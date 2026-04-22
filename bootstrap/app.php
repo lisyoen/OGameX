@@ -23,6 +23,16 @@ return Application::configure(basePath: dirname(__DIR__))
         ['middleware' => ['web', 'auth']],
     )
     ->withMiddleware(function (Middleware $middleware) {
+        // Task 015: Trust Cloudflare proxy headers to fix HTTPS redirect issue
+        $middleware->trustProxies(
+            at: '*',
+            headers: \Illuminate\Http\Request::HEADER_X_FORWARDED_FOR
+                   | \Illuminate\Http\Request::HEADER_X_FORWARDED_HOST
+                   | \Illuminate\Http\Request::HEADER_X_FORWARDED_PORT
+                   | \Illuminate\Http\Request::HEADER_X_FORWARDED_PROTO
+                   | \Illuminate\Http\Request::HEADER_X_FORWARDED_AWS_ELB,
+        );
+
         $middleware->prepend(LoginDebugContext::class);
         $middleware->prepend(ServerTiming::class);
         // Locale must be APPENDED (not prepended) to the web group so that it executes
