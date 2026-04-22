@@ -60,4 +60,15 @@ else
   exit 1
 fi
 
+echo "=== P2 Language dropdown regression guard ==="
+LANG_EN_KEYS=$(docker exec ogame-ogamex-app-1 php -r "echo implode(',', array_keys((include '/var/www/resources/lang/en/t_ingame.php')['options'] ?? []));" 2>/dev/null)
+echo "$LANG_EN_KEYS" | grep -q 'tab_display_section_language' || { echo "FAIL: t_ingame.options.tab_display_section_language 키 누락"; exit 1; }
+echo "$LANG_EN_KEYS" | grep -q 'language_select'  || { echo "FAIL: t_ingame.options.language_select 키 누락"; exit 1; }
+LANG_KO_STATUS=$(curl -sk -o /dev/null -w "%{http_code}" "$BASE_PUBLIC/lang/ko")
+case "$LANG_KO_STATUS" in
+  302|200) echo "OK: /lang/ko -> $LANG_KO_STATUS" ;;
+  *) echo "FAIL: /lang/ko unexpected $LANG_KO_STATUS"; exit 1 ;;
+esac
+echo "P2 language dropdown guard OK"
+
 echo "healthcheck done"
