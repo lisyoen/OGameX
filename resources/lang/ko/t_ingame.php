@@ -1097,6 +1097,11 @@ return [
         // Submit
         'use_settings'                              => 'Use settings',
 
+        // Language (added for i18n-ko Phase 2)
+        'tab_display_section_language'              => '언어',
+        'language_select'                           => '언어 선택',
+        'language_saved'                            => '언어 설정이 저장되었습니다.',
+
         // JS validationEngine rules
         'validation_not_enough_chars'               => 'Not enough characters',
         'validation_pw_too_short'                   => 'The entered password is too short (min. 4 characters)',

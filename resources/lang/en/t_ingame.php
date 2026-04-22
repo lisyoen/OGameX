@@ -1096,6 +1096,11 @@ return [
         // Submit
         'use_settings'                              => 'Use settings',
 
+        // Language (added for i18n-ko Phase 2)
+        'tab_display_section_language'              => 'Language',
+        'language_select'                           => 'Select language',
+        'language_saved'                            => 'Language preference saved.',
+
         // JS validationEngine rules
         'validation_not_enough_chars'               => 'Not enough characters',
         'validation_pw_too_short'                   => 'The entered password is too short (min. 4 characters)',
