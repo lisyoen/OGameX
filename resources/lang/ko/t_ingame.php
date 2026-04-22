@@ -1,4 +1,5 @@
 <?php
+// i18n-ko seed: copied from en on 2026-04-22. Translate values in Phase 3.
 
 return [
     // -------------------------------------------------------------------------
@@ -1097,9 +1098,9 @@ return [
         'use_settings'                              => 'Use settings',
 
         // Language (added for i18n-ko Phase 2)
-        'tab_display_section_language'              => 'Language',
-        'language_select'                           => 'Select language',
-        'language_saved'                            => 'Language preference saved.',
+        'tab_display_section_language'              => '언어',
+        'language_select'                           => '언어 선택',
+        'language_saved'                            => '언어 설정이 저장되었습니다.',
 
         // JS validationEngine rules
         'validation_not_enough_chars'               => 'Not enough characters',
@@ -1328,7 +1329,10 @@ return [
         'info_technocrat'            => 'More information about: Technocrat',
         'info_commanding_staff'      => 'More information about: Commanding Staff',
         'hire_commander_tooltip'     => 'Hire commander|+40 favorites, building queue, shortcuts, transport scanner, advertisement-free* <span style=\'font-size: 10px; line-height: 10px\'>(*excludes: game related references)</span>',
-        'hire_admiral_tooltip'       => "Hire admiral|Max. fleet slots +2,\nMax. expeditions +1,\nImproved fleet escape rate,\nCombat simulation save slots +20",
+        'hire_admiral_tooltip'       => "Hire admiral|Max. fleet slots +2,
+Max. expeditions +1,
+Improved fleet escape rate,
+Combat simulation save slots +20",
         'hire_engineer_tooltip'      => 'Hire engineer|Halves losses to defenses, +10% energy production',
         'hire_geologist_tooltip'     => 'Hire geologist|+10% mine production',
         'hire_technocrat_tooltip'    => 'Hire technocrat|+2 espionage levels, 25% less research time',

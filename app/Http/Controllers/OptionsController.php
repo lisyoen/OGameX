@@ -177,6 +177,42 @@ class OptionsController extends OGameController
     }
 
     /**
+     * Process language change request.
+     *
+     * @param Request $request
+     * @param PlayerService $player
+     * @return array<string,string>|null
+     */
+    public function processLanguageChange(Request $request, PlayerService $player): array|null
+    {
+        $language = $request->input('language');
+
+        // Only process if the language field was submitted
+        if (empty($language)) {
+            return null;
+        }
+
+        // Validate that the language is supported
+        $supportedLocales = array_keys(config('app.supported_locales'));
+        if (!in_array($language, $supportedLocales)) {
+            return ['error' => __('t_ingame.shared.error')];
+        }
+
+        // Update user's language preference
+        $user = $player->getUser();
+        $user->lang = $language;
+        $user->save();
+
+        // Update session locale
+        session(['locale' => $language]);
+
+        // Update app locale for current request
+        app()->setLocale($language);
+
+        return ['success' => __('t_ingame.options.language_saved')];
+    }
+
+    /**
      * Save handler for index() form.
      *
      * @param Request $request
@@ -190,7 +226,8 @@ class OptionsController extends OGameController
             'processChangeUsername',
             'processChangePassword',
             'processVacationMode',
-            'processEspionageProbesAmount'
+            'processEspionageProbesAmount',
+            'processLanguageChange'
         ];
 
         // Loop through change handlers, execute them and if it triggers
