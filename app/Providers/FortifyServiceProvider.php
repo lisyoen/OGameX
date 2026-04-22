@@ -5,6 +5,7 @@ namespace OGame\Providers;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
@@ -74,6 +75,12 @@ class FortifyServiceProvider extends ServiceProvider
             if (!$user || !Hash::check($request->password, $user->password)) {
                 $trace['reject_reason'] = !$user ? 'user_not_found' : 'hash_mismatch';
                 session()->flash('debug_login', $trace);
+
+                // Task 014: Mirror to login_debug.log
+                Log::channel('login_debug')->info('auth_attempt', array_merge($trace, [
+                    'request_id' => $request->attributes->get('debug_request_id'),
+                ]));
+
                 return;
             }
 
@@ -86,6 +93,11 @@ class FortifyServiceProvider extends ServiceProvider
                 $trace['reject_reason'] = 'banned';
                 session()->flash('debug_login', $trace);
 
+                // Task 014: Mirror to login_debug.log
+                Log::channel('login_debug')->info('auth_attempt', array_merge($trace, [
+                    'request_id' => $request->attributes->get('debug_request_id'),
+                ]));
+
                 throw ValidationException::withMessages([
                     'email' => ["Your account has been banned: {$ban?->reason}. Expires: {$until}."],
                 ]);
@@ -94,6 +106,11 @@ class FortifyServiceProvider extends ServiceProvider
             $trace['will_return_user'] = true;
             $trace['session_id_after'] = session()->getId();
             session()->flash('debug_login', $trace);
+
+            // Task 014: Mirror to login_debug.log
+            Log::channel('login_debug')->info('auth_attempt', array_merge($trace, [
+                'request_id' => $request->attributes->get('debug_request_id'),
+            ]));
 
             return $user;
         });

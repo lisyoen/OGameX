@@ -9,6 +9,7 @@ use OGame\Http\Middleware\CheckFirstLogin;
 use OGame\Http\Middleware\DebugHeaders;
 use OGame\Http\Middleware\GlobalGame;
 use OGame\Http\Middleware\Locale;
+use OGame\Http\Middleware\LoginDebugContext;
 use OGame\Http\Middleware\ServerTiming;
 
 return Application::configure(basePath: dirname(__DIR__))
@@ -22,6 +23,7 @@ return Application::configure(basePath: dirname(__DIR__))
         ['middleware' => ['web', 'auth']],
     )
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->prepend(LoginDebugContext::class);
         $middleware->prepend(ServerTiming::class);
         // Locale must be APPENDED (not prepended) to the web group so that it executes
         // after StartSession. Prepending would place it before StartSession, making
@@ -52,6 +54,12 @@ return Application::configure(basePath: dirname(__DIR__))
                 'is_secure' => $request->isSecure(),
             ];
             session()->flash('debug_auth_redirect', $diag);
+
+            // Task 014: Mirror to login_debug.log
+            \Illuminate\Support\Facades\Log::channel('login_debug')->info('guest_redirect', array_merge($diag, [
+                'request_id' => $request->attributes->get('debug_request_id'),
+            ]));
+
             return '/login';
         });
 

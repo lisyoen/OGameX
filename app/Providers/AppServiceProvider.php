@@ -2,7 +2,10 @@
 
 namespace OGame\Providers;
 
+use Illuminate\Auth\Events\Login;
 use Illuminate\Contracts\Debug\ExceptionHandler;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use OGame\Exceptions\Handler;
@@ -30,6 +33,16 @@ class AppServiceProvider extends ServiceProvider
 
         // Register model observers
         User::observe(UserObserver::class);
+
+        // Task 014: Login success event listener
+        Event::listen(Login::class, function (Login $event) {
+            Log::channel('login_debug')->info('fortify_validated_login', [
+                'request_id' => request()->attributes->get('debug_request_id'),
+                'user_id' => optional($event->user)->id,
+                'email' => optional($event->user)->email,
+                'session_id_after_regenerate' => session()->getId(),
+            ]);
+        });
     }
 
     /**
