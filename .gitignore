@@ -19,3 +19,9 @@ yarn-error.log
 rust/*/target
 # Compiled rust apps (rust modules are recompiled during container start)
 storage/rust-libs/*.so
+
+# craftbay 운영 환경 노이즈 제외
+/work-reports/
+*.bak.20*-*
+*.orig
+/20*-*-fix-report.md
