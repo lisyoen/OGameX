@@ -5,7 +5,6 @@ namespace OGame\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
-use OGame\Http\Middleware\Locale;
 
 class LanguageController extends OGameController
 {
@@ -21,17 +20,20 @@ class LanguageController extends OGameController
     /**
      * Switch the application language.
      *
-     * Validates the requested locale against the supported list (fallback to 'en'
-     * if unsupported), persists it in the session, and saves it to the user's
-     * database record when the user is authenticated.
+     * Validates the requested locale against the supported list (fallback to
+     * app.fallback_locale if unsupported), persists it in the session, and saves
+     * it to the user's database record when the user is authenticated.
      *
      * @param string $lang
      * @return RedirectResponse
      */
     public function switchLang(string $lang): RedirectResponse
     {
-        // Fallback to 'en' for any unsupported locale (e.g. /lang/fr → 'en').
-        $locale = in_array($lang, Locale::SUPPORTED_LOCALES, true) ? $lang : 'en';
+        $supported = array_keys(config('app.supported_locales', ['en' => 'English']));
+        $fallback = config('app.fallback_locale', 'en');
+
+        // Fallback to config default for any unsupported locale (e.g. /lang/fr → 'en').
+        $locale = in_array($lang, $supported, true) ? $lang : $fallback;
 
         App::setLocale($locale);
 
