@@ -56,8 +56,15 @@ elif [ "$role" = "app" ]; then
     # Ensure storage directory has correct ownership for www-data
     chown -R www-data:www-data /var/www/storage
 
-    # Run migrations as www-data to ensure log files are created with correct ownership
-    su -s /bin/sh -c "php artisan migrate --force" www-data
+    # Run migrations with safeguard (checks for real users, creates backup, blocks destructive ops in production)
+    # Note: We still run as www-data to ensure log file ownership, but delegate safety checks to safe-migrate.sh
+    # In production, migrate:fresh/refresh will be blocked; regular migrate will auto-backup if real users exist
+    if [ -f /var/www/scripts/safe-migrate.sh ]; then
+        su -s /bin/sh -c "/var/www/scripts/safe-migrate.sh migrate --force" www-data
+    else
+        # Fallback to direct migration if safe-migrate.sh is missing (e.g., old deployments)
+        su -s /bin/sh -c "php artisan migrate --force" www-data
+    fi
 
     # Only run caching in production (as www-data to ensure correct file ownership)
     if [ "$is_production" = true ]; then

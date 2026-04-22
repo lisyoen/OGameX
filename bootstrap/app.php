@@ -33,14 +33,12 @@ return Application::configure(basePath: dirname(__DIR__))
                    | \Illuminate\Http\Request::HEADER_X_FORWARDED_AWS_ELB,
         );
 
-        $middleware->prepend(LoginDebugContext::class);
         $middleware->prepend(ServerTiming::class);
-        // Locale must be APPENDED (not prepended) to the web group so that it executes
-        // after StartSession. Prepending would place it before StartSession, making
-        // $request->hasSession() return false and breaking session-based locale reading.
-        // Appending still guarantees the locale is set before any route-specific middleware
-        // (auth, globalgame, firstlogin) runs.
-        $middleware->web(append: [Locale::class]);
+        // Task 016: LoginDebugContext must run AFTER TrustProxies and StartSession to correctly
+        // capture $request->isSecure() (which depends on TrustProxies resolving X-Forwarded-Proto)
+        // and session IDs. Appending to web group ensures it runs in the correct order.
+        // Locale must also be appended (not prepended) to execute after StartSession.
+        $middleware->web(append: [Locale::class, LoginDebugContext::class]);
         $middleware->alias([
             'globalgame' => GlobalGame::class,
             'locale' => Locale::class,

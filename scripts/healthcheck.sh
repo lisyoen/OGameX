@@ -60,6 +60,19 @@ else
   exit 1
 fi
 
+echo "=== Real user account safeguard (016) ==="
+DB_PWD=$(docker exec ogame-ogamex-app-1 sh -c 'grep ^DB_PASSWORD /var/www/.env | cut -d= -f2' 2>/dev/null || echo "")
+if [ -n "$DB_PWD" ]; then
+  REAL_USER_COUNT=$(docker exec ogame-ogamex-db-1 sh -c "echo \"SELECT COUNT(*) FROM users WHERE email='lisyoen@gmail.com';\" | mariadb -u ogamex -p'$DB_PWD' --skip-ssl ogamex -N" 2>/dev/null || echo "0")
+  if [ "$REAL_USER_COUNT" -eq 0 ]; then
+    echo "WARN: Real user account (lisyoen@gmail.com) missing - possible DB reset"
+  else
+    echo "OK: Real user account exists (count=$REAL_USER_COUNT)"
+  fi
+else
+  echo "SKIP: Could not read DB_PASSWORD from .env"
+fi
+
 echo "=== P2 Language dropdown regression guard ==="
 LANG_EN_KEYS=$(docker exec ogame-ogamex-app-1 php -r "echo implode(',', array_keys((include '/var/www/resources/lang/en/t_ingame.php')['options'] ?? []));" 2>/dev/null)
 echo "$LANG_EN_KEYS" | grep -q 'tab_display_section_language' || { echo "FAIL: t_ingame.options.tab_display_section_language 키 누락"; exit 1; }
