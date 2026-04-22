@@ -44,4 +44,12 @@ else
   echo "OK: ajaxName structure correct"
 fi
 
+echo '=== regression guard 007: allRules synchronous init ==='
+if echo "$body" | grep -q 'allRules: __allRules' && echo "$body" | grep -q 'var __allRules'; then
+  echo "OK: allRules initialized synchronously in IIFE"
+else
+  echo "FAIL: allRules is not synchronously initialized (007 regression)"
+  exit 1
+fi
+
 echo "healthcheck done"
