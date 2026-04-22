@@ -273,6 +273,26 @@
                                         </div>
 
                                         <div class="category fieldwrapper alt bar">
+                                            <label class="styled textBeefy" data-element="language">
+                                                {{ __('t_ingame.options.tab_display_section_language') }}
+                                            </label>
+                                        </div>
+                                        <div class="group bborder">
+                                            <div class="fieldwrapper">
+                                                <label class="styled textBeefy">
+                                                    {{ __('t_ingame.options.language_select') }}
+                                                </label>
+                                                <div class="thefield">
+                                                    <select name="language" class="w200">
+                                                        @foreach (config('app.supported_locales') as $code => $label)
+                                                            <option value="{{ $code }}" @selected(app()->getLocale() === $code)>{{ $label }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="category fieldwrapper alt bar">
                                             <label class="styled textBeefy" data-element="planets">{{ __('t_ingame.options.section_planets') }}</label>
                                         </div>
                                         <div class="group bborder" style="display: none;">
