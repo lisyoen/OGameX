@@ -221,8 +221,7 @@
                   class=""
                   name="subscribeForm"
                   method="POST"
-                  onsubmit="changeAction('register','subscribeForm');"
-                  action="{{ route('register') }}"
+action="{{ route('register') }}"
                   autocomplete="off"
             >
                 {{ csrf_field() }}
