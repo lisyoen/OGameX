@@ -170,6 +170,15 @@
         <a id="loginBtn" href="javascript:void(0)" title="{{ __('t_external.login.btn') }}">
             {{ __('t_external.login.btn') }} </a>
         <div id="login">
+            @if ($errors->any())
+                <div id="loginErrorBox" style="color:#f66;margin:6px 0;padding:8px;background-color:rgba(255,102,102,0.1);border:1px solid #f66;border-radius:4px;">
+                    <ul style="margin:0;padding-left:20px;">
+                        @foreach ($errors->all() as $message)
+                            <li>{{ $message }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form id="loginForm" name="loginForm" method="post" action="{{ route('login') }}">
                 {{ csrf_field() }}
                 <div class="input-wrap">
@@ -215,6 +224,24 @@
                 <p id="TermsAndConditionsAcceptWithLogin">
                     {!! __('t_external.login.terms_accept_html') !!}</p>
             </form>
+            <script>
+            (function(){
+              // craftbay guard: prevent outgame.min.js::setUniUrl from redirecting
+              // #loginForm.action to legacy /game/reg/login2.php path.
+              var expected = "{{ route('login') }}";
+              function lockLoginAction() {
+                var f = document.getElementById('loginForm');
+                if (f && f.getAttribute('action') !== expected) {
+                  f.setAttribute('action', expected);
+                }
+              }
+              document.addEventListener('DOMContentLoaded', lockLoginAction);
+              var lf = document.getElementById('loginForm');
+              if (lf) {
+                lf.addEventListener('submit', lockLoginAction, true);
+              }
+            })();
+            </script>
         </div>
     </div>
     <div id="content" class="clearfix">

@@ -52,4 +52,12 @@ else
   exit 1
 fi
 
+echo '=== regression guard 012: lockLoginAction guard present ==='
+if echo "$body" | grep -q 'lockLoginAction'; then
+  echo "OK: lockLoginAction guard script found"
+else
+  echo "FAIL: lockLoginAction guard missing (012 regression)"
+  exit 1
+fi
+
 echo "healthcheck done"
