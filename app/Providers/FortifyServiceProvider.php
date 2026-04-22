@@ -51,9 +51,29 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         Fortify::authenticateUsing(function (Request $request) {
+            // Task 013: Login diagnostic trace
+            $trace = [];
+            $trace['at'] = now()->toIso8601String();
+            $trace['email_input'] = (string) $request->input('email');
+            $trace['has_password_input'] = $request->filled('password');
+            $trace['session_id_before'] = session()->getId();
+            $trace['session_has_login_key_before'] = collect(session()->all())->keys()->filter(fn($k) => str_contains($k, 'login_'))->values()->all();
+
             $user = User::where('email', $request->email)->first();
 
+            $trace['user_found'] = $user ? true : false;
+            $trace['user_id'] = $user?->id;
+
+            if ($user) {
+                $trace['hash_prefix'] = substr($user->password, 0, 4);
+                $trace['hash_len'] = strlen($user->password);
+                $trace['hash_check'] = Hash::check($request->password, $user->password);
+                $trace['is_banned'] = method_exists($user, 'isBanned') ? $user->isBanned() : null;
+            }
+
             if (!$user || !Hash::check($request->password, $user->password)) {
+                $trace['reject_reason'] = !$user ? 'user_not_found' : 'hash_mismatch';
+                session()->flash('debug_login', $trace);
                 return;
             }
 
@@ -63,10 +83,17 @@ class FortifyServiceProvider extends ServiceProvider
                     ? $ban->banned_until->format('Y-m-d H:i') . ' UTC'
                     : 'permanently';
 
+                $trace['reject_reason'] = 'banned';
+                session()->flash('debug_login', $trace);
+
                 throw ValidationException::withMessages([
                     'email' => ["Your account has been banned: {$ban?->reason}. Expires: {$until}."],
                 ]);
             }
+
+            $trace['will_return_user'] = true;
+            $trace['session_id_after'] = session()->getId();
+            session()->flash('debug_login', $trace);
 
             return $user;
         });

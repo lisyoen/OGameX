@@ -179,6 +179,30 @@
                     </ul>
                 </div>
             @endif
+            @if (session()->has('debug_login') || session()->has('debug_auth_redirect') || request()->query('debug'))
+            @php
+                $__ogameDebug = [
+                    'debug_login' => session('debug_login'),
+                    'debug_auth_redirect' => session('debug_auth_redirect'),
+                    'session_id_now' => session()->getId(),
+                    'auth_check_now' => auth()->check(),
+                    'auth_id_now' => auth()->id(),
+                    'cookies_visible_to_server' => array_keys(request()->cookies->all()),
+                    'xf_proto' => request()->header('X-Forwarded-Proto'),
+                    'is_secure' => request()->isSecure(),
+                    'url' => url()->current(),
+                ];
+            @endphp
+            <script>
+              // OGame login debug — injected by task 013
+              try {
+                window.__OGAME_DEBUG = @json($__ogameDebug);
+                console.log('%c[OGAME_DEBUG]', 'background:#114;color:#0ff;padding:2px 6px;border-radius:4px;', window.__OGAME_DEBUG);
+              } catch (e) {
+                console.error('[OGAME_DEBUG] inject error', e);
+              }
+            </script>
+            @endif
             <form id="loginForm" name="loginForm" method="post" action="{{ route('login') }}">
                 {{ csrf_field() }}
                 <div class="input-wrap">
