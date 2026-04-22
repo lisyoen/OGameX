@@ -226,6 +226,7 @@
                   autocomplete="off"
             >
                 {{ csrf_field() }}
+                <input type="hidden" name="uni_url" value="{{ request()->getHttpHost() }}"/>
                 <input style="display:none;" type="text" name="somefakename"/>
                 <input style="display:none;" type="password" name="anotherfakename"/>
 
