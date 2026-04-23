@@ -84,4 +84,13 @@ case "$LANG_KO_STATUS" in
 esac
 echo "P2 language dropdown guard OK"
 
+# Admin Users 라우트 회귀 가드 (028)
+echo "=== Admin Users route regression guard (028) ==="
+if docker exec ogame-ogamex-app-1 php artisan route:list --name=admin.users 2>/dev/null | grep -q "admin.users.index"; then
+  echo "OK: route admin.users.index 등록됨"
+else
+  echo "FAIL: route admin.users.index 누락"
+  exit 1
+fi
+
 echo "healthcheck done"

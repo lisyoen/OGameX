@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use OGame\Http\Controllers\Admin\AdminHomeController;
 use OGame\Http\Controllers\Admin\DeveloperShortcutsController;
 use OGame\Http\Controllers\Admin\FleetTimingController;
 use OGame\Http\Controllers\Admin\RulesController as AdminRulesController;
 use OGame\Http\Controllers\Admin\ServerAdministrationController;
 use OGame\Http\Controllers\Admin\ServerSettingsController as AdminServerSettingsController;
+use OGame\Http\Controllers\Admin\TranslationsController;
+use OGame\Http\Controllers\Admin\UsersController;
 use OGame\Http\Controllers\AllianceController;
 use OGame\Http\Controllers\AllianceDepotController;
 use OGame\Http\Controllers\BuddiesController;
@@ -257,6 +260,9 @@ Route::middleware(['auth', 'banned', 'globalgame', 'locale', 'firstlogin'])->gro
 
 // Group: all logged in pages:
 Route::middleware(['auth', 'globalgame', 'locale', 'admin'])->group(function () {
+    // Admin portal home (dashboard with feature cards)
+    Route::get('/admin', [AdminHomeController::class, 'index'])->name('admin.home');
+
     // Server settings
     Route::get('/admin/server-settings', [AdminServerSettingsController::class, 'index'])->name('admin.serversettings.index');
     Route::post('/admin/server-settings', [AdminServerSettingsController::class, 'update'])->name('admin.serversettings.update');
@@ -287,4 +293,22 @@ Route::middleware(['auth', 'globalgame', 'locale', 'admin'])->group(function () 
     Route::post('/admin/developershortcuts/create-at-coords', [DeveloperShortcutsController::class, 'createAtCoords'])->name('admin.developershortcuts.create-at-coords');
     Route::post('/admin/developershortcuts/create-debris', [DeveloperShortcutsController::class, 'createDebris'])->name('admin.developershortcuts.create-debris');
     Route::post('/admin/developershortcuts/update-dark-matter', [DeveloperShortcutsController::class, 'updateDarkMatter'])->name('admin.developershortcuts.update-dark-matter');
+
+    // Translations (admin i18n manager)
+    Route::get('/admin/translations', [TranslationsController::class, 'index'])->name('admin.translations.index');
+    Route::get('/admin/translations/status', [TranslationsController::class, 'status'])->name('admin.translations.status');
+    Route::post('/admin/translations/save', [TranslationsController::class, 'save'])->name('admin.translations.save');
+    Route::post('/admin/translations/commit', [TranslationsController::class, 'commit'])->name('admin.translations.commit');
+    Route::get('/admin/translations/{ns}', [TranslationsController::class, 'show'])
+        ->where('ns', '[a-z0-9_]+')
+        ->name('admin.translations.show');
+
+    // Users Management (admin user management)
+    Route::get('/admin/users', [UsersController::class, 'index'])->name('admin.users.index');
+    Route::get('/admin/users/{id}', [UsersController::class, 'show'])
+        ->whereNumber('id')
+        ->name('admin.users.show');
+    Route::post('/admin/users/{id}/role', [UsersController::class, 'toggleRole'])
+        ->whereNumber('id')
+        ->name('admin.users.role');
 });

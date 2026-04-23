@@ -80,6 +80,11 @@
             </ul>
         @else
             <ul>
+                <li><a class="{{(Request::is('admin') ? 'active' : '') }}" href="{{ route('admin.home') }}">Home</a></li>
+                @if(Route::has('admin.users.index'))
+                    <li><a class="{{(Request::is('admin/users*') ? 'active' : '') }}" href="{{ route('admin.users.index') }}">Users</a></li>
+                @endif
+                <li><a class="{{(Request::is('admin/translations*') ? 'active' : '') }}" href="{{ route('admin.translations.index') }}">Translations</a></li>
                 <li><a class="{{(Request::is('admin/developer-shortcuts') ? 'active' : '') }}" href="{{ route('admin.developershortcuts.index') }}">Developer shortcuts</a></li>
                 <li><a class="{{(Request::is('admin/server-settings') ? 'active' : '') }}" href="{{ route('admin.serversettings.index') }}">Server settings</a></li>
                 <li><a class="{{(Request::is('admin/fleet-timing*') ? 'active' : '') }}" href="{{ route('admin.fleettiming.index') }}">Fleet Timing</a></li>
