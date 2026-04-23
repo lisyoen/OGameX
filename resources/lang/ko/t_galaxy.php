@@ -4,16 +4,16 @@
 return [
     'planet' => [
         'description' => [
-            'nearest' => 'Due to the proximity to sun, collection of solar energy is highly efficient. However, planets in this position tend to be small and provide only small amounts of deuterium.',
-            'normal' => 'Normally, in this Position, there are balanced planets with sufficient sources of deuterium, a good supply of solar energy and enough room for development.',
-            'biggest' => 'Generally the biggest planets of the solar system lie in this position. Sun provides enough energy and sufficient deuterium sources can be anticipated.',
-            'farthest' => 'Due to the vast distance to the sun, collection of solar energy is limited. However these planets usually provide significant sources of deuterium.',
+            'nearest' => '태양과 가까워 태양광 에너지 수집 효율이 매우 높습니다. 다만 이 위치의 행성들은 작고 뜨거운 경향이 있으며, 중수소 매장량이 거의 없습니다.',
+            'normal' => '이 위치에는 보통 균형 잡힌 행성이 있으며, 중수소 자원이 풍부하고 태양광 에너지 공급이 좋으며 크기도 적당합니다.',
+            'biggest' => '일반적으로 태양계에서 가장 큰 행성들이 이 위치에 있습니다. 태양이 충분한 에너지를 제공하며 중수소 매장량도 풍부합니다.',
+            'farthest' => '태양과의 거리가 멀어 태양광 에너지 수집이 제한적입니다. 그러나 이 행성들은 낮은 온도 덕분에 중수소 매장량이 상당히 풍부한 편입니다.',
         ]
     ],
     'mission' => [
         'colonize' => [
-            'name' => 'Colonize',
-            'no_ship' => 'It is not possible to colonize a planet without a colony ship.'
+            'name' => '개척',
+            'no_ship' => '식민선 없이는 행성을 개척할 수 없습니다.'
         ]
     ]
 ];
