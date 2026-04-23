@@ -93,4 +93,13 @@ else
   exit 1
 fi
 
+# Admin Translations 라우트 회귀 가드 (029)
+echo "=== Admin Translations route regression guard (029) ==="
+if docker exec ogame-ogamex-app-1 php artisan route:list --name=admin.translations 2>/dev/null | grep -q "admin.translations.index"; then
+  echo "OK: route admin.translations.index 등록됨"
+else
+  echo "FAIL: route admin.translations.index 누락"
+  exit 1
+fi
+
 echo "healthcheck done"
