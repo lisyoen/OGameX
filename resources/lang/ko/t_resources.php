@@ -1,64 +1,64 @@
 <?php
-// i18n-ko seed: copied from en on 2026-04-22. Translate values in Phase 3.
+// i18n-ko Phase 3: Full Korean translation of t_resources.php
 
 return [
     'metal_mine' => [
-        'title'            => 'Metal Mine',
-        'description'      => 'Used in the extraction of metal ore, metal mines are of primary importance to all emerging and established empires.',
-        'description_long' => 'Metal is the primary resource used in the foundation of your Empire. At greater depths, the mines can produce more output of viable metal for use in the construction of buildings, ships, defense systems, and research. As the mines drill deeper, more energy is required for maximum production. As metal is the most abundant of all resources available, its value is considered to be the lowest of all resources for trading.',
+        'title'            => '금속 광산',
+        'description'      => '금속 광석을 채굴하는 데 사용되며, 금속 광산은 모든 신생 및 기존 제국에 가장 중요합니다.',
+        'description_long' => '금속은 제국의 기반을 구축하는 데 사용되는 주요 자원입니다. 더 깊은 곳에서 광산은 건물, 함선, 방어 시스템 및 연구 건설에 사용할 수 있는 더 많은 금속을 생산할 수 있습니다. 광산이 더 깊이 굴착할수록 최대 생산을 위해 더 많은 에너지가 필요합니다. 금속은 사용 가능한 모든 자원 중 가장 풍부하므로 거래에서 가장 낮은 가치로 간주됩니다.',
     ],
 
     'crystal_mine' => [
-        'title'            => 'Crystal Mine',
-        'description'      => 'Crystals are the main resource used to build electronic circuits and form certain alloy compounds.',
-        'description_long' => 'Crystal mines supply the main resource used to produce electronic circuits and from certain alloy compounds. Mining crystal consumes some one and half times more energy than a mining metal, making crystal more valuable. Almost all ships and all buildings require crystal. Most crystals required to build spaceships, however, are very rare, and like metal can only be found at a certain depth. Therefore, building mines in deeper strata will increase the amount of crystal produced.',
+        'title'            => '크리스탈 광산',
+        'description'      => '크리스탈은 전자 회로를 구축하고 특정 합금 화합물을 형성하는 데 사용되는 주요 자원입니다.',
+        'description_long' => '크리스탈 광산은 전자 회로를 생산하고 특정 합금 화합물을 만드는 데 사용되는 주요 자원을 공급합니다. 크리스탈 채굴은 금속 채굴보다 약 1.5배 많은 에너지를 소비하므로 크리스탈이 더 가치가 있습니다. 거의 모든 함선과 모든 건물에는 크리스탈이 필요합니다. 그러나 우주선을 건조하는 데 필요한 대부분의 크리스탈은 매우 희귀하며 금속과 마찬가지로 특정 깊이에서만 발견됩니다. 따라서 더 깊은 지층에 광산을 건설하면 생산되는 크리스탈의 양이 증가합니다.',
     ],
 
     'deuterium_synthesizer' => [
-        'title'            => 'Deuterium Synthesizer',
-        'description'      => 'Deuterium Synthesizers draw the trace Deuterium content from the water on a planet.',
-        'description_long' => 'Deuterium is also called heavy hydrogen. It is a stable isotope of hydrogen with a natural abundance in the oceans of colonies of approximately one atom in 6500 of hydrogen (~154 PPM). Deuterium thus accounts for approximately 0.015% (on a weight basis, 0.030%) of all. Deuterium is processed by special synthesizers which can separate the water from the Deuterium using specially designed centrifuges. The upgrade of the synthesizer allows for increasing the amount of Deuterium deposits processed. Deuterium is used when carrying out sensor phalanx scans, viewing galaxies, as fuel for ships, and performing specialized research upgrades.',
+        'title'            => '중수소 합성기',
+        'description'      => '중수소 합성기는 행성의 물에서 미량의 중수소 함량을 추출합니다.',
+        'description_long' => '중수소는 중수소(heavy hydrogen)라고도 합니다. 이것은 수소의 안정한 동위 원소로, 식민지의 바다에서 수소 6500개 원자당 약 1개의 원자로 자연적으로 존재합니다 (~154 PPM). 따라서 중수소는 전체의 약 0.015% (무게 기준 0.030%)를 차지합니다. 중수소는 특수 설계된 원심분리기를 사용하여 물에서 중수소를 분리할 수 있는 특수 합성기에 의해 처리됩니다. 합성기를 업그레이드하면 처리되는 중수소 매장량의 양이 증가합니다. 중수소는 센서 팔랑크스 스캔을 수행하고, 은하를 보고, 함선의 연료로 사용하며, 특수 연구 업그레이드를 수행할 때 사용됩니다.',
     ],
 
     'solar_plant' => [
-        'title'            => 'Solar Plant',
-        'description'      => 'Solar power plants absorb energy from solar radiation. All mines need energy to operate.',
-        'description_long' => 'Gigantic solar arrays are used to generate power for the mines and the deuterium synthesizer. As the solar plant is upgraded, the surface area of the photovoltaic cells covering the planet increases, resulting in a higher energy output across the power grids of your planet.',
+        'title'            => '태양광 발전소',
+        'description'      => '태양광 발전소는 태양 복사에서 에너지를 흡수합니다. 모든 광산은 작동하기 위해 에너지가 필요합니다.',
+        'description_long' => '거대한 태양광 어레이는 광산과 중수소 합성기를 위한 전력을 생성하는 데 사용됩니다. 태양광 발전소가 업그레이드되면 행성을 덮고 있는 광전지 셀의 표면적이 증가하여 행성의 전력망 전체에서 더 높은 에너지 출력이 발생합니다.',
     ],
 
     'fusion_plant' => [
-        'title'            => 'Fusion Reactor',
-        'description'      => 'The fusion reactor uses deuterium to produce energy.',
-        'description_long' => 'In fusion power plants, hydrogen nuclei are fused into helium nuclei under enormous temperature and pressure, releasing tremendous amounts of energy. For each gram of Deuterium consumed, up to 41,32*10^-13 Joule of energy can be produced; with 1 g you are able to produce 172 MWh energy.
+        'title'            => '핵융합 발전소',
+        'description'      => '핵융합 발전소는 중수소를 사용하여 에너지를 생산합니다.',
+        'description_long' => '핵융합 발전소에서는 수소 핵이 엄청난 온도와 압력 하에서 헬륨 핵으로 융합되어 엄청난 양의 에너지를 방출합니다. 소비된 중수소 1g당 최대 41,32*10^-13 Joule의 에너지가 생성될 수 있으며, 1g으로 172 MWh의 에너지를 생성할 수 있습니다.
 
-Larger reactor complexes use more deuterium and can produce more energy per hour. The energy effect could be increased by researching energy technology.
+더 큰 원자로 단지는 더 많은 중수소를 사용하며 시간당 더 많은 에너지를 생산할 수 있습니다. 에너지 기술을 연구하여 에너지 효과를 높일 수 있습니다.
 
-The energy production of the fusion plant is calculated like that:
+핵융합 발전소의 에너지 생산은 다음과 같이 계산됩니다:
 30 * [Level Fusion Plant] * (1,05 + [Level Energy Technology] * 0,01) ^ [Level Fusion Plant]',
     ],
 
     'metal_store' => [
-        'title'            => 'Metal Storage',
-        'description'      => 'Provides storage for excess metal.',
-        'description_long' => 'This giant storage facility is used to store metal ore. Each level of upgrading increases the amount of metal ore that can be stored. If the stores are full, no further metal will be mined.
+        'title'            => '금속 저장소',
+        'description'      => '과잉 금속을 저장합니다.',
+        'description_long' => '이 거대한 저장 시설은 금속 광석을 저장하는 데 사용됩니다. 업그레이드 레벨마다 저장할 수 있는 금속 광석의 양이 증가합니다. 저장소가 가득 차면 더 이상 금속이 채굴되지 않습니다.
 
-The Metal Storage protects a certain percentage of the mine\'s daily production (max. 10 percent).',
+금속 저장소는 광산의 일일 생산량의 일정 비율을 보호합니다 (최대 10%).',
     ],
 
     'crystal_store' => [
-        'title'            => 'Crystal Storage',
-        'description'      => 'Provides storage for excess crystal.',
-        'description_long' => 'The unprocessed crystal will be stored in these giant storage halls in the meantime. With each level of upgrade, it increases the amount of crystal can be stored. If the crystal stores are full, no further crystal will be mined.
+        'title'            => '크리스탈 저장소',
+        'description'      => '과잉 크리스탈을 저장합니다.',
+        'description_long' => '미처리된 크리스탈은 그 동안 이러한 거대한 저장 홀에 저장됩니다. 업그레이드 레벨마다 저장할 수 있는 크리스탈의 양이 증가합니다. 크리스탈 저장소가 가득 차면 더 이상 크리스탈이 채굴되지 않습니다.
 
-The Crystal Storage protects a certain percentage of the mine\'s daily production (max. 10 percent).',
+크리스탈 저장소는 광산의 일일 생산량의 일정 비율을 보호합니다 (최대 10%).',
     ],
 
     'deuterium_store' => [
-        'title'            => 'Deuterium Tank',
-        'description'      => 'Giant tanks for storing newly-extracted deuterium.',
-        'description_long' => 'The Deuterium tank is for storing newly-synthesized deuterium. Once it is processed by the synthesizer, it is piped into this tank for later use. With each upgrade of the tank, the total storage capacity is increased. Once the capacity is reached, no further Deuterium will be synthesized.
+        'title'            => '중수소 탱크',
+        'description'      => '새로 추출된 중수소를 저장하는 거대한 탱크입니다.',
+        'description_long' => '중수소 탱크는 새로 합성된 중수소를 저장하기 위한 것입니다. 합성기에서 처리되면 나중에 사용하기 위해 이 탱크로 파이프됩니다. 탱크를 업그레이드할 때마다 총 저장 용량이 증가합니다. 용량에 도달하면 더 이상 중수소가 합성되지 않습니다.
 
-The Deuterium Tank protects a certain percentage of the synthesizer\'s daily production (max. 10 percent).',
+중수소 탱크는 합성기의 일일 생산량의 일정 비율을 보호합니다 (최대 10%).',
     ],
 
     // -------------------------------------------------------------------------
@@ -66,82 +66,82 @@ The Deuterium Tank protects a certain percentage of the synthesizer\'s daily pro
     // -------------------------------------------------------------------------
 
     'robot_factory' => [
-        'title'            => 'Robotics Factory',
-        'description'      => 'Robotic factories provide construction robots to aid in the construction of buildings. Each level increases the speed of the upgrade of buildings.',
-        'description_long' => 'The Robotics Factory primary goal is the production of State of the Art construction robots. Each upgrade to the robotics factory results in the production of faster robots, which is used to reduce the time needed to construct buildings.',
+        'title'            => '로봇 공장',
+        'description'      => '로봇 공장은 건물 건설을 돕는 건설 로봇을 제공합니다. 각 레벨은 건물 업그레이드 속도를 증가시킵니다.',
+        'description_long' => '로봇 공장의 주요 목표는 최신 건설 로봇의 생산입니다. 로봇 공장을 업그레이드할 때마다 더 빠른 로봇이 생산되어 건물을 건설하는 데 필요한 시간이 단축됩니다.',
     ],
 
     'shipyard' => [
-        'title'            => 'Shipyard',
-        'description'      => 'All types of ships and defensive facilities are built in the planetary shipyard.',
-        'description_long' => 'The planetary shipyard is responsible for the construction of spacecraft and defensive mechanisms. As the shipyard is upgraded, it can produce a wider variety of vehicles at a much greater rate of speed. If a nanite factory is present on the planet, the speed at which ships are constructed is massively increased.',
+        'title'            => '조선소',
+        'description'      => '모든 유형의 함선과 방어 시설이 행성 조선소에서 건조됩니다.',
+        'description_long' => '행성 조선소는 우주선과 방어 메커니즘의 건설을 담당합니다. 조선소가 업그레이드되면 훨씬 빠른 속도로 더 다양한 차량을 생산할 수 있습니다. 행성에 나노봇 공장이 있는 경우 함선이 건조되는 속도가 대폭 증가합니다.',
     ],
 
     'research_lab' => [
-        'title'            => 'Research Lab',
-        'description'      => 'A research lab is required in order to conduct research into new technologies.',
-        'description_long' => 'An essential part of any empire, Research Labs are where new technologies are discovered and older technologies are improved upon. With each level of the Research Lab constructed, the speed in which new technologies are researched is increased, while also unlocking newer technologies to research. In order to conduct research as quickly as possible, research scientists are immediately dispatched to the colony to begin work and development. In this way, knowledge about new technologies can easily be disseminated throughout the empire.',
+        'title'            => '연구소',
+        'description'      => '새로운 기술을 연구하려면 연구소가 필요합니다.',
+        'description_long' => '모든 제국의 필수 부분인 연구소는 새로운 기술을 발견하고 오래된 기술을 개선하는 곳입니다. 연구소 레벨이 건설될 때마다 새로운 기술이 연구되는 속도가 증가하는 동시에 연구할 새로운 기술이 잠금 해제됩니다. 가능한 한 빨리 연구를 수행하기 위해 연구 과학자들은 즉시 식민지로 파견되어 작업과 개발을 시작합니다. 이러한 방식으로 새로운 기술에 대한 지식을 제국 전체에 쉽게 전파할 수 있습니다.',
     ],
 
     'alliance_depot' => [
-        'title'            => 'Alliance Depot',
-        'description'      => 'The alliance depot supplies fuel to friendly fleets in orbit helping with defense.',
-        'description_long' => 'The alliance depot supplies fuel to friendly fleets in orbit helping with defense. For each upgrade level of the alliance depot, a special demand of deuterium per hour can be sent to an orbiting fleet.',
+        'title'            => '동맹 보급소',
+        'description'      => '동맹 보급소는 궤도에 있는 우호 함대에 연료를 공급하여 방어를 돕습니다.',
+        'description_long' => '동맹 보급소는 궤도에 있는 우호 함대에 연료를 공급하여 방어를 돕습니다. 동맹 보급소의 각 업그레이드 레벨마다 시간당 특정 양의 중수소를 궤도 함대로 보낼 수 있습니다.',
     ],
 
     'missile_silo' => [
-        'title'            => 'Missile Silo',
-        'description'      => 'Missile silos are used to store missiles.',
-        'description_long' => 'Missile silos are used to construct, store and launch interplanetary and anti-ballistic missiles. With each level of the silo, five interplanetary missiles or ten anti-ballistic missiles can be stored. One Interplanetary missile uses the same space as two Anti-Ballistic missiles. Storage of both Interplanetary missiles and Anti-Ballistic missiles in the same silo is allowed.',
+        'title'            => '미사일 격납고',
+        'description'      => '미사일 격납고는 미사일을 저장하는 데 사용됩니다.',
+        'description_long' => '미사일 격납고는 행성간 미사일과 요격 미사일을 건설, 저장 및 발사하는 데 사용됩니다. 격납고의 각 레벨마다 5개의 행성간 미사일 또는 10개의 요격 미사일을 저장할 수 있습니다. 행성간 미사일 1개는 요격 미사일 2개와 동일한 공간을 사용합니다. 동일한 격납고에 행성간 미사일과 요격 미사일을 모두 저장할 수 있습니다.',
     ],
 
     'nano_factory' => [
-        'title'            => 'Nanite Factory',
-        'description'      => 'This is the ultimate in robotics technology. Each level cuts the construction time for buildings, ships, and defenses.',
-        'description_long' => 'A nanomachine, also called a nanite, is a mechanical or electromechanical device whose dimensions are measured in nanometers (millionths of a millimeter, or units of 10^-9 meter). The microscopic size of nanomachines translates into higher operational speed. This factory produces nanomachines that are the ultimate evolution in robotics technology. Once constructed, each upgrade significantly decreases production time for buildings, ships, and defensive structures.',
+        'title'            => '나노봇 공장',
+        'description'      => '로봇 기술의 궁극입니다. 각 레벨은 건물, 함선 및 방어의 건설 시간을 단축합니다.',
+        'description_long' => '나노머신(nanomachine), 또는 나노봇(nanite)은 나노미터(밀리미터의 백만분의 1, 또는 10^-9 미터 단위)로 측정되는 기계적 또는 전기 기계적 장치입니다. 나노머신의 미세한 크기는 더 높은 작동 속도로 변환됩니다. 이 공장은 로봇 기술의 궁극적인 진화인 나노머신을 생산합니다. 건설되면 각 업그레이드는 건물, 함선 및 방어 구조물의 생산 시간을 크게 줄입니다.',
     ],
 
     'terraformer' => [
-        'title'            => 'Terraformer',
-        'description'      => 'The terraformer increases the usable surface of planets.',
-        'description_long' => 'With the increasing construction on planets, even the living space for the colony is becoming more and more limited. Traditional methods such as high-rise and underground construction are increasingly becoming insufficient. A small group of high-energy physicists and nano engineers eventually came to the solution: terraforming.
-Making use of tremendous amounts of energy, the terraformer can make whole stretches of land or even continents arable. This building houses the production of nanites created specifically for this purpose, which ensure a consistent ground quality throughout.
+        'title'            => '테라포머',
+        'description'      => '테라포머는 행성의 사용 가능한 표면을 증가시킵니다.',
+        'description_long' => '행성의 건설이 증가함에 따라 식민지를 위한 생활 공간조차 점점 더 제한되고 있습니다. 고층 건물 및 지하 건설과 같은 전통적인 방법은 점점 더 불충분해지고 있습니다. 고에너지 물리학자와 나노 엔지니어의 작은 그룹은 결국 해결책인 테라포밍에 도달했습니다.
+엄청난 양의 에너지를 사용하여 테라포머는 전체 토지 또는 대륙을 경작 가능하게 만들 수 있습니다. 이 건물은 이 목적을 위해 특별히 만들어진 나노봇의 생산을 수용하며, 이는 전체에 걸쳐 일관된 지면 품질을 보장합니다.
 
-Each terraformer level allows 5 fields to be cultivated. With each level, the terraformer occupies one field itself. Every 2 terraformer levels you will receive 1 bonus field.
+각 테라포머 레벨은 5개의 필드를 경작할 수 있습니다. 각 레벨마다 테라포머는 1개의 필드를 차지합니다. 테라포머 레벨 2개마다 1개의 보너스 필드를 받습니다.
 
-Once built, the terraformer cannot be dismantled.',
+건설되면 테라포머는 해체할 수 없습니다.',
     ],
 
     'space_dock' => [
-        'title'            => 'Space Dock',
-        'description'      => 'Wreckages can be repaired in the Space Dock.',
-        'description_long' => 'The Space Dock offers the possibility to repair ships destroyed in battle which left behind wreckage. The repair time takes a maximum of 12 hours, but it takes at least 30 minutes until the ships can be put back into service.
+        'title'            => '우주 도크',
+        'description'      => '잔해는 우주 도크에서 수리할 수 있습니다.',
+        'description_long' => '우주 도크는 전투에서 파괴되어 잔해를 남긴 함선을 수리할 수 있는 가능성을 제공합니다. 수리 시간은 최대 12시간이 걸리지만 함선을 다시 가동하기까지 최소 30분이 걸립니다.
 
-Repairs must begin within 3 days of the creation of the wreckage. The repaired ships must be returned to duty manually after completion of the repairs. If this is not done, individual ships of any type will be returned to service after 3 days.
+수리는 잔해 생성 후 3일 이내에 시작해야 합니다. 수리된 함선은 수리 완료 후 수동으로 복귀시켜야 합니다. 이것이 수행되지 않으면 모든 유형의 개별 함선이 3일 후에 복귀됩니다.
 
-Wreckage only appears if more than 150,000 units have been destroyed including one\'s own ships which took part in the combat with a value of at least 5% of the ship points.
+잔해는 최소 함선 점수의 5% 이상의 가치를 가진 자신의 함선을 포함하여 150,000 유닛 이상이 파괴된 경우에만 나타납니다.
 
-Since the Space Dock floats in orbit, it does not require a planet field.',
+우주 도크는 궤도에 떠 있기 때문에 행성 필드가 필요하지 않습니다.',
     ],
 
     'lunar_base' => [
-        'title'            => 'Lunar Base',
-        'description'      => 'Since the moon has no atmosphere, a lunar base is required to generate habitable space.',
-        'description_long' => 'A moon has no atmosphere, so a lunar base must first be built before a settlement can be set up. This then provides oxygen, heating, and gravity. With each level constructed, a larger living and development area is provided within the biosphere. Each constructed level allows three fields for other buildings. With each level, the Lunar base occupies one field itself.
-Once built, the lunar base can not be torn down.',
+        'title'            => '달 기지',
+        'description'      => '달에는 대기가 없기 때문에 거주 가능한 공간을 생성하려면 달 기지가 필요합니다.',
+        'description_long' => '달에는 대기가 없으므로 정착지를 설치하기 전에 먼저 달 기지를 건설해야 합니다. 그러면 산소, 난방 및 중력이 제공됩니다. 건설된 각 레벨마다 생물권 내에 더 큰 생활 및 개발 영역이 제공됩니다. 건설된 각 레벨은 다른 건물을 위한 3개의 필드를 허용합니다. 각 레벨마다 달 기지는 1개의 필드를 차지합니다.
+건설되면 달 기지는 철거할 수 없습니다.',
     ],
 
     'sensor_phalanx' => [
-        'title'            => 'Sensor Phalanx',
-        'description'      => 'Using the sensor phalanx, fleets of other empires can be discovered and observed. The bigger the sensor phalanx array, the larger the range it can scan.',
-        'description_long' => 'Utilizing high-resolution sensors, the Sensor Phalanx first scans the spectrum of light, composition of gases, and radiation emissions from a distant world and transmits the data to a supercomputer for processing. Once the information is obtained, the supercomputer compares changes in the spectrum, gas composition, and radiation emissions, to a base line chart of known changes of the spectrum created by various ship movements. The resulting data then displays activity of any fleet within the range of the phalanx. To prevent the supercomputer from overheating during the process, it is cooled by utilizing 5k of processed Deuterium.
-To use the Phalanx, click on any planet in the Galaxy View within your sensors range.',
+        'title'            => '센서 팔랑크스',
+        'description'      => '센서 팔랑크스를 사용하면 다른 제국의 함대를 발견하고 관찰할 수 있습니다. 센서 팔랑크스 어레이가 클수록 스캔할 수 있는 범위가 더 넓습니다.',
+        'description_long' => '고해상도 센서를 활용하여 센서 팔랑크스는 먼저 먼 세계에서 빛의 스펙트럼, 가스 구성 및 방사선 방출을 스캔하고 데이터를 슈퍼컴퓨터로 전송하여 처리합니다. 정보를 얻은 후 슈퍼컴퓨터는 스펙트럼, 가스 구성 및 방사선 방출의 변화를 다양한 함선 이동으로 인한 스펙트럼 변화의 기준선 차트와 비교합니다. 그런 다음 결과 데이터는 팔랑크스 범위 내의 모든 함대의 활동을 표시합니다. 프로세스 중에 슈퍼컴퓨터가 과열되는 것을 방지하기 위해 5k의 처리된 중수소를 사용하여 냉각됩니다.
+팔랑크스를 사용하려면 센서 범위 내의 은하 보기에서 행성을 클릭하십시오.',
     ],
 
     'jump_gate' => [
-        'title'            => 'Jump Gate',
-        'description'      => 'Jump gates are huge transceivers capable of sending even the biggest fleet in no time to a distant jump gate.',
-        'description_long' => 'A Jump Gate is a system of giant transceivers capable of sending even the largest fleets to a receiving Gate anywhere in the universe without loss of time. Utilizing technology similar to that of a Worm Hole to achieve the jump, deuterium is not required. A recharge period of a few minutes must pass between jumps to allow for regeneration. Transporting resources through the Gate is not possible either. With every upgrade level the jump gate\'s cooldown time can be reduced.',
+        'title'            => '점프 게이트',
+        'description'      => '점프 게이트는 가장 큰 함대도 먼 점프 게이트로 즉시 보낼 수 있는 거대한 트랜시버입니다.',
+        'description_long' => '점프 게이트는 시간 손실 없이 우주의 어디에나 있는 수신 게이트로 가장 큰 함대도 보낼 수 있는 거대한 트랜시버 시스템입니다. 점프를 달성하기 위해 웜홀과 유사한 기술을 활용하므로 중수소가 필요하지 않습니다. 점프 사이에 재생을 위해 몇 분의 재충전 기간이 경과해야 합니다. 게이트를 통한 자원 운송도 불가능합니다. 업그레이드 레벨마다 점프 게이트의 쿨다운 시간을 줄일 수 있습니다.',
     ],
 
     // -------------------------------------------------------------------------
@@ -149,334 +149,334 @@ To use the Phalanx, click on any planet in the Galaxy View within your sensors r
     // -------------------------------------------------------------------------
 
     'energy_technology' => [
-        'title'            => 'Energy Technology',
-        'description'      => 'The command of different types of energy is necessary for many new technologies.',
-        'description_long' => 'As various fields of research advanced, it was discovered that the current technology of energy distribution was not sufficient enough to begin certain specialized research. With each upgrade of your Energy Technology, new research can be conducted which unlocks development of more sophisticated ships and defenses.',
+        'title'            => '에너지 기술',
+        'description'      => '다양한 유형의 에너지 제어는 많은 새로운 기술에 필요합니다.',
+        'description_long' => '다양한 연구 분야가 발전함에 따라 현재의 에너지 분배 기술이 특정 전문 연구를 시작하기에 충분하지 않다는 것이 발견되었습니다. 에너지 기술을 업그레이드할 때마다 더 정교한 함선과 방어를 개발할 수 있는 새로운 연구를 수행할 수 있습니다.',
     ],
 
     'laser_technology' => [
-        'title'            => 'Laser Technology',
-        'description'      => 'Focusing light produces a beam that causes damage when it strikes an object.',
-        'description_long' => 'Lasers (light amplification by stimulated emission of radiation) produce an intense, energy rich emission of coherent light. These devices can be used in all sorts of areas, from optical computers to heavy laser weapons, which effortlessly cut through armour technology. The laser technology provides an important basis for research of other weapon technologies.',
+        'title'            => '레이저 기술',
+        'description'      => '빛을 집중시키면 물체에 닿을 때 손상을 입히는 빔이 생성됩니다.',
+        'description_long' => '레이저(light amplification by stimulated emission of radiation)는 강렬한 에너지가 풍부한 간섭성 광 방출을 생성합니다. 이러한 장치는 광학 컴퓨터에서 장갑 기술을 손쉽게 절단하는 중 레이저 무기에 이르기까지 모든 종류의 영역에서 사용할 수 있습니다. 레이저 기술은 다른 무기 기술 연구를 위한 중요한 기반을 제공합니다.',
     ],
 
     'ion_technology' => [
-        'title'            => 'Ion Technology',
-        'description'      => 'The concentration of ions allows for the construction of cannons, which can inflict enormous damage and reduce the deconstruction costs per level by 4%.',
-        'description_long' => 'Ions can be concentrated and accelerated into a deadly beam. These beams can then inflict enormous damage. Our scientists have also developed a technique that will clearly reduce the deconstruction costs for buildings and systems. For each research level, the deconstruction costs will sink by 4%.',
+        'title'            => '이온 기술',
+        'description'      => '이온의 농축은 엄청난 피해를 줄 수 있는 대포의 건설을 가능하게 하며, 레벨당 해체 비용을 4% 줄입니다.',
+        'description_long' => '이온은 농축되어 치명적인 빔으로 가속될 수 있습니다. 그런 다음 이러한 빔은 엄청난 피해를 줄 수 있습니다. 우리 과학자들은 또한 건물과 시스템의 해체 비용을 명확하게 줄이는 기술을 개발했습니다. 각 연구 레벨마다 해체 비용은 4% 감소합니다.',
     ],
 
     'hyperspace_technology' => [
-        'title'            => 'Hyperspace Technology',
-        'description'      => 'By integrating the 4th and 5th dimensions it is now possible to research a new kind of drive that is more economical and efficient.',
-        'description_long' => 'In theory, the idea of hyperspace travel relies on the existence of a separate and adjacent dimension. When activated, a hyperspace drive shunts the starship into this other dimension, where it can cover vast distances in an amount of time greatly reduced from the time it would take in "normal" space. Once it reaches the point in hyperspace that corresponds to its destination in real space, it re-emerges.
-Once a sufficient level of Hyperspace Technology is researched, the Hyperspace Drive is no longer just a theory. Each improvement to this drive increases the load capacity of your ships by 5% of the base value.',
+        'title'            => '초공간 기술',
+        'description'      => '4차원과 5차원을 통합하여 이제 보다 경제적이고 효율적인 새로운 종류의 드라이브를 연구할 수 있습니다.',
+        'description_long' => '이론상 초공간 여행의 아이디어는 별도의 인접 차원의 존재에 의존합니다. 활성화되면 초공간 드라이브는 우주선을 이 다른 차원으로 이동시키며, 여기서 "정상" 공간에서 걸리는 시간보다 크게 단축된 시간에 광대한 거리를 커버할 수 있습니다. 실제 공간의 목적지에 해당하는 초공간의 지점에 도달하면 다시 나타납니다.
+충분한 수준의 초공간 기술이 연구되면 초공간 드라이브는 더 이상 이론만이 아닙니다. 이 드라이브의 각 개선은 함선의 적재 용량을 기본 값의 5%만큼 증가시킵니다.',
     ],
 
     'plasma_technology' => [
-        'title'            => 'Plasma Technology',
-        'description'      => 'A further development of ion technology which accelerates high-energy plasma, which then inflicts devastating damage and additionally optimises the production of metal, crystal and deuterium (1%/0.66%/0.33% per level).',
-        'description_long' => 'A further development of ion technology that doesn\'t speed up ions but high-energy plasma instead, which can then inflict devastating damage on impact with an object. Our scientists have also found a way to noticeably improve the mining of metal and crystal using this technology.
+        'title'            => '플라즈마 기술',
+        'description'      => '고에너지 플라즈마를 가속하는 이온 기술의 추가 개발로, 엄청난 피해를 주고 금속, 크리스탈 및 중수소의 생산을 추가로 최적화합니다 (레벨당 1%/0.66%/0.33%).',
+        'description_long' => '이온을 가속하는 것이 아니라 고에너지 플라즈마를 가속하는 이온 기술의 추가 개발로, 물체에 충돌 시 엄청난 피해를 줄 수 있습니다. 우리 과학자들은 또한 이 기술을 사용하여 금속과 크리스탈 채굴을 눈에 띄게 개선하는 방법을 발견했습니다.
 
-Metal production increases by 1%, crystal production by 0.66% and deuterium production by 0.33% per construction level of the plasma technology.',
+금속 생산은 1%, 크리스탈 생산은 0.66%, 중수소 생산은 플라즈마 기술의 건설 레벨당 0.33%씩 증가합니다.',
     ],
 
     'combustion_drive' => [
-        'title'            => 'Combustion Drive',
-        'description'      => 'The development of this drive makes some ships faster, although each level increases speed by only 10 % of the base value.',
-        'description_long' => 'The Combustion Drive is the oldest of technologies, but is still in use. With the Combustion Drive, exhaust is formed from propellants carried within the ship prior to use. In a closed chamber, the pressures are equal in each direction and no acceleration occurs. If an opening is provided at the bottom of the chamber then the pressure is no longer opposed on that side. The remaining pressure gives a resultant thrust in the side opposite the opening, which propels the ship forward by expelling the exhaust rearwards at extreme high speed.
+        'title'            => '연소 엔진',
+        'description'      => '이 드라이브의 개발은 일부 함선을 더 빠르게 만들지만 각 레벨은 기본 값의 10%만큼만 속도를 증가시킵니다.',
+        'description_long' => '연소 엔진은 가장 오래된 기술이지만 여전히 사용되고 있습니다. 연소 엔진을 사용하면 배기가스는 사용 전에 함선 내에 운반된 추진제로부터 형성됩니다. 밀폐된 챔버에서 압력은 각 방향에서 동일하며 가속이 발생하지 않습니다. 챔버 하단에 개구부가 제공되면 압력은 더 이상 그쪽에서 반대되지 않습니다. 나머지 압력은 개구부 반대편에서 결과적인 추력을 제공하여 배기가스를 극도로 높은 속도로 뒤쪽으로 배출하여 함선을 앞으로 추진합니다.
 
-With each level of the Combustion Drive developed, the speed of small and large cargo ships, light fighters, recyclers, and espionage probes are increased by 10%.',
+연소 엔진의 각 레벨이 개발되면 소형 및 대형 수송선, 경전투기, 재활용선 및 정찰 탐사선의 속도가 10% 증가합니다.',
     ],
 
     'impulse_drive' => [
-        'title'            => 'Impulse Drive',
-        'description'      => 'The impulse drive is based on the reaction principle. Further development of this drive makes some ships faster, although each level increases speed by only 20 % of the base value.',
-        'description_long' => 'The impulse drive is based on the recoil principle, by which the stimulated emission of radiation is mainly produced as a waste product from the core fusion to gain energy. Additionally, other masses can be injected. With each level of the Impulse Drive developed, the speed of bombers, cruisers, heavy fighters, and colony ships are increased by 20% of the base value. Additionally, the small transporters are fitted with impulse drives as soon as their research level reaches 5. As soon as Impulse Drive research has reached level 17, Recyclers are refitted with Impulse Drives.
+        'title'            => '임펄스 엔진',
+        'description'      => '임펄스 엔진은 반동 원리를 기반으로 합니다. 이 드라이브의 추가 개발은 일부 함선을 더 빠르게 만들지만 각 레벨은 기본 값의 20%만큼만 속도를 증가시킵니다.',
+        'description_long' => '임펄스 엔진은 반동 원리를 기반으로 하며, 에너지를 얻기 위해 코어 융합에서 폐기물로 주로 생성되는 자극된 방사선 방출에 의해 이루어집니다. 또한 다른 질량을 주입할 수 있습니다. 임펄스 엔진의 각 레벨이 개발되면 폭격기, 순양함, 중전투기 및 식민선의 속도가 기본 값의 20%씩 증가합니다. 또한 연구 레벨이 5에 도달하면 소형 수송선에 임펄스 엔진이 장착됩니다. 임펄스 엔진 연구가 레벨 17에 도달하면 재활용선은 임펄스 엔진으로 재장착됩니다.
 
-Interplanetary missiles also travel farther with each level.',
+행성간 미사일도 각 레벨마다 더 멀리 이동합니다.',
     ],
 
     'hyperspace_drive' => [
-        'title'            => 'Hyperspace Drive',
-        'description'      => 'Hyperspace drive warps space around a ship. The development of this drive makes some ships faster, although each level increases speed by only 30 % of the base value.',
-        'description_long' => 'In the immediate vicinity of the ship, the space is warped so that long distances can be covered very quickly. The more the Hyperspace Drive is developed, the stronger the warped nature of the space, whereby the speed of the ships equipped with it (Battlecruisers, Battleships, Destroyers, Deathstars, Pathfinders and Reapers) increase by 30% per level. Additionally, the bomber is built with a Hyperspace Drive as soon as research reaches level 8. As soon as Hyperspace Drive research reaches level 15, the Recycler is refitted with a Hyperspace Drive.',
+        'title'            => '초공간 엔진',
+        'description'      => '초공간 엔진은 함선 주위의 공간을 왜곡합니다. 이 드라이브의 개발은 일부 함선을 더 빠르게 만들지만 각 레벨은 기본 값의 30%만큼만 속도를 증가시킵니다.',
+        'description_long' => '함선의 바로 근처에서 공간이 왜곡되어 먼 거리를 매우 빠르게 이동할 수 있습니다. 초공간 엔진이 더 많이 개발될수록 공간의 왜곡된 특성이 더 강해지며, 이에 장착된 함선(전투순양함, 전함, 구축함, 데스스타, 개척선 및 리퍼)의 속도가 레벨당 30% 증가합니다. 또한 연구가 레벨 8에 도달하면 폭격기는 초공간 엔진으로 건조됩니다. 초공간 엔진 연구가 레벨 15에 도달하면 재활용선은 초공간 엔진으로 재장착됩니다.',
     ],
 
     'espionage_technology' => [
-        'title'            => 'Espionage Technology',
-        'description'      => 'Information about other planets and moons can be gained using this technology.',
-        'description_long' => 'Espionage Technology is, in the first instance, an advancement of sensor technology. The more advanced this technology is, the more information the user receives about activities in his environment.
-The differences between your own spy level and opposing spy levels is crucial for probes. The more advanced your own espionage technology is, the more information the report can gather and the smaller the chance is that your espionage activities are discovered. The more probes that you send on one mission, the more details they can gather from the target planet. But at the same time it also increases the chance of discovery.
-Espionage technology also improves the chance of locating foreign fleets. The espionage level is vital in determining this. From level 2 onwards, the exact total number of attacking ships is displayed as well as the normal attack notification. And from level 4 onwards, the type of attacking ships as well as the total number is shown and from level 8 onwards the exact number of different ship types is shown.
-This technology is indispensable for an upcoming attack, as it informs you whether the victim fleet has defense available or not. That is why this technology should be researched very early on.',
+        'title'            => '첩보 기술',
+        'description'      => '이 기술을 사용하여 다른 행성과 달에 대한 정보를 얻을 수 있습니다.',
+        'description_long' => '첩보 기술은 우선 센서 기술의 발전입니다. 이 기술이 더 발전할수록 사용자는 자신의 환경에서의 활동에 대한 더 많은 정보를 받습니다.
+자신의 스파이 레벨과 상대 스파이 레벨 간의 차이는 탐사선에 중요합니다. 자신의 첩보 기술이 더 발전할수록 보고서가 더 많은 정보를 수집할 수 있으며 첩보 활동이 발견될 가능성이 줄어듭니다. 한 임무에 더 많은 탐사선을 보낼수록 대상 행성에서 더 많은 세부 정보를 수집할 수 있습니다. 그러나 동시에 발견될 가능성도 증가합니다.
+첩보 기술은 또한 외국 함대를 찾을 가능성을 향상시킵니다. 첩보 레벨은 이를 결정하는 데 중요합니다. 레벨 2부터 정상적인 공격 알림과 함께 공격하는 함선의 정확한 총 수가 표시됩니다. 레벨 4부터 공격하는 함선의 유형과 총 수가 표시되며 레벨 8부터 다양한 함선 유형의 정확한 수가 표시됩니다.
+이 기술은 다가오는 공격에 필수적입니다. 피해자 함대가 방어를 사용할 수 있는지 여부를 알려주기 때문입니다. 그렇기 때문에 이 기술은 매우 일찍 연구되어야 합니다.',
     ],
 
     'computer_technology' => [
-        'title'            => 'Computer Technology',
-        'description'      => 'More fleets can be commanded by increasing computer capacities. Each level of computer technology increases the maximum number of fleets by one.',
-        'description_long' => 'Once launched on any mission, fleets are controlled primarily by a series of computers located on the originating planet. These massive computers calculate the exact time of arrival, controls course corrections as needed, calculates trajectories, and regulates flight speeds.
-With each level researched, the flight computer is upgraded to allow an additional slot to be launched. Computer technology should be continuously developed throughout the building of your empire.',
+        'title'            => '컴퓨터 기술',
+        'description'      => '컴퓨터 용량을 증가시켜 더 많은 함대를 지휘할 수 있습니다. 컴퓨터 기술의 각 레벨은 함대의 최대 수를 1개씩 증가시킵니다.',
+        'description_long' => '임무에 시작되면 함대는 주로 원산지 행성에 위치한 일련의 컴퓨터에 의해 제어됩니다. 이러한 대규모 컴퓨터는 정확한 도착 시간을 계산하고, 필요에 따라 코스 수정을 제어하고, 궤적을 계산하고, 비행 속도를 조절합니다.
+각 레벨이 연구되면 비행 컴퓨터가 업그레이드되어 추가 슬롯이 시작되도록 허용됩니다. 컴퓨터 기술은 제국을 건설하는 동안 지속적으로 개발되어야 합니다.',
     ],
 
     'astrophysics' => [
-        'title'            => 'Astrophysics',
-        'description'      => 'With an astrophysics research module, ships can undertake long expeditions. Every second level of this technology will allow you to colonise an extra planet.',
-        'description_long' => 'Further findings in the field of astrophysics allow for the construction of laboratories that can be fitted on more and more ships. This makes long expeditions far into unexplored areas of space possible. In addition these advancements can be used to further colonise the universe. For every two levels of this technology an additional planet can be made usable.',
+        'title'            => '천체물리학',
+        'description'      => '천체물리학 연구 모듈을 사용하면 함선이 긴 원정을 수행할 수 있습니다. 이 기술의 두 번째 레벨마다 추가 행성을 식민지화할 수 있습니다.',
+        'description_long' => '천체물리학 분야의 추가 발견은 점점 더 많은 함선에 장착할 수 있는 실험실의 건설을 가능하게 합니다. 이것은 우주의 탐험되지 않은 지역으로의 긴 원정을 가능하게 합니다. 또한 이러한 발전은 우주를 더욱 식민지화하는 데 사용될 수 있습니다. 이 기술의 두 레벨마다 추가 행성을 사용할 수 있습니다.',
     ],
 
     'intergalactic_research_network' => [
-        'title'            => 'Intergalactic Research Network',
-        'description'      => 'Researchers on different planets communicate via this network.',
-        'description_long' => 'This is your deep space network to communicate research results to your colonies. With the IRN, faster research times can be achieved by linking the highest level research labs equal to the level of the IRN developed.
-In order to function, each colony must be able to conduct the research independently.',
+        'title'            => '은하간 연구 네트워크',
+        'description'      => '다른 행성의 연구원들은 이 네트워크를 통해 통신합니다.',
+        'description_long' => '이것은 연구 결과를 식민지에 전달하기 위한 심우주 네트워크입니다. IRN을 사용하면 개발된 IRN 레벨과 동일한 최고 레벨의 연구소를 연결하여 더 빠른 연구 시간을 달성할 수 있습니다.
+작동하려면 각 식민지가 독립적으로 연구를 수행할 수 있어야 합니다.',
     ],
 
     'graviton_technology' => [
-        'title'            => 'Graviton Technology',
-        'description'      => 'Firing a concentrated charge of graviton particles can create an artificial gravity field, which can destroy ships or even moons.',
-        'description_long' => 'A graviton is an elementary particle that is massless and has no cargo. It determines the gravitational power. By firing a concentrated load of gravitons, an artificial gravitational field can be constructed. Not unlike a black hole, it draws mass into itself. Thus it can destroy ships and even entire moons. To produce a sufficient amount of gravitons, huge amounts of energy are required. Graviton Research is required to construct a destructive Deathstar.',
+        'title'            => '그라비톤 기술',
+        'description'      => '그라비톤 입자의 집중된 전하를 발사하면 함선이나 달도 파괴할 수 있는 인공 중력장을 만들 수 있습니다.',
+        'description_long' => '그라비톤은 질량이 없고 화물이 없는 기본 입자입니다. 중력을 결정합니다. 집중된 그라비톤 부하를 발사하여 인공 중력장을 구성할 수 있습니다. 블랙홀과 다르지 않게 질량을 자체로 끌어당깁니다. 따라서 함선과 전체 달도 파괴할 수 있습니다. 충분한 양의 그라비톤을 생산하려면 막대한 양의 에너지가 필요합니다. 그라비톤 연구는 파괴적인 데스스타를 건설하는 데 필요합니다.',
     ],
 
     'weapon_technology' => [
-        'title'            => 'Weapon Technology',
-        'description'      => 'Weapons technology makes weapons systems more efficient. Each level of weapons technology increases the weapon strength of units by 10 % of the base value.',
-        'description_long' => 'Weapons Technology is a key research technology and is critical to your survival against enemy Empires. With each level of Weapons Technology researched, the weapons systems on ships and your defense mechanisms become increasingly more efficient. Each level increases the base strength of your weapons by 10% of the base value.',
+        'title'            => '무기 기술',
+        'description'      => '무기 기술은 무기 시스템을 더 효율적으로 만듭니다. 무기 기술의 각 레벨은 유닛의 무기 강도를 기본 값의 10%씩 증가시킵니다.',
+        'description_long' => '무기 기술은 핵심 연구 기술이며 적 제국에 대한 생존에 중요합니다. 무기 기술의 각 레벨이 연구되면 함선의 무기 시스템과 방어 메커니즘이 점점 더 효율적이 됩니다. 각 레벨은 무기의 기본 강도를 기본 값의 10%씩 증가시킵니다.',
     ],
 
     'shielding_technology' => [
-        'title'            => 'Shield Technology',
-        'description'      => 'Shield technology makes the shields on ships and defensive facilities more efficient. Each level of shield technology increases the strength of the shields by 10 % of the base value.',
-        'description_long' => 'With the invention of the magnetosphere generator, scientists learned that an artificial shield could be produced to protect the crew in space ships not only from the harsh solar radiation environment in deep space, but also provide protection from enemy fire during an attack. Once scientists finally perfected the technology, a magnetosphere generator was installed on all ships and defense systems.
+        'title'            => '방어막 기술',
+        'description'      => '방어막 기술은 함선과 방어 시설의 방어막을 더 효율적으로 만듭니다. 방어막 기술의 각 레벨은 방어막의 강도를 기본 값의 10%씩 증가시킵니다.',
+        'description_long' => '자기권 발생기의 발명으로 과학자들은 심우주의 가혹한 태양 복사 환경으로부터 우주선의 승무원을 보호할 뿐만 아니라 공격 중 적의 공격으로부터 보호를 제공할 수 있는 인공 방어막을 생산할 수 있다는 것을 배웠습니다. 과학자들이 마침내 기술을 완성하자 자기권 발생기가 모든 함선과 방어 시스템에 설치되었습니다.
 
-As the technology is advanced to each level, the magnetosphere generator is upgraded which provides an additional 10% strength to the shields base value.',
+기술이 각 레벨로 발전함에 따라 자기권 발생기가 업그레이드되어 방어막 기본 값에 추가로 10%의 강도를 제공합니다.',
     ],
 
     'armor_technology' => [
-        'title'            => 'Armour Technology',
-        'description'      => 'Special alloys improve the armour on ships and defensive structures. The effectiveness of the armour can be increased by 10 % per level.',
-        'description_long' => 'The environment of deep space is harsh. Pilots and crew on various missions not only faced intense solar radiation, they also faced the prospect of being hit by space debris, or destroyed by enemy fire in an attack. With the discovery of an aluminum-lithium titanium carbide alloy, which was found to be both light weight and durable, this afforded the crew a certain degree of protection. With each level of Armour Technology developed, a higher quality alloy is produced, which increases the armours strength by 10%.',
+        'title'            => '장갑 기술',
+        'description'      => '특수 합금은 함선과 방어 구조물의 장갑을 개선합니다. 장갑의 효율성은 레벨당 10%씩 증가할 수 있습니다.',
+        'description_long' => '심우주의 환경은 가혹합니다. 다양한 임무의 조종사와 승무원은 강렬한 태양 복사에 직면했을 뿐만 아니라 우주 잔해에 맞거나 공격에서 적의 공격에 의해 파괴될 가능성에 직면했습니다. 가볍고 내구성이 있는 것으로 발견된 알루미늄-리튬 티타늄 카바이드 합금의 발견으로 승무원에게 일정 정도의 보호가 제공되었습니다. 장갑 기술의 각 레벨이 개발되면 더 높은 품질의 합금이 생성되어 장갑 강도가 10% 증가합니다.',
     ],
 
     // ---- Civil Ships ----
 
     'small_cargo' => [
-        'title'            => 'Small Cargo',
-        'description'      => 'The small cargo is an agile ship which can quickly transport resources to other planets.',
-        'description_long' => 'Transporters are about as large as fighters, yet they forego high-performance drives and on-board weaponry for gains in their freighting capacity. As a result, a transporter should only be sent into battles when it is accompanied by combat-ready ships.
+        'title'            => '소형 수송선',
+        'description'      => '소형 수송선은 자원을 다른 행성으로 빠르게 운송할 수 있는 민첩한 함선입니다.',
+        'description_long' => '수송선은 전투기만큼 크지만 적재 용량의 이득을 위해 고성능 드라이브와 선상 무기를 포기합니다. 결과적으로 수송선은 전투 준비가 된 함선이 동반할 때만 전투에 보내져야 합니다.
 
-As soon as the Impulse Drive reaches research level 5, the small transporter travels with increased base speed and is geared with an Impulse Drive.',
+임펄스 엔진이 연구 레벨 5에 도달하면 소형 수송선은 증가된 기본 속도로 이동하며 임펄스 엔진이 장착됩니다.',
     ],
 
     'large_cargo' => [
-        'title'            => 'Large Cargo',
-        'description'      => 'This cargo ship has a much larger cargo capacity than the small cargo, and is generally faster thanks to an improved drive.',
-        'description_long' => 'As time evolved, the raids on colonies resulted in larger and larger amounts of resources being captured. As a result, Small Cargos were being sent out in mass numbers to compensate for the larger captures. It was quickly learned that a new class of ship was needed to maximize resources captured in raids, yet also be cost effective. After much development, the Large Cargo was born.
+        'title'            => '대형 수송선',
+        'description'      => '이 화물선은 소형 수송선보다 훨씬 큰 화물 용량을 가지고 있으며 개선된 드라이브 덕분에 일반적으로 더 빠릅니다.',
+        'description_long' => '시간이 발전함에 따라 식민지에 대한 습격으로 점점 더 많은 양의 자원이 포획되었습니다. 결과적으로 소형 수송선은 더 큰 포획을 보상하기 위해 대량으로 보내졌습니다. 습격에서 포획된 자원을 극대화하면서도 비용 효율적인 새로운 등급의 함선이 필요하다는 것이 빠르게 학습되었습니다. 많은 개발 끝에 대형 수송선이 탄생했습니다.
 
-To maximize the resources that can be stored in the holds, this ship has little in the way of weapons or armour. Thanks to the highly developed combustion engine installed, it serves as the most economical resource supplier between planets, and most effective in raids on hostile worlds.',
+홀드에 저장할 수 있는 자원을 극대화하기 위해 이 함선은 무기나 장갑이 거의 없습니다. 설치된 고도로 개발된 연소 엔진 덕분에 행성 간 가장 경제적인 자원 공급 업체이자 적대적인 세계에 대한 습격에 가장 효과적입니다.',
     ],
 
     'colony_ship' => [
-        'title'            => 'Colony Ship',
-        'description'      => 'Vacant planets can be colonised with this ship.',
-        'description_long' => 'In the 20th Century, Man decided to go for the stars. First, it was landing on the Moon. After that, a space station was built. Mars was colonized soon afterwards. It was soon determined that our growth depended on colonizing other worlds. Scientists and engineers all over the world gathered together to develop mans greatest achievement ever. The Colony Ship is born.
+        'title'            => '식민선',
+        'description'      => '이 함선으로 빈 행성을 식민지화할 수 있습니다.',
+        'description_long' => '20세기에 인류는 별을 향하기로 결정했습니다. 먼저 달에 착륙했습니다. 그 후 우주 정거장이 건설되었습니다. 화성은 곧 식민지화되었습니다. 우리의 성장은 다른 세계를 식민지화하는 데 달려 있다는 것이 곧 결정되었습니다. 전 세계의 과학자와 엔지니어들이 모여 인류의 가장 위대한 업적을 개발했습니다. 식민선이 탄생했습니다.
 
-This ship is used to prepare a newly discovered planet for colonization. Once it arrives at the destination, the ship is instantly transformed into habitual living space to assist in populating and mining the new world. The maximum number of planets is thereby determined by the progress in astrophysics research. Two new levels of Astrotechnology allow for the colonization of one additional planet.',
+이 함선은 새로 발견된 행성을 식민지화를 위해 준비하는 데 사용됩니다. 목적지에 도착하면 함선은 즉시 거주 생활 공간으로 변환되어 새로운 세계를 거주하고 채굴하는 데 도움이 됩니다. 행성의 최대 수는 천체물리학 연구의 진행 상황에 의해 결정됩니다. 천체기술의 두 가지 새로운 레벨은 하나의 추가 행성을 식민지화할 수 있게 합니다.',
     ],
 
     'recycler' => [
-        'title'            => 'Recycler',
-        'description'      => 'Recyclers are the only ships able to harvest debris fields floating in a planet\'s orbit after combat.',
-        'description_long' => 'Combat in space took on ever larger scales. Thousands of ships were destroyed and the resources of their remains seemed to be lost to the debris fields forever. Normal cargo ships couldn\'t get close enough to these fields without risking substantial damage.
-A recent development in shield technologies efficiently bypassed this issue. A new class of ships were created that were similar to the Transporters: the Recyclers. Their efforts helped to gather the thought-lost resources and then salvage them. The debris no longer posed any real danger thanks to the new shields.
+        'title'            => '재활용선',
+        'description'      => '재활용선은 전투 후 행성 궤도에 떠 있는 잔해 필드를 수확할 수 있는 유일한 함선입니다.',
+        'description_long' => '우주에서의 전투는 점점 더 큰 규모로 진행되었습니다. 수천 척의 함선이 파괴되었고 그들의 잔해 자원은 잔해 필드에 영원히 손실된 것처럼 보였습니다. 일반 화물선은 상당한 손상의 위험 없이 이러한 필드에 충분히 가까이 갈 수 없었습니다.
+방어막 기술의 최근 발전은 이 문제를 효율적으로 우회했습니다. 수송선과 유사한 새로운 등급의 함선이 만들어졌습니다: 재활용선. 그들의 노력은 잃어버린 것으로 생각되었던 자원을 수집한 다음 회수하는 데 도움이 되었습니다. 잔해는 더 이상 새로운 방어막 덕분에 실제 위험을 제기하지 않았습니다.
 
-As soon as Impulse Drive research has reached level 17, Recyclers are refitted with Impulse Drives. As soon as Hyperspace Drive research has reached level 15, Recyclers are refitted with Hyperspace Drives.',
+임펄스 엔진 연구가 레벨 17에 도달하면 재활용선은 임펄스 엔진으로 재장착됩니다. 초공간 엔진 연구가 레벨 15에 도달하면 재활용선은 초공간 엔진으로 재장착됩니다.',
     ],
 
     'espionage_probe' => [
-        'title'            => 'Espionage Probe',
-        'description'      => 'Espionage probes are small, agile drones that provide data on fleets and planets over great distances.',
-        'description_long' => 'Espionage probes are small, agile drones that provide data on fleets and planets. Fitted with specially designed engines, it allows them to cover vast distances in only a few minutes. Once in orbit around the target planet, they quickly collect data and transmit the report back via your Deep Space Network for evaluation. But there is a risk to the intelligent gathering aspect. During the time the report is transmitted back to your network, the signal can be detected by the target and the probes can be destroyed.',
+        'title'            => '정찰 탐사선',
+        'description'      => '정찰 탐사선은 먼 거리에서 함대와 행성에 대한 데이터를 제공하는 작고 민첩한 드론입니다.',
+        'description_long' => '정찰 탐사선은 함대와 행성에 대한 데이터를 제공하는 작고 민첩한 드론입니다. 특수 설계된 엔진이 장착되어 몇 분 만에 광대한 거리를 커버할 수 있습니다. 대상 행성 주위의 궤도에 들어가면 빠르게 데이터를 수집하고 평가를 위해 심우주 네트워크를 통해 보고서를 다시 전송합니다. 그러나 지능 수집 측면에는 위험이 있습니다. 보고서가 네트워크로 다시 전송되는 동안 신호가 대상에 의해 감지될 수 있으며 탐사선이 파괴될 수 있습니다.',
     ],
 
     'solar_satellite' => [
-        'title'            => 'Solar Satellite',
-        'description'      => 'Solar satellites are simple platforms of solar cells, located in a high, stationary orbit. They gather sunlight and transmit it to the ground station via laser.',
-        'description_long' => 'Scientists discovered a method of transmitting electrical energy to the colony using specially designed satellites in a geosynchronous orbit. Solar Satellites gather solar energy and transmit it to a ground station using advanced laser technology. The efficiency of a solar satellite depends on the strength of the solar radiation it receives. In principle, energy production in orbits closer to the sun is greater than for planets in orbits distant from the sun.
-Due to their good cost/performance ratio solar satellites can solve a lot of energy problems. But beware: Solar satellites can be easily destroyed in battle.',
+        'title'            => '태양광 위성',
+        'description'      => '태양광 위성은 높고 정지된 궤도에 위치한 태양 전지의 간단한 플랫폼입니다. 햇빛을 모아 레이저를 통해 지상국으로 전송합니다.',
+        'description_long' => '과학자들은 정지 궤도에서 특수 설계된 위성을 사용하여 식민지에 전기 에너지를 전송하는 방법을 발견했습니다. 태양광 위성은 태양 에너지를 수집하고 고급 레이저 기술을 사용하여 지상국으로 전송합니다. 태양광 위성의 효율성은 수신하는 태양 복사의 강도에 따라 달라집니다. 원칙적으로 태양에 가까운 궤도에서 에너지 생산은 태양에서 먼 궤도의 행성보다 더 큽니다.
+우수한 비용/성능 비율로 인해 태양광 위성은 많은 에너지 문제를 해결할 수 있습니다. 그러나 주의하십시오: 태양광 위성은 전투에서 쉽게 파괴될 수 있습니다.',
     ],
 
     'crawler' => [
-        'title'            => 'Crawler',
-        'description'      => 'Crawlers increase the production of metal, crystal and Deuterium on their tasked planet each by 0.02%, 0.02% and 0.02% respectively. As a collector, production also increases. The maximum total bonus depends on the overall level of your mines.',
-        'description_long' => 'The Crawler is a large trench vehicle that increases the production of mines and synthesizers. It is more agile than it looks but it is not particularly robust. Each Crawler increases metal production by 0.02%, crystal production by 0.02% and Deuterium production by 0.02%. As a collector, production also increases. The maximum total bonus depends on the overall level of your mines.',
+        'title'            => '크롤러',
+        'description'      => '크롤러는 할당된 행성에서 금속, 크리스탈 및 중수소의 생산을 각각 0.02%, 0.02% 및 0.02%씩 증가시킵니다. 수집기로서 생산도 증가합니다. 최대 총 보너스는 광산의 전체 레벨에 따라 다릅니다.',
+        'description_long' => '크롤러는 광산과 합성기의 생산을 증가시키는 대형 참호 차량입니다. 보이는 것보다 민첩하지만 특별히 견고하지는 않습니다. 각 크롤러는 금속 생산을 0.02%, 크리스탈 생산을 0.02%, 중수소 생산을 0.02% 증가시킵니다. 수집기로서 생산도 증가합니다. 최대 총 보너스는 광산의 전체 레벨에 따라 다릅니다.',
     ],
 
     'pathfinder' => [
-        'title'            => 'Pathfinder',
-        'description'      => 'The Pathfinder is a quick and agile ship, purpose-built for expeditions into unknown sectors of space.',
-        'description_long' => 'The Pathfinder is the latest development in exploration technology. This ship was specially designed for members of the Discoverer class to maximize their potential. Equipped with advanced scanning systems and a large cargo hold for salvaging resources, the Pathfinder excels at expeditions. Its sophisticated sensors can detect valuable resources and anomalies that would go unnoticed by other ships. The ship combines a high speed with good cargo capacity, making it perfect for quick exploration missions and resource gathering from distant sectors.',
+        'title'            => '개척선',
+        'description'      => '개척선은 미지의 우주 섹터로의 원정을 위해 특별히 제작된 빠르고 민첩한 함선입니다.',
+        'description_long' => '개척선은 탐험 기술의 최신 개발입니다. 이 함선은 발견자 클래스의 구성원이 잠재력을 극대화하도록 특별히 설계되었습니다. 고급 스캐닝 시스템과 자원 회수를 위한 대형 화물 홀드를 갖춘 개척선은 원정에서 탁월합니다. 정교한 센서는 다른 함선이 눈치채지 못할 귀중한 자원과 이상 현상을 감지할 수 있습니다. 함선은 높은 속도와 우수한 화물 용량을 결합하여 먼 섹터에서의 빠른 탐험 임무 및 자원 수집에 완벽합니다.',
     ],
 
     // ---- Military Ships ----
 
     'light_fighter' => [
-        'title'            => 'Light Fighter',
-        'description'      => 'This is the first fighting ship all emperors will build. The light fighter is an agile ship, but vulnerable on its own. In mass numbers, they can become a great threat to any empire. They are the first to accompany small and large cargoes to hostile planets with minor defenses.',
-        'description_long' => 'This is the first fighting ship all emperors will build. The light fighter is an agile ship, but vulnerable when it is on its own. In mass numbers, they can become a great threat to any empire. They are the first to accompany small and large cargoes to hostile planets with minor defenses.',
+        'title'            => '경전투기',
+        'description'      => '이것은 모든 황제가 건조할 첫 번째 전투 함선입니다. 경전투기는 민첩한 함선이지만 혼자서는 취약합니다. 대량으로 그들은 모든 제국에 큰 위협이 될 수 있습니다. 그들은 작은 방어로 적대적인 행성으로 소형 및 대형 수송선을 동반하는 첫 번째입니다.',
+        'description_long' => '이것은 모든 황제가 건조할 첫 번째 전투 함선입니다. 경전투기는 민첩한 함선이지만 혼자 있을 때 취약합니다. 대량으로 그들은 모든 제국에 큰 위협이 될 수 있습니다. 그들은 작은 방어로 적대적인 행성으로 소형 및 대형 수송선을 동반하는 첫 번째입니다.',
     ],
 
     'heavy_fighter' => [
-        'title'            => 'Heavy Fighter',
-        'description'      => 'This fighter is better armoured and has a higher attack strength than the light fighter.',
-        'description_long' => 'In developing the heavy fighter, researchers reached a point at which conventional drives no longer provided sufficient performance. In order to move the ship optimally, the impulse drive was used for the first time. This increased the costs, but also opened new possibilities. By using this drive, there was more energy left for weapons and shields; in addition, high-quality materials were used for this new family of fighters. With these changes, the heavy fighter represents a new era in ship technology and is the basis for cruiser technology.
+        'title'            => '중전투기',
+        'description'      => '이 전투기는 경전투기보다 더 나은 장갑을 가지고 있으며 더 높은 공격력을 가지고 있습니다.',
+        'description_long' => '중전투기를 개발하면서 연구원들은 기존 드라이브가 더 이상 충분한 성능을 제공하지 않는 지점에 도달했습니다. 함선을 최적으로 이동시키기 위해 임펄스 엔진이 처음으로 사용되었습니다. 이것은 비용을 증가시켰지만 새로운 가능성도 열었습니다. 이 드라이브를 사용하면 무기와 방어막에 더 많은 에너지가 남았습니다. 또한 고품질 재료가 이 새로운 전투기 제품군에 사용되었습니다. 이러한 변화로 중전투기는 함선 기술의 새로운 시대를 나타내며 순양함 기술의 기반입니다.
 
-Slightly larger than the light fighter, the heavy fighter has thicker hulls, providing more protection, and stronger weaponry.',
+경전투기보다 약간 크며 중전투기는 더 두꺼운 선체를 가지고 있어 더 많은 보호를 제공하고 더 강력한 무기를 제공합니다.',
     ],
 
     'cruiser' => [
-        'title'            => 'Cruiser',
-        'description'      => 'Cruisers are armoured almost three times as heavily as heavy fighters and have more than twice the firepower. In addition, they are very fast.',
-        'description_long' => 'With the development of the heavy laser and the ion cannon, light and heavy fighters encountered an alarmingly high number of defeats that increased with each raid. Despite many modifications, weapons strength and armour changes, it could not be increased fast enough to effectively counter these new defensive measures. Therefore, it was decided to build a new class of ship that combined more armour and more firepower. As a result of years of research and development, the Cruiser was born.
+        'title'            => '순양함',
+        'description'      => '순양함은 중전투기보다 거의 3배 더 많은 장갑을 가지고 있으며 화력이 2배 이상입니다. 또한 매우 빠릅니다.',
+        'description_long' => '중 레이저와 이온 대포의 개발로 경전투기와 중전투기는 각 습격과 함께 증가한 놀라울 정도로 많은 수의 패배에 직면했습니다. 많은 수정, 무기 강도 및 장갑 변경에도 불구하고 이러한 새로운 방어 조치를 효과적으로 대응하기에 충분히 빠르게 증가할 수 없었습니다. 따라서 더 많은 장갑과 더 많은 화력을 결합한 새로운 등급의 함선을 건조하기로 결정되었습니다. 수년간의 연구 개발 결과 순양함이 탄생했습니다.
 
-Cruisers are armoured almost three times of that of the heavy fighters, and possess more than twice the firepower of any combat ship in existence. They also possess speeds that far surpassed any spacecraft ever made. For almost a century, cruisers dominated the universe. However, with the development of Gauss cannons and plasma turrets, their predominance ended. They are still used today against fighter groups, but not as predominantly as before.',
+순양함은 중전투기의 거의 3배의 장갑을 가지고 있으며 존재하는 모든 전투 함선의 화력의 2배 이상을 보유합니다. 그들은 또한 지금까지 만들어진 모든 우주선을 훨씬 능가하는 속도를 보유하고 있습니다. 거의 한 세기 동안 순양함은 우주를 지배했습니다. 그러나 가우스 캐논과 플라즈마 포탑의 개발로 그들의 우위는 끝났습니다. 그들은 오늘날에도 전투기 그룹에 대해 여전히 사용되지만 이전만큼 주로 사용되지는 않습니다.',
     ],
 
     'battle_ship' => [
-        'title'            => 'Battleship',
-        'description'      => 'Battleships form the backbone of a fleet. Their heavy cannons, high speed, and large cargo holds make them opponents to be taken seriously.',
-        'description_long' => 'Once it became apparent that the cruiser was losing ground to the increasing number of defense structures it was facing, and with the loss of ships on missions at unacceptable levels, it was decided to build a ship that could face those same type of defense structures with as little loss as possible. After extensive development, the Battleship was born. Built to withstand the largest of battles, the Battleship features large cargo spaces, heavy cannons, and high hyperdrive speed. Once developed, it eventually turned out to be the backbone of every raiding Emperors fleet.',
+        'title'            => '전함',
+        'description'      => '전함은 함대의 중추를 형성합니다. 중포, 고속 및 대형 화물 홀드는 그들을 심각하게 받아들여야 할 적으로 만듭니다.',
+        'description_long' => '순양함이 직면한 방어 구조의 수가 증가함에 따라 입지를 잃고 있다는 것이 명백해지고 임무에서 함선의 손실이 받아들일 수 없는 수준에 이르자, 가능한 한 적은 손실로 동일한 유형의 방어 구조에 직면할 수 있는 함선을 건조하기로 결정되었습니다. 광범위한 개발 끝에 전함이 탄생했습니다. 가장 큰 전투를 견디도록 제작된 전함은 대형 화물 공간, 중포 및 높은 초공간 속도를 특징으로 합니다. 일단 개발되면 결국 모든 습격 황제 함대의 중추가 된 것으로 밝혀졌습니다.',
     ],
 
     'battlecruiser' => [
-        'title'            => 'Battlecruiser',
-        'description'      => 'The Battlecruiser is highly specialized in the interception of hostile fleets.',
-        'description_long' => 'This ship is one of the most advanced fighting ships ever to be developed, and is particularly deadly when it comes to destroying attacking fleets. With its improved laser cannons on board and advanced Hyperspace engine, the Battlecruiser is a serious force to be dealt with in any attack. Due to the ships design and its large weapons system, the cargo holds had to be cut, but this is compensated for by the lowered fuel consumption.',
+        'title'            => '전투순양함',
+        'description'      => '전투순양함은 적대적인 함대의 요격에 고도로 전문화되어 있습니다.',
+        'description_long' => '이 함선은 지금까지 개발된 가장 진보된 전투 함선 중 하나이며, 공격하는 함대를 파괴하는 데 특히 치명적입니다. 선상에 개선된 레이저 대포와 고급 초공간 엔진을 갖춘 전투순양함은 모든 공격에서 처리해야 할 심각한 힘입니다. 함선 설계와 대형 무기 시스템으로 인해 화물 홀드를 줄여야 했지만 이것은 낮아진 연료 소비로 보상됩니다.',
     ],
 
     'bomber' => [
-        'title'            => 'Bomber',
-        'description'      => 'The bomber was developed especially to destroy the planetary defenses of a world.',
-        'description_long' => 'Over the centuries, as defenses were starting to get larger and more sophisticated, fleets were starting to be destroyed at an alarming rate. It was decided that a new ship was needed to break defenses to ensure maximum results. After years of research and development, the Bomber was created.
+        'title'            => '폭격기',
+        'description'      => '폭격기는 세계의 행성 방어를 파괴하기 위해 특별히 개발되었습니다.',
+        'description_long' => '수세기에 걸쳐 방어가 더 크고 정교해지기 시작하면서 함대가 놀라운 속도로 파괴되기 시작했습니다. 최대 결과를 보장하기 위해 방어를 무너뜨리기 위한 새로운 함선이 필요하다고 결정되었습니다. 수년간의 연구 개발 끝에 폭격기가 만들어졌습니다.
 
-Using laser-guided targeting equipment and Plasma Bombs, the Bomber seeks out and destroys any defense mechanism it can find. As soon as the hyperspace drive is developed to Level 8, the Bomber is retrofitted with the hyperspace engine and can fly at higher speeds.',
+레이저 유도 표적 장비와 플라즈마 폭탄을 사용하여 폭격기는 찾을 수 있는 모든 방어 메커니즘을 찾아 파괴합니다. 초공간 엔진이 레벨 8로 개발되면 폭격기는 초공간 엔진으로 재장착되어 더 높은 속도로 비행할 수 있습니다.',
     ],
 
     'destroyer' => [
-        'title'            => 'Destroyer',
-        'description'      => 'The destroyer is the king of the warships.',
-        'description_long' => 'The Destroyer is the result of years of work and development. With the development of Deathstars, it was decided that a class of ship was needed to defend against such a massive weapon. Thanks to its improved homing sensors, multi-phalanx Ion cannons, Gauss Cannons and Plasma Turrets, the Destroyer turned out to be one of the most fearsome ships created.
+        'title'            => '구축함',
+        'description'      => '구축함은 전함의 왕입니다.',
+        'description_long' => '구축함은 수년간의 작업과 개발의 결과입니다. 데스스타의 개발로 그러한 대규모 무기에 대항하여 방어할 수 있는 등급의 함선이 필요하다고 결정되었습니다. 개선된 유도 센서, 다중 팔랑크스 이온 대포, 가우스 캐논 및 플라즈마 포탑 덕분에 구축함은 만들어진 가장 두려운 함선 중 하나로 밝혀졌습니다.
 
-Because the destroyer is very large, its manoeuvrability is severely limited, which makes it more of a battle station than a fighting ship. The lack of manoeuvrability is made up for by its sheer firepower, but it also costs significant amounts of deuterium to build and operate.',
+구축함은 매우 크기 때문에 기동성이 심각하게 제한되어 전투 함선이라기보다는 전투 기지에 가깝습니다. 기동성의 부족은 순수한 화력으로 보완되지만 건설 및 운영에 상당한 양의 중수소도 소비합니다.',
     ],
 
     'deathstar' => [
-        'title'            => 'Deathstar',
-        'description'      => 'The destructive power of the deathstar is unsurpassed.',
-        'description_long' => 'The Deathstar is the most powerful ship ever created. This moon sized ship is the only ship that can be seen with the naked eye on the ground. By the time you spot it, unfortunately, it is too late to do anything.
+        'title'            => '데스스타',
+        'description'      => '데스스타의 파괴력은 비할 데가 없습니다.',
+        'description_long' => '데스스타는 지금까지 만들어진 가장 강력한 함선입니다. 이 달 크기의 함선은 지상에서 육안으로 볼 수 있는 유일한 함선입니다. 당신이 그것을 발견할 때쯤에는 불행히도 아무것도 할 수 없습니다.
 
-Armed with a gigantic graviton cannon, the most advanced weapons system ever created in the Universe, this massive ship has not only the capability of destroying entire fleets and defenses, but also has the capability of destroying entire moons. Only the most advanced empires have the capability to build a ship of this mammoth size.',
+우주에서 만들어진 가장 진보된 무기 시스템인 거대한 그라비톤 대포로 무장한 이 거대한 함선은 전체 함대와 방어를 파괴할 수 있는 능력뿐만 아니라 전체 달을 파괴할 수 있는 능력도 가지고 있습니다. 가장 진보된 제국만이 이 거대한 크기의 함선을 건조할 수 있는 능력을 가지고 있습니다.',
     ],
 
     'reaper' => [
-        'title'            => 'Reaper',
-        'description'      => 'The Reaper is a powerful combat ship specialized for aggressive raiding and debris field harvesting.',
-        'description_long' => 'The Reaper represents the pinnacle of General class military engineering. This heavily armed vessel was designed for commanders who value both combat prowess and tactical flexibility. While its primary role is combat, the Reaper features reinforced cargo holds that allow it to harvest debris fields after battle. Its advanced targeting systems and heavy armour make it a formidable opponent, while its dual-purpose design means it can both create and profit from battlefield carnage. The ship is equipped with cutting-edge weapons technology and can hold its own against much larger vessels.',
+        'title'            => '리퍼',
+        'description'      => '리퍼는 공격적인 습격과 잔해 필드 수확에 특화된 강력한 전투 함선입니다.',
+        'description_long' => '리퍼는 장군 클래스 군사 공학의 정점을 나타냅니다. 이 중무장 함선은 전투 능력과 전술적 유연성을 모두 중시하는 지휘관을 위해 설계되었습니다. 주요 역할은 전투이지만 리퍼는 전투 후 잔해 필드를 수확할 수 있는 강화된 화물 홀드를 특징으로 합니다. 고급 표적 시스템과 중장갑은 그것을 강력한 적으로 만들며, 이중 목적 설계는 전장 대학살을 만들고 이익을 얻을 수 있음을 의미합니다. 함선은 최첨단 무기 기술을 갖추고 있으며 훨씬 더 큰 함선에 대해서도 자체적으로 유지할 수 있습니다.',
     ],
 
     // ---- Defense ----
 
     'rocket_launcher' => [
-        'title'            => 'Rocket Launcher',
-        'description'      => 'The rocket launcher is a simple, cost-effective defensive option.',
-        'description_long' => 'Your first basic line of defense. These are simple ground based launch facilities that fire conventional warhead tipped missiles at attacking enemy targets. As they are cheap to construct and no research is required, they are well suited for defending raids, but lose effectiveness defending from larger scale attacks. Once you begin construction on more advanced defense weapons systems, Rocket Launchers become simple fodder to allow your more damaging weapons to inflict greater damage for a longer period of time.
+        'title'            => '로켓 발사기',
+        'description'      => '로켓 발사기는 간단하고 비용 효율적인 방어 옵션입니다.',
+        'description_long' => '첫 번째 기본 방어선입니다. 이들은 공격하는 적 목표물에 재래식 탄두가 장착된 미사일을 발사하는 간단한 지상 기반 발사 시설입니다. 건설 비용이 저렴하고 연구가 필요하지 않기 때문에 습격을 방어하는 데 적합하지만 대규모 공격을 방어하는 효과는 떨어집니다. 더 진보된 방어 무기 시스템을 건설하기 시작하면 로켓 발사기는 더 많은 피해를 주는 무기가 더 오랫동안 더 큰 피해를 입힐 수 있도록 하는 단순한 미끼가 됩니다.
 
-After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'light_laser' => [
-        'title'            => 'Light Laser',
-        'description'      => 'Concentrated firing at a target with photons can produce significantly greater damage than standard ballistic weapons.',
-        'description_long' => 'As technology developed and more sophisticated ships were created, it was determined that a stronger line of defense was needed to counter the attacks. As Laser Technology advanced, a new weapon was designed to provide the next level of defense. Light Lasers are simple ground based weapons that utilize special targeting systems to track the enemy and fire a high intensity laser designed to cut through the hull of the target. In order to be kept cost effective, they were fitted with an improved shielding system, however the structural integrity is the same as that of the Rocket Launcher.
+        'title'            => '경 레이저',
+        'description'      => '광자로 대상을 집중 발사하면 표준 탄도 무기보다 훨씬 더 큰 피해를 줄 수 있습니다.',
+        'description_long' => '기술이 발전하고 더 정교한 함선이 만들어짐에 따라 공격에 대응하기 위해 더 강력한 방어선이 필요하다는 것이 결정되었습니다. 레이저 기술이 발전함에 따라 다음 수준의 방어를 제공하기 위해 새로운 무기가 설계되었습니다. 경 레이저는 적을 추적하고 대상의 선체를 절단하도록 설계된 고강도 레이저를 발사하는 특수 표적 시스템을 활용하는 간단한 지상 기반 무기입니다. 비용 효율적으로 유지하기 위해 개선된 방어막 시스템이 장착되었지만 구조적 무결성은 로켓 발사기와 동일합니다.
 
-After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'heavy_laser' => [
-        'title'            => 'Heavy Laser',
-        'description'      => 'The heavy laser is the logical development of the light laser.',
-        'description_long' => 'The Heavy Laser is a practical, improved version of the Light Laser. Being more balanced than the Light Laser with improved alloy composition, it utilizes stronger, more densely packed beams, and even better onboard targeting systems.
+        'title'            => '중 레이저',
+        'description'      => '중 레이저는 경 레이저의 논리적 발전입니다.',
+        'description_long' => '중 레이저는 경 레이저의 실용적이고 개선된 버전입니다. 개선된 합금 조성으로 경 레이저보다 더 균형이 잡혀 있으며 더 강하고 밀집된 빔과 훨씬 더 나은 온보드 표적 시스템을 활용합니다.
 
-After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'gauss_cannon' => [
-        'title'            => 'Gauss Cannon',
-        'description'      => 'The Gauss Cannon fires projectiles weighing tons at high speeds.',
-        'description_long' => 'For a long time projectile weapons were regarded as antiquated in the wake of modern thermonuclear and energy technology and due to the development of the hyperdrive and improved armour. That was until the exact energy technology that had once aged it, helped it to re-achieve their established position.
-A gauss cannon is a large version of the particle accelerator. Extremely heavy missiles are accelerated with a huge electromagnetic force and have muzzle velocities that make the dirt surrounding the missile burn in the skies. This weapon is so powerful when fired that it creates a sonic boom. Modern armour and shields can barely withstand the force, often the target is completely penetrated by the power of the missile. Defense structures deactivate as soon as they have been too badly damaged.
+        'title'            => '가우스 캐논',
+        'description'      => '가우스 캐논은 톤 단위의 무게를 가진 발사체를 고속으로 발사합니다.',
+        'description_long' => '오랫동안 발사체 무기는 현대 열핵 및 에너지 기술과 초공간 및 개선된 장갑의 개발로 인해 구식으로 간주되었습니다. 그것은 한때 그것을 노화시켰던 정확한 에너지 기술이 확립된 위치를 다시 달성하도록 도와주었을 때까지였습니다.
+가우스 캐논은 입자 가속기의 대형 버전입니다. 매우 무거운 미사일은 거대한 전자기력으로 가속되며 미사일 주변의 먼지가 하늘에서 타오르는 총구 속도를 가집니다. 이 무기는 발사될 때 너무 강력하여 음속 폭발을 일으킵니다. 현대 장갑과 방어막은 힘을 거의 견딜 수 없으며 종종 대상이 미사일의 힘에 완전히 관통됩니다. 방어 구조물은 너무 심하게 손상되면 즉시 비활성화됩니다.
 
-After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'ion_cannon' => [
-        'title'            => 'Ion Cannon',
-        'description'      => 'The Ion Cannon fires a continuous beam of accelerating ions, causing considerable damage to objects it strikes.',
-        'description_long' => 'An ion cannon is a weapon that fires beams of ions (positively or negatively charged particles). The Ion Cannon is actually a type of Particle Cannon; only the particles used are ionized. Due to their electrical charges, they also have the potential to disable electronic devices, and anything else that has an electrical or similar power source, using a phenomena known as the the Electromagetic Pulse (EMP effect). Due to the cannons highly improved shielding system, this cannon provides improved protection for your larger, more destructive defense weapons.
+        'title'            => '이온 캐논',
+        'description'      => '이온 캐논은 가속 이온의 연속 빔을 발사하여 충돌하는 물체에 상당한 피해를 입힙니다.',
+        'description_long' => '이온 캐논은 이온(양전하 또는 음전하를 띤 입자) 빔을 발사하는 무기입니다. 이온 캐논은 실제로 입자 캐논의 한 유형입니다. 사용되는 입자만 이온화됩니다. 전하로 인해 전자기 펄스(EMP 효과)로 알려진 현상을 사용하여 전자 장치와 전기 또는 유사한 전원이 있는 다른 모든 것을 비활성화할 수 있는 잠재력도 있습니다. 캐논의 고도로 개선된 방어막 시스템으로 인해 이 캐논은 더 크고 더 파괴적인 방어 무기에 대한 개선된 보호를 제공합니다.
 
-After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'plasma_turret' => [
-        'title'            => 'Plasma Turret',
-        'description'      => 'Plasma Turrets release the energy of a solar flare and surpass even the destroyer in destructive effect.',
-        'description_long' => 'One of the most advanced defense weapons systems ever developed, the Plasma Turret uses a large nuclear reactor fuel cell to power an electromagnetic accelerator that fires a pulse, or toroid, of plasma. During operation, the Plasma turret first locks on a target and begins the process of firing. A plasma sphere is created in the turrets core by super heating and compressing gases, stripping them of their ions. Once the gas is superheated, compressed, and a plasma sphere is created, it is then loaded into the electromagnetic accelerator which is energized. Once fully energized, the accelerator is activated, which results in the plasma sphere being launched at an extremely high rate of speed to the intended target. From the targets perspective, the approaching bluish ball of plasma is impressive, but once it strikes, it causes instant destruction.
+        'title'            => '플라즈마 포탑',
+        'description'      => '플라즈마 포탑은 태양 플레어의 에너지를 방출하고 구축함조차 능가하는 파괴 효과를 냅니다.',
+        'description_long' => '지금까지 개발된 가장 진보된 방어 무기 시스템 중 하나인 플라즈마 포탑은 대형 원자로 연료 전지를 사용하여 펄스 또는 토로이드의 플라즈마를 발사하는 전자기 가속기를 구동합니다. 작동 중에 플라즈마 포탑은 먼저 대상을 잠그고 발사 프로세스를 시작합니다. 플라즈마 구는 가스를 과열하고 압축하여 이온을 제거함으로써 포탑 코어에서 생성됩니다. 가스가 과열되고 압축되며 플라즈마 구가 생성되면 활성화된 전자기 가속기에 로드됩니다. 완전히 활성화되면 가속기가 활성화되어 플라즈마 구가 의도된 대상으로 매우 높은 속도로 발사됩니다. 대상의 관점에서 접근하는 푸른빛의 플라즈마 공은 인상적이지만 충돌하면 즉각적인 파괴를 일으킵니다.
 
-Defensive facilities deactivate as soon as they are too heavily damaged. After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+방어 시설은 너무 심하게 손상되면 즉시 비활성화됩니다. 전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'small_shield_dome' => [
-        'title'            => 'Small Shield Dome',
-        'description'      => 'The small shield dome covers an entire planet with a field which can absorb a tremendous amount of energy.',
-        'description_long' => 'Colonizing new worlds brought about a new danger, space debris. A large asteroid could easily wipe out the world and all inhabitants. Advancements in shielding technology provided scientists with a way to develop a shield to protect an entire planet not only from space debris but, as it was learned, from an enemy attack. By creating a large electromagnetic field around the planet, space debris that would normally have destroyed the planet was deflected, and attacks from enemy Empires were thwarted. The first generators were large and the shield provided moderate protection, but it was later discovered that small shields did not afford the protection from larger scale attacks. The small shield dome was the prelude to a stronger, more advanced planetary shielding system to come.
+        'title'            => '소형 방어막 돔',
+        'description'      => '소형 방어막 돔은 엄청난 양의 에너지를 흡수할 수 있는 필드로 전체 행성을 덮습니다.',
+        'description_long' => '새로운 세계를 식민지화하는 것은 새로운 위험인 우주 잔해를 가져왔습니다. 큰 소행성은 쉽게 세계와 모든 주민을 쓸어버릴 수 있습니다. 방어막 기술의 발전은 과학자들에게 우주 잔해로부터뿐만 아니라 학습된 것처럼 적의 공격으로부터도 전체 행성을 보호하기 위한 방어막을 개발할 수 있는 방법을 제공했습니다. 행성 주위에 대형 전자기장을 생성하여 일반적으로 행성을 파괴했을 우주 잔해가 편향되었으며 적 제국의 공격이 저지되었습니다. 첫 번째 발생기는 컸고 방어막은 적당한 보호를 제공했지만 나중에 소형 방어막이 대규모 공격으로부터 보호를 제공하지 않는다는 것이 발견되었습니다. 소형 방어막 돔은 더 강력하고 진보된 행성 방어막 시스템의 서곡이었습니다.
 
-After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'large_shield_dome' => [
-        'title'            => 'Large Shield Dome',
-        'description'      => 'The evolution of the small shield dome can employ significantly more energy to withstand attacks.',
-        'description_long' => 'The Large Shield Dome is the next step in the advancement of planetary shields, it is the result of years of work improving the Small Shield Dome. Built to withstand a larger barrage of enemy fire by providing a higher energized electromagnetic field, large domes provide a longer period of protection before collapsing.
+        'title'            => '대형 방어막 돔',
+        'description'      => '소형 방어막 돔의 진화는 공격을 견디기 위해 훨씬 더 많은 에너지를 사용할 수 있습니다.',
+        'description_long' => '대형 방어막 돔은 행성 방어막의 발전의 다음 단계이며, 소형 방어막 돔을 개선하기 위한 수년간의 작업의 결과입니다. 더 높은 에너지 전자기장을 제공하여 더 많은 적의 공격을 견디도록 제작된 대형 돔은 붕괴되기 전에 더 긴 보호 기간을 제공합니다.
 
-After a battle, there is up to a 70 % chance that failed defensive facilities can be returned to use.',
+전투 후 실패한 방어 시설을 다시 사용할 수 있는 확률은 최대 70%입니다.',
     ],
 
     'anti_ballistic_missile' => [
-        'title'            => 'Anti-Ballistic Missiles',
-        'description'      => 'Anti-Ballistic Missiles destroy attacking interplanetary missiles.',
-        'description_long' => 'Anti Ballistic Missiles (ABM) are your only line of defense when attacked by Interplanetary Missiles (IPM) on your planet or moon. When a launch of IPMs is detected, these missiles automatically arm, process a launch code in their flight computers, target the inbound IPM, and launch to intercept. During the flight, the target IPM is constantly tracked and course corrections are applied until the ABM reaches the target and destroys the attacking IPM. Each ABM destroys one incoming IPM.',
+        'title'            => '요격 미사일',
+        'description'      => '요격 미사일은 공격하는 행성간 미사일을 파괴합니다.',
+        'description_long' => '요격 미사일(ABM)은 행성이나 달에서 행성간 미사일(IPM)의 공격을 받았을 때 유일한 방어선입니다. IPM의 발사가 감지되면 이러한 미사일은 자동으로 무장하고, 비행 컴퓨터에서 발사 코드를 처리하고, 들어오는 IPM을 대상으로 하고, 요격을 위해 발사합니다. 비행 중에 대상 IPM은 지속적으로 추적되고 ABM이 대상에 도달하여 공격하는 IPM을 파괴할 때까지 코스 수정이 적용됩니다. 각 ABM은 들어오는 IPM 하나를 파괴합니다.',
     ],
 
     'interplanetary_missile' => [
-        'title'            => 'Interplanetary Missiles',
-        'description'      => 'Interplanetary Missiles destroy enemy defenses.',
-        'description_long' => 'Interplanetary Missiles (IPM) are your offensive weapon to destroy the defenses of your target. Using state of the art tracking technology, each missile targets a certain number of defenses for destruction. Tipped with an anti-matter bomb, they deliver a destructive force so severe that destroyed shields and defenses cannot be repaired. The only way to counter these missiles is with ABMs.',
+        'title'            => '행성간 미사일',
+        'description'      => '행성간 미사일은 적의 방어를 파괴합니다.',
+        'description_long' => '행성간 미사일(IPM)은 대상의 방어를 파괴하기 위한 공격 무기입니다. 최신 추적 기술을 사용하여 각 미사일은 파괴를 위한 특정 수의 방어를 대상으로 합니다. 반물질 폭탄이 장착되어 파괴된 방어막과 방어를 수리할 수 없을 정도로 심각한 파괴력을 전달합니다. 이러한 미사일에 대응하는 유일한 방법은 ABM입니다.',
     ],
 
     // ---- Shop Booster Items ----
 
     'kraken' => [
-        'title'       => 'KRAKEN',
-        'description' => 'Reduces the building time of buildings currently under construction by <b>:duration</b>.',
+        'title'       => '크라켄',
+        'description' => '현재 건설 중인 건물의 건설 시간을 <b>:duration</b>만큼 줄입니다.',
     ],
 
     'detroid' => [
-        'title'       => 'DETROID',
-        'description' => 'Reduces the construction time of current shipyard-contracts by <b>:duration</b>.',
+        'title'       => '데트로이드',
+        'description' => '현재 조선소 계약의 건설 시간을 <b>:duration</b>만큼 줄입니다.',
     ],
 
     'newtron' => [
-        'title'       => 'NEWTRON',
-        'description' => 'Reduces research time for all research that is currently in progress by <b>:duration</b>.',
+        'title'       => '뉴트론',
+        'description' => '현재 진행 중인 모든 연구의 연구 시간을 <b>:duration</b>만큼 줄입니다.',
     ],
 ];
