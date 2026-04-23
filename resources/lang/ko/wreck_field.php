@@ -1,98 +1,97 @@
 <?php
-// i18n-ko seed: copied from en on 2026-04-22. Translate values in Phase 3.
 
 return [
     // Wreck Field Information and Status
-    'wreck_field' => 'Wreck Field',
-    'wreck_field_formed' => 'Wreck field has formed at coordinates {coordinates}',
-    'wreck_field_expired' => 'Wreck field has expired',
-    'wreck_field_burned' => 'Wreck field has been burned',
+    'wreck_field' => '잔해 필드',
+    'wreck_field_formed' => '좌표 {coordinates}에 잔해 필드가 생성되었습니다',
+    'wreck_field_expired' => '잔해 필드가 만료되었습니다',
+    'wreck_field_burned' => '잔해 필드가 소각되었습니다',
 
     // Wreck Field Conditions
-    'formation_conditions' => 'A wreck field forms when at least {min_resources} resources are lost and at least {min_percentage}% of the defending fleet is destroyed.',
-    'resources_lost' => 'Resources lost: {amount}',
-    'fleet_percentage' => 'Fleet destroyed: {percentage}%',
+    'formation_conditions' => '최소 {min_resources}의 자원이 손실되고 방어 함대의 {min_percentage}% 이상이 파괴되면 잔해 필드가 생성됩니다.',
+    'resources_lost' => '손실 자원: {amount}',
+    'fleet_percentage' => '파괴된 함대: {percentage}%',
 
     // Repair Information
-    'repair_time' => 'Repair time',
-    'repair_progress' => 'Repair progress',
-    'repair_completed' => 'Repair completed',
-    'repairs_underway' => 'Repairs underway',
-    'repair_duration_min' => 'Minimum repair time: {minutes} minutes',
-    'repair_duration_max' => 'Maximum repair time: {hours} hours',
-    'repair_speed_bonus' => 'Space Dock level {level} provides {bonus}% repair speed bonus',
+    'repair_time' => '수리 시간',
+    'repair_progress' => '수리 진행률',
+    'repair_completed' => '수리 완료',
+    'repairs_underway' => '수리 진행 중',
+    'repair_duration_min' => '최소 수리 시간: {minutes}분',
+    'repair_duration_max' => '최대 수리 시간: {hours}시간',
+    'repair_speed_bonus' => '우주 도크 레벨 {level}이(가) {bonus}% 수리 속도 보너스를 제공합니다',
 
     // Ships in Wreck Field
-    'ships_in_wreck_field' => 'Ships in wreck field',
-    'ship_type' => 'Ship type',
-    'quantity' => 'Quantity',
-    'repairable' => 'Repairable',
-    'total_ships' => 'Total ships: {count}',
+    'ships_in_wreck_field' => '잔해 필드 내 함선',
+    'ship_type' => '함선 종류',
+    'quantity' => '수량',
+    'repairable' => '수리 가능',
+    'total_ships' => '총 함선: {count}',
 
     // Actions
-    'start_repairs' => 'Start repairs',
-    'complete_repairs' => 'Complete repairs',
-    'burn_wreck_field' => 'Burn wreck field',
-    'cancel_repairs' => 'Cancel repairs',
+    'start_repairs' => '수리 시작',
+    'complete_repairs' => '수리 완료',
+    'burn_wreck_field' => '잔해 필드 소각',
+    'cancel_repairs' => '수리 취소',
 
     // Action Messages
-    'repair_started' => 'Repairs have started. Completion time: {time}',
-    'repairs_completed' => 'All repairs have been completed. Ships are ready for deployment.',
-    'wreck_field_burned_success' => 'Wreck field has been successfully burned.',
-    'cannot_repair' => 'This wreck field cannot be repaired.',
-    'cannot_burn' => 'This wreck field cannot be burned while repairs are in progress.',
+    'repair_started' => '수리가 시작되었습니다. 완료 시간: {time}',
+    'repairs_completed' => '모든 수리가 완료되었습니다. 함선 배치 준비 완료.',
+    'wreck_field_burned_success' => '잔해 필드를 성공적으로 소각했습니다.',
+    'cannot_repair' => '이 잔해 필드는 수리할 수 없습니다.',
+    'cannot_burn' => '수리 진행 중에는 잔해 필드를 소각할 수 없습니다.',
 
     // Galaxy View
-    'wreck_field_icon' => 'WF',
-    'wreck_field_tooltip' => 'Wreck Field ({time_remaining} remaining)',
-    'click_to_repair' => 'Click to go to Space Dock for repairs',
-    'no_wreck_field' => 'No wreck field',
+    'wreck_field_icon' => '잔해',
+    'wreck_field_tooltip' => '잔해 필드 ({time_remaining} 남음)',
+    'click_to_repair' => '수리하려면 클릭하여 우주 도크로 이동',
+    'no_wreck_field' => '잔해 필드 없음',
 
     // Space Dock Integration
-    'space_dock_required' => 'Space Dock level 1 is required to repair wreck fields.',
-    'space_dock_level' => 'Space Dock level: {level}',
-    'upgrade_space_dock' => 'Upgrade Space Dock to repair more ships',
-    'repair_capacity_reached' => 'Maximum repair capacity reached. Upgrade Space Dock to increase capacity.',
+    'space_dock_required' => '잔해 필드를 수리하려면 우주 도크 레벨 1이 필요합니다.',
+    'space_dock_level' => '우주 도크 레벨: {level}',
+    'upgrade_space_dock' => '더 많은 함선을 수리하려면 우주 도크를 업그레이드하세요',
+    'repair_capacity_reached' => '최대 수리 용량에 도달했습니다. 우주 도크를 업그레이드하여 용량을 늘리세요.',
 
     // Battle Reports
-    'wreck_field_section' => 'Wreck Field Information',
-    'ships_available_for_repair' => 'Ships available for repair: {count}',
-    'wreck_field_resources' => 'Wreck field contains approximately {value} resources worth of ships.',
+    'wreck_field_section' => '잔해 필드 정보',
+    'ships_available_for_repair' => '수리 가능한 함선: {count}',
+    'wreck_field_resources' => '잔해 필드에 약 {value}에 해당하는 함선이 있습니다.',
 
     // Admin Settings
-    'settings_title' => 'Wreck Field Settings',
-    'enabled_description' => 'Wreck fields allow recovery of destroyed ships through the Space Dock building. Ships can be repaired if the destruction meets certain criteria.',
-    'percentage_setting' => 'Destroyed ships in wreck field:',
-    'min_resources_setting' => 'Minimum destruction for wreck fields:',
-    'min_fleet_percentage_setting' => 'Minimum fleet destruction percentage:',
-    'lifetime_setting' => 'Wreck field lifetime (hours):',
-    'repair_max_time_setting' => 'Maximum repair time (hours):',
-    'repair_min_time_setting' => 'Minimum repair time (minutes):',
+    'settings_title' => '잔해 필드 설정',
+    'enabled_description' => '잔해 필드는 우주 도크를 통해 파괴된 함선을 복구할 수 있습니다. 파괴가 특정 조건을 충족하면 함선을 수리할 수 있습니다.',
+    'percentage_setting' => '잔해 필드에 남는 파괴 함선 비율:',
+    'min_resources_setting' => '잔해 필드 생성 최소 파괴량:',
+    'min_fleet_percentage_setting' => '최소 함대 파괴 비율:',
+    'lifetime_setting' => '잔해 필드 지속 시간 (시간):',
+    'repair_max_time_setting' => '최대 수리 시간 (시간):',
+    'repair_min_time_setting' => '최소 수리 시간 (분):',
 
     // Errors and Warnings
-    'error_no_wreck_field' => 'No wreck field found at this location.',
-    'error_not_owner' => 'You do not own this wreck field.',
-    'error_already_repairing' => 'Repairs are already in progress.',
-    'error_no_ships' => 'No ships available for repair.',
-    'error_space_dock_required' => 'Space Dock level 1 is required to repair wreck fields.',
-    'error_cannot_collect_late_added' => 'Ships added during ongoing repairs cannot be collected manually. You must wait until all repairs are automatically completed.',
-    'warning_auto_return' => 'Repaired ships will be automatically returned to service {hours} hours after repair completion.',
+    'error_no_wreck_field' => '이 위치에 잔해 필드가 없습니다.',
+    'error_not_owner' => '이 잔해 필드의 소유자가 아닙니다.',
+    'error_already_repairing' => '수리가 이미 진행 중입니다.',
+    'error_no_ships' => '수리 가능한 함선이 없습니다.',
+    'error_space_dock_required' => '잔해 필드를 수리하려면 우주 도크 레벨 1이 필요합니다.',
+    'error_cannot_collect_late_added' => '수리 진행 중에 추가된 함선은 수동으로 회수할 수 없습니다. 모든 수리가 자동으로 완료될 때까지 기다려야 합니다.',
+    'warning_auto_return' => '수리된 함선은 수리 완료 후 {hours}시간 뒤에 자동으로 투입됩니다.',
 
     // Time Remaining
-    'time_remaining' => '{hours}h {minutes}m remaining',
-    'expires_soon' => 'Expires soon',
-    'repair_time_remaining' => 'Repair completion: {time}',
+    'time_remaining' => '{hours}시간 {minutes}분 남음',
+    'expires_soon' => '곧 만료',
+    'repair_time_remaining' => '수리 완료: {time}',
 
     // Status Messages
-    'status_active' => 'Active',
-    'status_repairing' => 'Repairing',
-    'status_completed' => 'Completed',
-    'status_burned' => 'Burned',
-    'status_expired' => 'Expired',
+    'status_active' => '활성',
+    'status_repairing' => '수리 중',
+    'status_completed' => '완료',
+    'status_burned' => '소각됨',
+    'status_expired' => '만료',
 
     // Action Results
-    'repairs_started' => 'Repairs started successfully',
-    'all_ships_deployed' => 'All ships have been put back into service',
-    'no_ships_ready' => 'No ships ready for collection',
-    'repairs_not_started' => 'Repairs have not been started yet',
+    'repairs_started' => '수리를 시작했습니다',
+    'all_ships_deployed' => '모든 함선이 투입되었습니다',
+    'no_ships_ready' => '회수할 함선이 없습니다',
+    'repairs_not_started' => '수리가 아직 시작되지 않았습니다',
 ];
