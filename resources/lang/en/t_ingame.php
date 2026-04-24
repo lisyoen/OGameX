@@ -1281,6 +1281,13 @@ return [
         'loca_notice'               => 'Reference',
         'loca_planet_giveup'        => 'Are you sure you want to abandon the planet %planetName% %planetCoordinates%?',
         'loca_moon_giveup'          => 'Are you sure you want to abandon the moon %planetName% %planetCoordinates%?',
+
+        // Welcome dialog
+        'welcome_title'             => 'Welcome to OGame!',
+        'welcome_message'           => 'To help your game start get moving quickly, we\'ve assigned you the name Commodore Nebula. You can change this at any time by clicking on the username.<br/>Fleet Command has left you information on your first steps in your inbox, to help you be well-equipped for your start.<br/><br/>Have fun playing!',
+
+        // Space dock wreckage icon
+        'wreckage'                  => 'Wreckage',
     ],
 
     // ── Highscore ───────────────────────────────────────────────────────────
@@ -1483,5 +1490,20 @@ return [
         'msg_yes'                       => 'Yes',
         'msg_no'                        => 'No',
         'msg_ok'                        => 'Ok',
+    ],
+
+    // -------------------------------------------------------------------------
+    // Admin menu (admin-menu.blade.php)
+    // -------------------------------------------------------------------------
+    'admin_menu' => [
+        'brand'                  => 'Server admin',
+        'home'                   => 'Home',
+        'users'                  => 'Users',
+        'translations'           => 'Translations',
+        'developer_shortcuts'    => 'Developer shortcuts',
+        'server_settings'        => 'Server settings',
+        'fleet_timing'           => 'Fleet Timing',
+        'rules_legal'            => 'Rules & Legal',
+        'server_administration'  => 'Server Administration',
     ],
 ];

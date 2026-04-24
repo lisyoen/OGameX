@@ -1282,6 +1282,13 @@ return [
         'loca_notice'               => '참고',
         'loca_planet_giveup'        => '정말 행성 %planetName% %planetCoordinates%을(를) 포기하시겠습니까?',
         'loca_moon_giveup'          => '정말 달 %planetName% %planetCoordinates%을(를) 포기하시겠습니까?',
+
+        // Welcome dialog
+        'welcome_title'             => 'OGame에 오신 것을 환영합니다!',
+        'welcome_message'           => '게임 시작을 돕기 위해 Commodore Nebula라는 이름을 지정해 드렸습니다. 사용자 이름을 클릭하여 언제든지 변경할 수 있습니다.<br/>함대 사령부에서 시작에 필요한 정보를 받은 편지함에 남겨두었으니 확인해 주세요.<br/><br/>즐거운 게임 되세요!',
+
+        // Space dock wreckage icon
+        'wreckage'                  => '잔해',
     ],
 
     // ── Highscore ───────────────────────────────────────────────────────────
@@ -1487,5 +1494,20 @@ return [
         'msg_yes'                       => '예',
         'msg_no'                        => '아니오',
         'msg_ok'                        => '확인',
+    ],
+
+    // -------------------------------------------------------------------------
+    // Admin menu (admin-menu.blade.php)
+    // -------------------------------------------------------------------------
+    'admin_menu' => [
+        'brand'                  => '시스템 관리',
+        'home'                   => '홈',
+        'users'                  => '사용자 관리',
+        'translations'           => '번역 관리',
+        'developer_shortcuts'    => '개발자 단축키',
+        'server_settings'        => '서버 설정',
+        'fleet_timing'           => '함대 타이밍',
+        'rules_legal'            => '규칙 및 약관',
+        'server_administration'  => '서버 관리',
     ],
 ];
