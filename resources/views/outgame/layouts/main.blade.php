@@ -27,9 +27,9 @@
     <meta name="audience" content="all"/>
     <meta name="Expires" content="never"/>
     <meta name="Keywords"
-          content="Game, Browser, online, for free, legendary, MMOG, Science fiction, space, space ship"/>
+          content="{{ __('t_external.meta.keywords') }}"/>
     <meta name="Description"
-          content="OGameX - The legendary game in the space! Discover the universe together with thousands of players."/>
+          content="{{ __('t_external.meta.description') }}"/>
     <meta name="robots" content="index,follow"/>
     <meta name="Revisit" content="After 14 days"/>
     <title>{{ config('app.name', 'Laravel') }}</title>

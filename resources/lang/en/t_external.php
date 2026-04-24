@@ -106,4 +106,10 @@ return [
         'wreckfield'      => 'Space Dock activated: some destroyed ships can be restored using the Space Dock.',
         'universe_big'    => 'Amount of Galaxies in the Universe',
     ],
+
+    // Meta tags (SEO)
+    'meta' => [
+        'keywords'    => 'Game, Browser, online, for free, legendary, MMOG, Science fiction, space, space ship',
+        'description' => 'OGameX - The legendary game in the space! Discover the universe together with thousands of players.',
+    ],
 ];
