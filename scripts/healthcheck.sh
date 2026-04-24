@@ -129,4 +129,17 @@ for f in resources/views/ingame/layouts/main.blade.php \
 done
 [ "$unwrapped" -eq 0 ] && echo "OK: ingame layouts wrapping guard passed" || exit 1
 
+echo "=== P3.5 Ingame overview/resources i18n regression guard (035) ==="
+unwrapped=0
+for f in resources/views/ingame/resources/settings.blade.php; do
+  # 가드 단어 목록: 화면 노출 빈도 높은 영문 키워드
+  # Events는 하드코딩이 가장 명확한 키워드
+  cnt=$(grep -cE '>Events[[:space:]]*<' "$f" 2>/dev/null || true)
+  if [ "$cnt" -gt 0 ]; then
+    echo "INGAME_RESOURCES_I18N_REGRESSION: $f has $cnt unwrapped 'Events' strings"
+    unwrapped=$((unwrapped + cnt))
+  fi
+done
+[ "$unwrapped" -eq 0 ] && echo "OK: ingame overview/resources wrapping guard passed" || exit 1
+
 echo "healthcheck done"
