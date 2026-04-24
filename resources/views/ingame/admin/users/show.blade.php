@@ -43,7 +43,7 @@
 
                     <div class="fieldwrapper">
                         <label class="styled textBeefy">@lang('Last Login:')</label>
-                        <div class="thefield">{{ $user->time ? \Carbon\Carbon::parse($user->time)->format('Y-m-d H:i:s') : '-' }}</div>
+                        <div class="thefield">{{ $user->time ? \Illuminate\Support\Carbon::createFromTimestamp((int)$user->time)->format('Y-m-d H:i:s') : '-' }}</div>
                     </div>
 
                     <div class="fieldwrapper">
