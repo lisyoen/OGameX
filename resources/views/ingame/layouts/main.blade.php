@@ -112,13 +112,8 @@
     <!-- Removed all custom close button CSS to restore normal jQuery UI behavior -->
 </head>
 <body id="{{ !empty($body_id) ? $body_id : 'ingamepage' }}" class="ogame lang-en default no-touch">
-<div id="initial_welcome_dialog" title="Welcome to OGame!" style="display: none;">
-    To help your game start get moving quickly, we've assigned you the name Commodore Nebula. You can change this at any
-    time by clicking on the username.<br/>
-    Fleet Command has left you information on your first steps in your inbox, to help you be well-equipped for your
-    start.<br/>
-    <br/>
-    Have fun playing!
+<div id="initial_welcome_dialog" title="{{ __('t_ingame.layout.welcome_title') }}" style="display: none;">
+    {!! __('t_ingame.layout.welcome_message') !!}
 </div>
 @if ($currentPlayer->isAdmin() || !empty($isImpersonating))
     @include ('ingame.layouts.admin-menu', ['currentPlayer' => $currentPlayer, 'isImpersonating' => $isImpersonating ?? false, 'impersonateLeaveUrl' => $impersonateLeaveUrl ?? null])
@@ -352,10 +347,10 @@
                     <div id="eventboxFilled" class="eventToggle" style="display: none;">
                         <a id="js_eventDetailsClosed" class="tooltipRight js_hideTipOnMobile"
                            href="javascript:void(0);"
-                           title="More details"></a>
+                           title="{{ __('t_ingame.layout.js_more_details') }}"></a>
                         <a id="js_eventDetailsOpen" class="tooltipRight open js_hideTipOnMobile"
                            href="javascript:void(0);"
-                           title="Less detail"></a>
+                           title="{{ __('t_ingame.layout.js_less_details') }}"></a>
 
 
                     </div>
@@ -1755,13 +1750,13 @@ However, the Space Dock's engineers think that some of the remains can be salvag
                                                     <img id="planetBarSpaceObjectImg_{{ $moon->getPlanetId() }}"
                                                          src="/img/moons/small/{{ $moon->getPlanetImageType() }}.gif"
                                                          width="16" height="16"
-                                                         alt="Moon"
+                                                         alt="{{ __('t_ingame.fleet.moon') }}"
                                                          class="icon-moon">
                                                 </div>
                                             @else
                                                 <img src="/img/moons/small/{{ $moon->getPlanetImageType() }}.gif"
                                                      width="16" height="16"
-                                                     alt="Moon"
+                                                     alt="{{ __('t_ingame.fleet.moon') }}"
                                                      class="icon-moon">
                                             @endif
                                         </a>
@@ -1790,7 +1785,7 @@ However, the Space Dock's engineers think that some of the remains can be salvag
                                         @endphp
                                         @if ($isOwner && $hasSpaceDock)
                                         <a class="wreckFieldIcon tooltip js_hideTipOnMobile"
-                                           title="Wreckage"
+                                           title="{{ __('t_ingame.layout.wreckage') }}"
                                            href="javascript:void(0);" onclick="openFacilitiesSpaceDock();">
                                             <span class="icon icon_wreck_field"></span>
                                         </a>
@@ -1879,7 +1874,7 @@ However, the Space Dock's engineers think that some of the remains can be salvag
     @endif
     @if (\Session::has('success_logout'))
     $(document).ready(function () {
-        errorBoxNotify("Ok", "{!! \Session::get('success_logout') !!}", "Ok", redirectLogout);
+        errorBoxNotify({!! json_encode(__('t_ingame.layout.js_ok')) !!}, "{!! \Session::get('success_logout') !!}", {!! json_encode(__('t_ingame.layout.js_ok')) !!}, redirectLogout);
     });
     @endif
 </script>

@@ -112,4 +112,21 @@ else
   exit 1
 fi
 
+echo "=== P3.5 Ingame layouts i18n regression guard (034) ==="
+# Blade 소스 기준 하드코딩 검사 (E2E는 JS 식별자 false-positive 회피 위해 소스 검사)
+unwrapped=0
+for f in resources/views/ingame/layouts/main.blade.php \
+         resources/views/ingame/layouts/admin-menu.blade.php; do
+  # 사용자 노출 위치에 남은 영문 단어 패턴
+  # - >Word< 형태 (태그 텍스트 노드)
+  # - title="Word ...", alt="Word ...", placeholder="Word ..."
+  # 단, 번역 디렉티브가 인접한 경우는 제외
+  cnt=$(grep -cE '>(Home|Users|Translations|Server admin|Developer shortcuts|Server settings|Fleet Timing|Rules & Legal|Server Administration)<' "$f" 2>/dev/null || true)
+  if [ "$cnt" -gt 0 ]; then
+    echo "INGAME_LAYOUTS_I18N_REGRESSION: $f has $cnt unwrapped strings"
+    unwrapped=$((unwrapped + cnt))
+  fi
+done
+[ "$unwrapped" -eq 0 ] && echo "OK: ingame layouts wrapping guard passed" || exit 1
+
 echo "healthcheck done"

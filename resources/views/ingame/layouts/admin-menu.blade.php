@@ -67,7 +67,7 @@
             @if(!empty($isImpersonating))
                 {{ __('Masquerading as user') }}
             @else
-                Server admin
+                {{ __('t_ingame.admin_menu.brand') }}
             @endif
         </div>
         @if(!empty($isImpersonating) && !empty($impersonateLeaveUrl))
@@ -80,16 +80,16 @@
             </ul>
         @else
             <ul>
-                <li><a class="{{(Request::is('admin') ? 'active' : '') }}" href="{{ route('admin.home') }}">Home</a></li>
+                <li><a class="{{(Request::is('admin') ? 'active' : '') }}" href="{{ route('admin.home') }}">{{ __('t_ingame.admin_menu.home') }}</a></li>
                 @if(Route::has('admin.users.index'))
-                    <li><a class="{{(Request::is('admin/users*') ? 'active' : '') }}" href="{{ route('admin.users.index') }}">Users</a></li>
+                    <li><a class="{{(Request::is('admin/users*') ? 'active' : '') }}" href="{{ route('admin.users.index') }}">{{ __('t_ingame.admin_menu.users') }}</a></li>
                 @endif
-                <li><a class="{{(Request::is('admin/translations*') ? 'active' : '') }}" href="{{ route('admin.translations.index') }}">Translations</a></li>
-                <li><a class="{{(Request::is('admin/developer-shortcuts') ? 'active' : '') }}" href="{{ route('admin.developershortcuts.index') }}">Developer shortcuts</a></li>
-                <li><a class="{{(Request::is('admin/server-settings') ? 'active' : '') }}" href="{{ route('admin.serversettings.index') }}">Server settings</a></li>
-                <li><a class="{{(Request::is('admin/fleet-timing*') ? 'active' : '') }}" href="{{ route('admin.fleettiming.index') }}">Fleet Timing</a></li>
-                <li><a class="{{(Request::is('admin/rules') ? 'active' : '') }}" href="{{ route('admin.rules.index') }}">Rules & Legal</a></li>
-                <li><a class="{{(Request::is('admin/server-administration*') ? 'active' : '') }}" href="{{ route('admin.server-administration.index') }}">Server Administration</a></li>
+                <li><a class="{{(Request::is('admin/translations*') ? 'active' : '') }}" href="{{ route('admin.translations.index') }}">{{ __('t_ingame.admin_menu.translations') }}</a></li>
+                <li><a class="{{(Request::is('admin/developer-shortcuts') ? 'active' : '') }}" href="{{ route('admin.developershortcuts.index') }}">{{ __('t_ingame.admin_menu.developer_shortcuts') }}</a></li>
+                <li><a class="{{(Request::is('admin/server-settings') ? 'active' : '') }}" href="{{ route('admin.serversettings.index') }}">{{ __('t_ingame.admin_menu.server_settings') }}</a></li>
+                <li><a class="{{(Request::is('admin/fleet-timing*') ? 'active' : '') }}" href="{{ route('admin.fleettiming.index') }}">{{ __('t_ingame.admin_menu.fleet_timing') }}</a></li>
+                <li><a class="{{(Request::is('admin/rules') ? 'active' : '') }}" href="{{ route('admin.rules.index') }}">{{ __('t_ingame.admin_menu.rules_legal') }}</a></li>
+                <li><a class="{{(Request::is('admin/server-administration*') ? 'active' : '') }}" href="{{ route('admin.server-administration.index') }}">{{ __('t_ingame.admin_menu.server_administration') }}</a></li>
             </ul>
         @endif
     </div>
