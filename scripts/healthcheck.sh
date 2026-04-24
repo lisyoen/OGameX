@@ -84,6 +84,17 @@ case "$LANG_KO_STATUS" in
 esac
 echo "P2 language dropdown guard OK"
 
+echo "=== P3.5 Outgame i18n meta tags regression guard ==="
+if echo "$body" | grep -qE 'content="Game, Browser, online.*MMOG'; then
+  echo "FAIL: meta Keywords still hardcoded (P3.5 regression)"
+  exit 1
+elif echo "$body" | grep -qE 'content="OGameX - The legendary game in the space'; then
+  echo "FAIL: meta Description still hardcoded (P3.5 regression)"
+  exit 1
+else
+  echo "OK: meta tags use __() translation keys"
+fi
+
 # Admin Users 라우트 회귀 가드 (028)
 echo "=== Admin Users route regression guard (028) ==="
 if docker exec ogame-ogamex-app-1 php artisan route:list --name=admin.users 2>/dev/null | grep -q "admin.users.index"; then
