@@ -85,14 +85,13 @@ esac
 echo "P2 language dropdown guard OK"
 
 echo "=== P3.5 Outgame i18n meta tags regression guard ==="
-if echo "$body" | grep -qE 'content="Game, Browser, online.*MMOG'; then
-  echo "FAIL: meta Keywords still hardcoded (P3.5 regression)"
-  exit 1
-elif echo "$body" | grep -qE 'content="OGameX - The legendary game in the space'; then
-  echo "FAIL: meta Description still hardcoded (P3.5 regression)"
-  exit 1
+# Blade 소스에서 __() 래핑 여부 확인 (렌더링 결과가 아닌 소스 코드 검사)
+main_blade="/var/www/resources/views/outgame/layouts/main.blade.php"
+if docker exec ogame-ogamex-app-1 grep -qE 'content="\{\{ __\(' "$main_blade"; then
+  echo "OK: meta tags wrapped with __()"
 else
-  echo "OK: meta tags use __() translation keys"
+  echo "FAIL: meta tags not wrapped with __() (P3.5 regression)"
+  exit 1
 fi
 
 # Admin Users 라우트 회귀 가드 (028)
