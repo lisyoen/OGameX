@@ -72,7 +72,7 @@
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->username }}</td>
                                 <td>{{ $user->created_at ? $user->created_at->format('Y-m-d H:i') : '-' }}</td>
-                                <td>{{ $user->time ? \Carbon\Carbon::parse($user->time)->format('Y-m-d H:i') : '-' }}</td>
+                                <td>{{ $user->time ? \Illuminate\Support\Carbon::createFromTimestamp((int)$user->time)->format('Y-m-d H:i') : '-' }}</td>
                                 <td>
                                     @if($user->hasRole('admin'))
                                         <span class="status_abbr_active" style="background: #f48406; padding: 2px 6px; border-radius: 3px;">ADMIN</span>

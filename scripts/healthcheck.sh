@@ -142,4 +142,12 @@ for f in resources/views/ingame/resources/settings.blade.php; do
 done
 [ "$unwrapped" -eq 0 ] && echo "OK: ingame overview/resources wrapping guard passed" || exit 1
 
+echo "=== 036 /admin/users Carbon guard ==="
+# Blade 소스에 Carbon::parse($user->time) 패턴이 재등장하면 실패
+leak=$(grep -hE "Carbon\\\\Carbon::parse\\(\\\$user->time\\)|Carbon::parse\\(\\\$user->time\\)" \
+       resources/views/ingame/admin/users/index.blade.php \
+       resources/views/ingame/admin/users/show.blade.php 2>/dev/null | wc -l || echo 0)
+[ "$leak" -eq 0 ] && echo "OK: admin users Carbon parse pattern not regressed" \
+  || { echo "FAIL: Carbon::parse(\$user->time) 재발생"; exit 1; }
+
 echo "healthcheck done"
