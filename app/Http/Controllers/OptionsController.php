@@ -47,7 +47,7 @@ class OptionsController extends OGameController
     public function processChangeUsername(Request $request, PlayerService $player): array|null
     {
         $name = $request->input('new_username_username');
-        if (!empty($name)) {
+        if (!empty($name) && $name !== $player->getUsername()) {
             // Check if username validates.
             $validationResult = $player->isUsernameValid($name);
             if (!$validationResult['valid']) {
@@ -200,6 +200,9 @@ class OptionsController extends OGameController
 
         // Update user's language preference
         $user = $player->getUser();
+        if ($user->lang === $language) {
+            return null; // No change, continue to next handler
+        }
         $user->lang = $language;
         $user->save();
 
@@ -223,11 +226,11 @@ class OptionsController extends OGameController
     {
         // Define change handlers.
         $change_handlers = [
+            'processLanguageChange',
             'processChangeUsername',
             'processChangePassword',
             'processVacationMode',
-            'processEspionageProbesAmount',
-            'processLanguageChange'
+            'processEspionageProbesAmount'
         ];
 
         // Loop through change handlers, execute them and if it triggers

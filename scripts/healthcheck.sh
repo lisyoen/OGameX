@@ -150,4 +150,14 @@ leak=$(grep -hE "Carbon\\\\Carbon::parse\\(\\\$user->time\\)|Carbon::parse\\(\\\
 [ "$leak" -eq 0 ] && echo "OK: admin users Carbon parse pattern not regressed" \
   || { echo "FAIL: Carbon::parse(\$user->time) 재발생"; exit 1; }
 
+echo "=== 038 Options save handler order guard ==="
+# processLanguageChange 가 배열의 첫 번째여야 함
+first_handler=$(awk '/\$change_handlers\s*=\s*\[/,/\];/' app/Http/Controllers/OptionsController.php | grep -oE "'process[A-Za-z]+'" | head -1)
+if [ "$first_handler" = "'processLanguageChange'" ]; then
+    echo "OK: processLanguageChange is first in handlers array"
+else
+    echo "FAIL: processLanguageChange must be first in \$change_handlers, got $first_handler"
+    exit 1
+fi
+
 echo "healthcheck done"
