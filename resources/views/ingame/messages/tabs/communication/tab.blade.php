@@ -135,10 +135,10 @@
                                     <select name="empfaenger[]" multiple="" id="select2" style="width: 310px;"
                                             tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
                                         <option value="-1" selected="">
-                                            all players
+                                            {{ __('t_ingame.messages.all_players') }}
                                         </option>
-                                        <option value="3147">only rank: Founder</option>
-                                        <option value="3148">only rank: Newcomer</option>
+                                        <option value="3147">{{ __('t_ingame.messages.only_rank') }}: Founder</option>
+                                        <option value="3148">{{ __('t_ingame.messages.only_rank') }}: Newcomer</option>
                                     </select><span class="select2 select2-container select2-container--default"
                                                    dir="ltr" style="width: 310px;"><span class="selection"><span
                                                     class="select2-selection select2-selection--multiple"
@@ -167,17 +167,16 @@
                                                     <ul class="miu_basic">
                                                         <li class="markItUpButton markItUpButton1 bold"><a href=""
                                                                                                            accesskey="B"
-                                                                                                           title="Bold [Ctrl+B]">Bold</a>
+                                                                                                           title="{{ __('t_ingame.messages.bbcode_bold') }} [Ctrl+B]">{{ __('t_ingame.messages.bbcode_bold') }}</a>
                                                         </li>
                                                         <li class="markItUpButton markItUpButton2 italic"><a href=""
                                                                                                              accesskey="I"
-                                                                                                             title="Italic [Ctrl+I]">Italic</a>
+                                                                                                             title="{{ __('t_ingame.messages.bbcode_italic') }} [Ctrl+I]">{{ __('t_ingame.messages.bbcode_italic') }}</a>
                                                         </li>
                                                         <li class="markItUpButton markItUpButton3 fontColor"><a href=""
-                                                                                                                title="Font colour">Font
-                                                                colour</a></li>
+                                                                                                                title="{{ __('t_ingame.messages.bbcode_font_color') }}">{{ __('t_ingame.messages.bbcode_font_color') }}</a></li>
                                                         <li class="markItUpButton markItUpButton4 fontSize markItUpDropMenu">
-                                                            <a href="" title="Font size">Font size</a>
+                                                            <a href="" title="{{ __('t_ingame.messages.bbcode_font_size') }}">{{ __('t_ingame.messages.bbcode_font_size') }}</a>
                                                             <ul class="">
                                                                 <li class="markItUpButton markItUpButton4-1 fontSize6">
                                                                     <a href="" title="">6</a></li>
@@ -208,10 +207,10 @@
                                                             </ul>
                                                             <span class="dropdown_arr"></span></li>
                                                         <li class="markItUpButton markItUpButton5 list"><a href=""
-                                                                                                           title="List">List</a>
+                                                                                                           title="{{ __('t_ingame.messages.bbcode_list') }}">{{ __('t_ingame.messages.bbcode_list') }}</a>
                                                         </li>
                                                         <li class="markItUpButton markItUpButton6 coordinates"><a
-                                                                    href="" title="Coordinates">Coordinates</a></li>
+                                                                    href="" title="{{ __('t_ingame.messages.bbcode_coordinates') }}">{{ __('t_ingame.messages.bbcode_coordinates') }}</a></li>
                                                         <li class="txt_link fright li_miu_advanced"><span
                                                                     class="toggle_miu_advanced show_miu_advanced awesome-button"
                                                                     role="button"></span></li>
@@ -219,21 +218,21 @@
                                                     <ul class="miu_advanced" style="display: none;">
                                                         <li class="markItUpButton markItUpButton1 underline"><a href=""
                                                                                                                 accesskey="U"
-                                                                                                                title="Underline [Ctrl+U]">Underline</a>
+                                                                                                                title="{{ __('t_ingame.messages.bbcode_underline') }} [Ctrl+U]">{{ __('t_ingame.messages.bbcode_underline') }}</a>
                                                         </li>
                                                         <li class="markItUpButton markItUpButton2 strikeThrough"><a
                                                                     href="" accesskey="S"
-                                                                    title="Strikethrough [Ctrl+S]">Strikethrough</a>
+                                                                    title="{{ __('t_ingame.messages.bbcode_stroke') }} [Ctrl+S]">{{ __('t_ingame.messages.bbcode_stroke') }}</a>
                                                         </li>
                                                         <li class="markItUpButton markItUpButton3 sub"><a href=""
-                                                                                                          title="Subscript">Subscript</a>
+                                                                                                          title="{{ __('t_ingame.messages.bbcode_sub') }}">{{ __('t_ingame.messages.bbcode_sub') }}</a>
                                                         </li>
                                                         <li class="markItUpButton markItUpButton4 sup"><a href=""
-                                                                                                          title="Superscript">Superscript</a>
+                                                                                                          title="{{ __('t_ingame.messages.bbcode_sup') }}">{{ __('t_ingame.messages.bbcode_sup') }}</a>
                                                         </li>
                                                         <li class="markItUpSeparator">-</li>
                                                         <li class="markItUpButton markItUpButton5 item markItUpDropMenu">
-                                                            <a href="" title="Item">Item</a>
+                                                            <a href="" title="{{ __('t_ingame.messages.bbcode_item') }}">{{ __('t_ingame.messages.bbcode_item') }}</a>
                                                             <ul class="">
                                                                 <li class="markItUpButton markItUpButton5-1 "><a href=""
                                                                                                                  title="">Researchers</a>
@@ -540,38 +539,36 @@
                                                             </ul>
                                                             <span class="dropdown_arr"></span></li>
                                                         <li class="markItUpButton markItUpButton6 player"><a href=""
-                                                                                                             title="Player">Player</a>
+                                                                                                             title="{{ __('t_ingame.messages.bbcode_player') }}">{{ __('t_ingame.messages.bbcode_player') }}</a>
                                                         </li>
                                                         <li class="markItUpSeparator">-</li>
                                                         <li class="markItUpButton markItUpButton7 leftAlign"><a href=""
-                                                                                                                title="Left align">Left
-                                                                align</a></li>
+                                                                                                                title="{{ __('t_ingame.messages.bbcode_align_left') }}">{{ __('t_ingame.messages.bbcode_align_left') }}</a></li>
                                                         <li class="markItUpButton markItUpButton8 centerAlign"><a
-                                                                    href="" title="Centre align">Centre align</a></li>
+                                                                    href="" title="{{ __('t_ingame.messages.bbcode_align_center') }}">{{ __('t_ingame.messages.bbcode_align_center') }}</a></li>
                                                         <li class="markItUpButton markItUpButton9 rightAlign"><a href=""
-                                                                                                                 title="Right align">Right
-                                                                align</a></li>
+                                                                                                                 title="{{ __('t_ingame.messages.bbcode_align_right') }}">{{ __('t_ingame.messages.bbcode_align_right') }}</a></li>
                                                         <li class="markItUpButton markItUpButton10 justifyAlign"><a
-                                                                    href="" title="Justify">Justify</a></li>
+                                                                    href="" title="{{ __('t_ingame.messages.bbcode_align_justify') }}">{{ __('t_ingame.messages.bbcode_align_justify') }}</a></li>
                                                         <li class="markItUpSeparator">-</li>
                                                         <li class="markItUpButton markItUpButton11 code"><a href=""
-                                                                                                            title="Code">Code</a>
+                                                                                                            title="{{ __('t_ingame.messages.bbcode_code') }}">{{ __('t_ingame.messages.bbcode_code') }}</a>
                                                         </li>
                                                         <li class="markItUpSeparator">-</li>
                                                         <li class="markItUpButton markItUpButton12 email"><a href=""
                                                                                                              accesskey="E"
-                                                                                                             title="Email [Ctrl+E]">Email</a>
+                                                                                                             title="{{ __('t_ingame.messages.bbcode_email') }} [Ctrl+E]">{{ __('t_ingame.messages.bbcode_email') }}</a>
                                                         </li>
                                                         <li class="markItUpButton markItUpButton13 preview"
                                                             style="display: none;"><a href=""
-                                                                                      title="Preview">Preview</a></li>
+                                                                                      title="{{ __('t_ingame.messages.bbcode_preview') }}">{{ __('t_ingame.messages.bbcode_preview') }}</a></li>
                                                     </ul>
                                                 </div>
                                                 <textarea name="text"
                                                           class="new_msg_textarea markItUpEditor"></textarea>
                                                 <div class="miu_footer clearfix"><a role="button"
-                                                                                    class="fright txt_link btn_blue preview_link">Preview</a><span
-                                                            class="fleft"><span class="cnt_chars">2000</span> Characters remaining</span>
+                                                                                    class="fright txt_link btn_blue preview_link">{{ __('t_ingame.messages.bbcode_preview') }}</a><span
+                                                            class="fleft"><span class="cnt_chars">2000</span> {{ __('t_ingame.messages.bbcode_chars_left') }}</span>
                                                 </div>
                                                 <div class="miu_preview_container" style="display: none;">
 
