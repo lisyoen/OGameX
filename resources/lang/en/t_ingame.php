@@ -165,6 +165,7 @@ return [
         'total_per_hour'     => 'Total per hour:',
         'total_per_day'      => 'Total per day',
         'total_per_week'     => 'Total per week:',
+        'events'             => 'Events',
     ],
 
     // -------------------------------------------------------------------------
