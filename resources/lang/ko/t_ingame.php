@@ -619,6 +619,7 @@ return [
         'spy_defense'         => '방어',
         'spy_research'        => '연구',
         'spy_building'        => '건물',
+        'spy_api_key'         => '이 데이터는 호환 가능한 전투 시뮬레이터에 입력할 수 있습니다',
 
         // Battle report (brief)
         'battle_attacker'    => '공격자',
@@ -668,6 +669,7 @@ return [
         'battle_player_from'     => '출발지',
         'battle_attacker_fires'  => ':attacker이(가) :defender에게 총 :hits발을 발사하여 총 :strength의 공격력을 가했습니다. :defender2의 보호막이 :absorbed 데미지를 흡수했습니다.',
         'battle_defender_fires'  => ':defender이(가) :attacker에게 총 :hits발을 발사하여 총 :strength의 공격력을 가했습니다. :attacker2의 보호막이 :absorbed 데미지를 흡수했습니다.',
+        'battle_api_key'         => '이 데이터는 호환 가능한 전투 시뮬레이터에 입력할 수 있습니다',
     ],
 
     // -------------------------------------------------------------------------

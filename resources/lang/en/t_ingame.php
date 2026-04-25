@@ -618,6 +618,7 @@ return [
         'spy_defense'         => 'Defense',
         'spy_research'        => 'Research',
         'spy_building'        => 'Building',
+        'spy_api_key'         => 'This data can be entered into a compatible combat simulator',
 
         // Battle report (brief)
         'battle_attacker'    => 'Attacker',
@@ -667,6 +668,7 @@ return [
         'battle_player_from'     => 'from',
         'battle_attacker_fires'  => 'The :attacker fires a total of :hits shots at the :defender with a total strength of :strength. The :defender2\'s shields absorb :absorbed points of damage.',
         'battle_defender_fires'  => 'The :defender fires a total of :hits shots at the :attacker with a total strength of :strength. The :attacker2\'s shields absorb :absorbed points of damage.',
+        'battle_api_key'         => 'This data can be entered into a compatible combat simulator',
     ],
 
     // -------------------------------------------------------------------------
