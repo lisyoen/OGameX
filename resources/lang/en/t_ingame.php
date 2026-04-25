@@ -1494,6 +1494,120 @@ return [
     ],
 
     // -------------------------------------------------------------------------
+    // Rewards page
+    // -------------------------------------------------------------------------
+    'rewards' => [
+        'page_title'          => 'Rewards',
+        'info_tooltip'        => 'Rewards will be dispatched every day and can be collected manually. From the 7th day on, no further rewards will be sent out. The first reward will be given on the 2nd day of registration.',
+        'new_awards'          => 'New awards',
+        'awards_not_reached'  => 'Awards not yet reached',
+        'collected_awards'    => 'Collected awards',
+        'not_fulfilled'       => 'Not fulfilled',
+
+        // Reward items
+        'reward_1_title'      => 'Let`s go Emperor',
+        'reward_1_text'       => 'Greetings, emperor Lieutenant Cupid!
+
+The supplies from your colony ship have been unloaded and are now available to help develop your world. The perfect time to drive forward the improvements to your empire!
+
+Good luck!
+The OGame Starter Aid',
+        'reward_2_title'      => 'The colony is growing!',
+        'reward_2_text'       => 'Greetings, emperor Lieutenant Cupid!
+
+Your subordinates want to make themselves useful. We have provided you with a KRAKEN robot to help accelerate the improvements to your colony. Increase your production and soon your empire will bloom into untold strength!
+
+Good luck!
+The OGame Starter Aid',
+        'reward_4_title'      => 'Supply and demand',
+        'reward_4_text'       => 'Greetings, emperor Lieutenant Cupid!
+
+When the metal storage is overflowing and the assembly line stands still because there are no more crystals, it is a good time to pay a visit to the resource merchant. Best check out his offers now.
+
+Good luck!
+The OGame Starter Aid',
+        'reward_8_title'      => 'Progress through technology',
+        'reward_8_text'       => 'Greetings, emperor Lieutenant Cupid!
+
+Your colony has to be protected from enemy emperors. Rocket Launchers are an effective means of fighting back against attacking space ships. Protect your new home!
+
+Good luck!
+The OGame Starter Aid',
+        'reward_16_title'     => 'Progress through technology',
+        'reward_16_text'      => 'Greetings, emperor Lieutenant Cupid!
+
+Our scientists are racking their brains. How about we support them a little in their hard work? A NEWTRON robot should be of good use to them.
+
+Good luck!
+The OGame Starter Aid',
+        'reward_32_title'     => 'Conquer outer space',
+        'reward_32_text'      => 'Greetings, emperor Lieutenant Cupid!
+
+We need to strengthen our forces if we don`t want to end up being our enemy`s play toy. The DETROID robot can accelerate production in the shipyard. That way the fleet will be ready to go at all times!
+
+Good luck!
+The OGame Starter Aid',
+        'reward_64_title'     => 'Expansion of the empire',
+        'reward_64_text'      => 'Greetings, emperor Lieutenant Cupid!
+
+The foundations for a powerful empire are set. The Commanding Staff are now available to you for 3 days to support you in the consolidation of your empire. Drive research forward and soon new worlds will be open to you and available for your settlers!
+
+Good luck!
+The OGame Starter Aid',
+    ],
+
+    // -------------------------------------------------------------------------
+    // Chat page
+    // -------------------------------------------------------------------------
+    'chat' => [
+        'page_title'          => 'Chat',
+        'buddy'               => 'Buddy',
+        'your_alliance'       => 'Your alliance',
+        'online'              => 'online',
+        'offline'             => 'offline',
+        'status_not_visible'  => 'Status not visible',
+        'highscore_ranking'   => 'Highscore ranking',
+        'alliance'            => 'Alliance',
+        'planet'              => 'Planet',
+        'no_messages_yet'     => 'No messages yet. Start the conversation!',
+        'submit'              => 'Submit',
+        'alliance_chat'       => 'Alliance Chat',
+        'list_of_chats'       => 'List of your chats',
+        'alliance_group_chat' => 'Alliance group chat',
+        'no_conversations'    => 'No conversations yet.',
+        'player_list'         => 'Player list',
+        'buddies'             => 'Buddies',
+        'no_buddies'          => 'No buddies',
+        'strangers'           => 'Strangers',
+        'no_strangers'        => 'No strangers',
+    ],
+
+    // -------------------------------------------------------------------------
+    // Character class page
+    // -------------------------------------------------------------------------
+    'characterclass' => [
+        'page_title'             => 'Class Selection',
+        'choose_class_title'     => 'Choose Your Class',
+        'choose_class_desc'      => 'Select a class to receive additional benefits. You can change your class in the class selection section in the top-right.',
+        'deactivate'             => 'Deactivate',
+        'select_for_free'        => 'Select for Free',
+        'buy_for'                => 'Buy for',
+        'select_title'           => 'Select Character Class',
+        'confirm'                => 'Confirm',
+        'cancel'                 => 'Cancel',
+        'activate_free_confirm'  => 'Do you want to activate the :className class for free?',
+        'activate_paid_confirm'  => 'Do you want to activate the :className class for :price Dark Matter? In doing so, you will lose your current class.',
+        'selected_success'       => 'Character class selected successfully!',
+        'not_enough_dm_title'    => 'Not enough Dark Matter',
+        'not_enough_dm_desc'     => 'Not enough Dark Matter available! Do you want to buy some now?',
+        'buy_dm'                 => 'Buy Dark Matter',
+        'error_occurred'         => 'An error occurred. Please try again.',
+        'deactivate_title'       => 'Deactivate Character Class',
+        'deactivate_confirm'     => 'Do you really want to deactivate your character class? Reactivation requires :cost Dark Matter.',
+        'deactivated_success'    => 'Character class deactivated successfully!',
+    ],
+
+    // -------------------------------------------------------------------------
     // Admin menu (admin-menu.blade.php)
     // -------------------------------------------------------------------------
     'admin_menu' => [
