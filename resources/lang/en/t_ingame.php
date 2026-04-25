@@ -555,6 +555,7 @@ return [
         'new_alliance_msg'   => 'New alliance message',
         'to'                 => 'To',
         'all_players'        => 'all players',
+        'only_rank'          => 'Only rank',
         'send'               => 'send',
         'delete_buddy_title' => 'Delete buddy',
         'report_to_operator' => 'Report this message to a game operator?',

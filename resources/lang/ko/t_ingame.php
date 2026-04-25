@@ -556,6 +556,7 @@ return [
         'new_alliance_msg'   => '새 동맹 메시지',
         'to'                 => '받는 사람',
         'all_players'        => '모든 플레이어',
+        'only_rank'          => '순위만',
         'send'               => '보내기',
         'delete_buddy_title' => '친구 삭제',
         'report_to_operator' => '이 메시지를 게임 운영자에게 신고하시겠습니까?',
