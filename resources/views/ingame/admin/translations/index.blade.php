@@ -3,16 +3,16 @@
 @section('content')
     <div id="resourcesettingscomponent" class="maincontent">
         <div id="planet" class="shortHeader">
-            <h2>번역 관리</h2>
+            <h2>{{ __('t_ingame.admin.translations.title') }}</h2>
         </div>
 
         <div id="buttonz">
             <div class="header">
-                <h2>번역 관리</h2>
+                <h2>{{ __('t_ingame.admin.translations.title') }}</h2>
             </div>
             <div class="content">
                 <p class="box_highlight textCenter">
-                    네임스페이스를 선택하여 en/ko 번역을 편집하세요.
+                    {{ __('t_ingame.admin.translations.select_namespace') }}
                 </p>
 
                 {{-- Summary Stats --}}
@@ -32,23 +32,23 @@
                 <div style="margin: 20px 0; padding: 16px; background: #1e2a3a; border: 1px solid #415a77; border-radius: 6px;">
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px;">
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">전체 NS</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations.total_ns') }}</div>
                             <div style="font-size: 20px; font-weight: bold; color: #fff;">{{ count($namespaces) }}</div>
                         </div>
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">전체 키</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations.total_keys') }}</div>
                             <div style="font-size: 20px; font-weight: bold; color: #fff;">{{ number_format($totalKeys) }}</div>
                         </div>
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">번역 완료</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations.translated') }}</div>
                             <div style="font-size: 20px; font-weight: bold; color: #4ade80;">{{ number_format($totalOk) }}</div>
                         </div>
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">미번역</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations.untranslated') }}</div>
                             <div style="font-size: 20px; font-weight: bold; color: #fb923c;">{{ number_format($totalUntranslated) }}</div>
                         </div>
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">placeholder 불일치</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations.placeholder_mismatch') }}</div>
                             <div style="font-size: 20px; font-weight: bold; color: #ef4444;">{{ number_format($totalMismatch) }}</div>
                         </div>
                     </div>
@@ -82,11 +82,11 @@
                                 {{ $ns['name'] }}
                             </div>
                             <div style="font-size: 13px; color: #b0c4de; margin-bottom: 8px;">
-                                전체 키: <strong>{{ number_format($totalCount) }}</strong>
+                                {{ __('t_ingame.admin.translations.total_keys') }}: <strong>{{ number_format($totalCount) }}</strong>
                             </div>
                             <div style="margin-bottom: 8px;">
                                 <div style="font-size: 12px; color: #b0c4de; margin-bottom: 4px;">
-                                    ko 번역률: <strong>{{ $translationRate }}%</strong>
+                                    {{ __('t_ingame.admin.translations.ko_translation_rate') }}: <strong>{{ $translationRate }}%</strong>
                                 </div>
                                 <div style="background: #1e2a3a; border-radius: 4px; height: 8px; overflow: hidden;">
                                     <div style="background: #4ade80; height: 100%; width: {{ $translationRate }}%;"></div>
@@ -95,11 +95,11 @@
                             <div>
                                 @if($mismatchCount === 0)
                                     <span style="background: #4ade80; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">
-                                        placeholder OK
+                                        {{ __('t_ingame.admin.translations.placeholder_ok') }}
                                     </span>
                                 @else
                                     <span style="background: #ef4444; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">
-                                        mismatch: {{ $mismatchCount }}
+                                        {{ __('t_ingame.admin.translations.mismatch_count', ['count' => $mismatchCount]) }}
                                     </span>
                                 @endif
                             </div>
