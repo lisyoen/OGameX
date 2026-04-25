@@ -396,7 +396,7 @@
                     <div class="overlayDiv repairlayer" style="width: 656px; background: url('{{ asset('img/facilities/e9f54b10dc4e1140ce090106d2f528.jpg') }}') 100% 0% rgb(0, 0, 0);">
                           <div id="repairlayer" style="">
                             <div class="repairableShips">
-                                <span>${wreckFieldData.is_repairing ? 'There is no wreckage at this position.' : 'Wreckages can be repaired in the Space Dock.'}</span>
+                                <span>${wreckFieldData.is_repairing ? '{{ __('t_ingame.facilities_page.wreck_field.no_wreckage') }}' : '{{ __('t_ingame.facilities_page.wreck_field.wreckage_repairable') }}'}</span>
                                 <div class="clearfix"></div>
                                 <br>
                                 <hr>
@@ -404,7 +404,7 @@
 
                 if (wreckFieldData.is_repairing) {
                     overlayHtml += `
-                        <h3>Ships being repaired:</h3>
+                        <h3>{{ __('t_ingame.facilities_page.wreck_field.ships_being_repaired') }}</h3>
                         <div class="ships_wrapper clearfix">
                     `;
 
@@ -531,7 +531,7 @@
                     if (totalRepaired > 0 && minTimePassed && !hasLateAddedShips) {
                         overlayHtml += `
                             <div class="btn btn_dark fright wreckfield-collect-btn-overlay">
-                                <input type="button" class="middlemark wreckfield-collect-btn-overlay-input" value="Put ships that are already repaired back into service" onclick="collectRepairedShips(); closeOverlay();">
+                                <input type="button" class="middlemark wreckfield-collect-btn-overlay-input" value="{{ __('t_ingame.facilities_page.wreck_field.put_ships_back') }}" onclick="collectRepairedShips(); closeOverlay();">
                             </div>
                         `;
                     }
@@ -598,7 +598,7 @@
                     var overlay = $('<div id="wreckFieldDetailsOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000; display: flex; align-items: center; justify-content: center;">' +
                         '<div style="width: 656px; background: #000; border: 1px solid #333; padding: 20px;">' +
                         '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">' +
-                        '<h2 style="color: #fff; margin: 0;">Space Dock</h2>' +
+                        '<h2 style="color: #fff; margin: 0;">{{ __('t_ingame.facilities_page.wreck_field.space_dock_title') }}</h2>' +
                         '<button onclick="closeOverlay()" style="background: #333; color: #fff; border: 1px solid #555; padding: 5px 10px; cursor: pointer;">✕</button>' +
                         '</div>' +
                         overlayHtml +
@@ -665,7 +665,7 @@
 
                 if (!isActiveWreckField) {
                     // When repairing: create the exact OGame structure
-                    var $wreckFieldSpan = $('<span class="wreck_field" style="font-size: 7px !important;">There is no wreckage at this position.</span>');
+                    var $wreckFieldSpan = $('<span class="wreck_field" style="font-size: 7px !important;">{{ __('t_ingame.facilities_page.wreck_field.no_wreckage') }}</span>');
                     var $separator = $('<hr>');
                     var $repairOrder = $('<span class="repair_order"></span>');
 
@@ -711,8 +711,8 @@
 
                   var $shipsSpan = $(`
                         <span class="ships" style="font-size: 7px;">
-                            ${repairTimerElement ? `Repair time remaining: ${repairTimerElement} ` : ''}
-                            Repaired Ships: <a href="javascript:void(0);" class="value tooltip" onclick="openWreckFieldDetailsPopup(); return false;" style="font-size: 7px; font-weight: bold;">${repairedShips} / ${totalShips}</a>
+                            ${repairTimerElement ? `{{ __('t_ingame.facilities_page.wreck_field.repair_time_remaining') }} ${repairTimerElement} ` : ''}
+                            {{ __('t_ingame.facilities_page.wreck_field.repaired_ships') }} <a href="javascript:void(0);" class="value tooltip" onclick="openWreckFieldDetailsPopup(); return false;" style="font-size: 7px; font-weight: bold;">${repairedShips} / ${totalShips}</a>
                         </span>
                     `);
 
@@ -749,13 +749,13 @@
                     var collectButtonTooltip = '';
                     if (!collectEnabled) {
                         if (hasLateAddedShips) {
-                            collectButtonTooltip = 'Ships added during ongoing repairs cannot be collected manually. You must wait until all repairs are automatically completed.';
+                            collectButtonTooltip = '{{ __('t_ingame.facilities_page.wreck_field.late_added_ships_warning') }}';
                         } else if (wreckFieldData.is_repairing) {
-                            collectButtonTooltip = 'Repairs are still in progress. Use the Details window for partial collection.';
+                            collectButtonTooltip = '{{ __('t_ingame.facilities_page.wreck_field.repairs_in_progress') }}';
                         } else if (!hasRepairedShips) {
-                            collectButtonTooltip = 'No ships repaired yet';
+                            collectButtonTooltip = '{{ __('t_ingame.facilities_page.wreck_field.no_ships_repaired') }}';
                         } else {
-                            collectButtonTooltip = 'Repairs must be completed to collect ships from here.';
+                            collectButtonTooltip = '{{ __('t_ingame.facilities_page.wreck_field.repairs_must_complete') }}';
                         }
                     }
 
@@ -764,10 +764,10 @@
 
                     var $collectBtn = $(`
                         <button class="wreckfield-collect-btn" ${collectButtonOnclick}>
-                            <span class="btn btn_dark tooltip middlemark" title="${collectButtonTooltip}" style="${collectButtonStyle}">Collect</span>
+                            <span class="btn btn_dark tooltip middlemark" title="${collectButtonTooltip}" style="${collectButtonStyle}">{{ __('t_ingame.facilities_page.wreck_field.collect') }}</span>
                         </button>
                     `);
-                    var $detailsBtn = $('<a class="btn btn_dark undermark fright" href="javascript:void(0);" onclick="openWreckFieldDetailsPopup(); return false;">Details</a>');
+                    var $detailsBtn = $('<a class="btn btn_dark undermark fright" href="javascript:void(0);" onclick="openWreckFieldDetailsPopup(); return false;">{{ __('t_ingame.facilities_page.wreck_field.details') }}</a>');
 
                     $wreckfieldBtns.append($collectBtn);
                     $wreckfieldBtns.append($detailsBtn);
@@ -846,12 +846,12 @@
 
                     // Create the wreck field span with proper structure
                     var $wreckFieldSpan = $('<span class="wreck_field" style="font-size: 7px !important;"></span>');
-                    $wreckFieldSpan.text('Wreckage burns up in: ');
+                    $wreckFieldSpan.text('{{ __('t_ingame.facilities_page.wreck_field.wreckage_burns_up_in') }} ');
                     var $timeElement = $('<time id="burnUpCountDownForStationScreen" class="value countdown" datetime="P' + timeDisplay.replace(/\s/g, '') + '" style="font-size: 11px !important; font-weight: bold;">' + timeDisplay + '</time>');
                     $wreckFieldSpan.append($timeElement);
 
                     // Add Details link
-                    var $detailsLink = $('<a href="javascript:void(0);" class="fright tooltip" onclick="openWreckFieldDetailsPopup(); return false;">Details</a>');
+                    var $detailsLink = $('<a href="javascript:void(0);" class="fright tooltip" onclick="openWreckFieldDetailsPopup(); return false;">{{ __('t_ingame.facilities_page.wreck_field.details') }}</a>');
 
                     var $separator = $('<hr>');
 
@@ -869,12 +869,12 @@
                     // Use the same tooltip system as shipyard - simple title attribute with <br/> tags
                     var $shipLink = $('<a href="javascript:void(0);" class="value tooltip hideTooltipOnMouseenter js_hideTipOnMobile" title="' + tooltipContent.replace(/<br>/g, '<br/>') + '" style="font-size: 8px !important; font-weight: bold;">' + totalShips + ' Ships</a>');
 
-                    var $repairOrder = $('<span class="repair_order" style="font-size: 7px !important;">Repairable Ships: <i></i> in <time class="value" datetime="PT32M" style="font-size: 8px !important; font-weight: bold;">32m</time></span>');
+                    var $repairOrder = $('<span class="repair_order" style="font-size: 7px !important;">{{ __('t_ingame.facilities_page.wreck_field.repairable_ships') }} <i></i> in <time class="value" datetime="PT32M" style="font-size: 8px !important; font-weight: bold;">32m</time></span>');
                     $repairOrder.find('i').append($shipLink);
 
                     var $wreckfieldBtns = $('<div id="wreckfield-btns"></div>');
-                    var $burnUpBtn = $('<a href="javascript:void(0);" class="btn btn_dark overmark burn_up" onclick="confirmBurnUpWreckField();">Leave to burn up</a>');
-                    var $repairBtn = $('<a href="javascript:void(0);" class="btn btn_dark undermark repair" onclick="startWreckFieldRepairs();">Start repairs</a>');
+                    var $burnUpBtn = $('<a href="javascript:void(0);" class="btn btn_dark overmark burn_up" onclick="confirmBurnUpWreckField();">{{ __('t_ingame.facilities_page.wreck_field.leave_to_burn_up') }}</a>');
+                    var $repairBtn = $('<a href="javascript:void(0);" class="btn btn_dark undermark repair" onclick="startWreckFieldRepairs();">{{ __('t_ingame.facilities_page.wreck_field.start_repairs') }}</a>');
 
                     $wreckfieldBtns.append($burnUpBtn);
                     $wreckfieldBtns.append($repairBtn);
@@ -959,10 +959,10 @@
             // Function to confirm burn up
             function confirmBurnUpWreckField() {
                 errorBoxDecision(
-                    "Leave to burn up",
-                    "The wreckage will descend into the planet's atmosphere and burn up. Once struck, a repair will no longer be possible. Are you sure you want to burn up the wreckage?",
-                    "yes",
-                    "No",
+                    "{{ __('t_ingame.facilities_page.wreck_field.leave_burn_up_title') }}",
+                    "{{ __('t_ingame.facilities_page.wreck_field.leave_burn_up_confirm') }}",
+                    "{{ __('t_ingame.shared.yes') }}",
+                    "{{ __('t_ingame.shared.no') }}",
                     function() {
                         burnUpWreckField();
                     },

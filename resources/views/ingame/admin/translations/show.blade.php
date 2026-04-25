@@ -5,17 +5,17 @@
 
     <div id="resourcesettingscomponent" class="maincontent">
         <div id="planet" class="shortHeader">
-            <h2>번역 관리 — {{ $ns }}</h2>
+            <h2>{{ __('t_ingame.admin.translations_show.title', ['ns' => $ns]) }}</h2>
         </div>
 
         <div id="buttonz">
             <div class="header">
-                <h2>번역 관리 — {{ $ns }}</h2>
+                <h2>{{ __('t_ingame.admin.translations_show.title', ['ns' => $ns]) }}</h2>
             </div>
             <div class="content">
                 {{-- Back Link --}}
                 <div style="margin-bottom: 16px;">
-                    <a href="{{ route('admin.translations.index') }}" class="btn">← 목록</a>
+                    <a href="{{ route('admin.translations.index') }}" class="btn">{{ __('t_ingame.admin.translations_show.back_to_list') }}</a>
                 </div>
 
                 {{-- Summary Stats --}}
@@ -35,19 +35,19 @@
                 <div style="margin-bottom: 20px; padding: 16px; background: #1e2a3a; border: 1px solid #415a77; border-radius: 6px;">
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px;">
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">전체 키</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations_show.stats_total_keys') }}</div>
                             <div style="font-size: 18px; font-weight: bold; color: #fff;">{{ number_format($totalCount) }}</div>
                         </div>
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">번역 완료</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations_show.stats_translated') }}</div>
                             <div style="font-size: 18px; font-weight: bold; color: #4ade80;">{{ number_format($okCount) }}</div>
                         </div>
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">미번역</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations_show.stats_untranslated') }}</div>
                             <div style="font-size: 18px; font-weight: bold; color: #fb923c;">{{ number_format($untranslatedCount) }}</div>
                         </div>
                         <div>
-                            <div style="font-size: 12px; color: #b0c4de;">placeholder 불일치</div>
+                            <div style="font-size: 12px; color: #b0c4de;">{{ __('t_ingame.admin.translations_show.stats_mismatch') }}</div>
                             <div style="font-size: 18px; font-weight: bold; color: #ef4444;">{{ number_format($mismatchCount) }}</div>
                         </div>
                     </div>
@@ -56,10 +56,10 @@
                 {{-- Action Buttons --}}
                 <div style="margin-bottom: 20px; display: flex; gap: 12px;">
                     <button id="bulkSaveBtn" class="btn_blue" disabled style="opacity: 0.5;">
-                        일괄 저장 (<span id="dirtyCount">0</span>)
+                        {{ __('t_ingame.admin.translations_show.bulk_save') }} (<span id="dirtyCount">0</span>)
                     </button>
                     <button id="commitBtn" class="btn">
-                        Commit
+                        {{ __('t_ingame.admin.translations_show.commit') }}
                     </button>
                 </div>
 
@@ -68,11 +68,11 @@
                     <table class="table544" cellspacing="0" cellpadding="0" style="width: 100%;">
                         <thead style="position: sticky; top: 0; background: #1e2a3a; z-index: 10;">
                             <tr>
-                                <th style="width: 20%;">키</th>
-                                <th style="width: 30%;">en 원문</th>
-                                <th style="width: 30%;">ko 번역</th>
-                                <th style="width: 10%;">placeholder</th>
-                                <th style="width: 10%;">저장</th>
+                                <th style="width: 20%;">{{ __('t_ingame.admin.translations_show.table_key') }}</th>
+                                <th style="width: 30%;">{{ __('t_ingame.admin.translations_show.table_en_original') }}</th>
+                                <th style="width: 30%;">{{ __('t_ingame.admin.translations_show.table_ko_translation') }}</th>
+                                <th style="width: 10%;">{{ __('t_ingame.admin.translations_show.table_placeholder') }}</th>
+                                <th style="width: 10%;">{{ __('t_ingame.admin.translations_show.table_save') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -99,7 +99,7 @@
                                         @endif
                                     </td>
                                     <td class="save-status" style="text-align: center;">
-                                        <span class="status-dot" style="font-size: 20px; color: #6b7280;" title="초기 상태">●</span>
+                                        <span class="status-dot" style="font-size: 20px; color: #6b7280;" title="{{ __('t_ingame.admin.translations_show.status_initial') }}">●</span>
                                     </td>
                                 </tr>
                             @endforeach
@@ -131,9 +131,9 @@
             max-width: 600px;
             width: 90%;
         ">
-            <h3 style="color: #f48406; margin-bottom: 16px;">Commit 수동 가이드</h3>
+            <h3 style="color: #f48406; margin-bottom: 16px;">{{ __('t_ingame.admin.translations_show.modal_title') }}</h3>
             <p style="color: #b0c4de; margin-bottom: 16px;">
-                자동 commit은 501 (미구현) 상태입니다. 아래를 spark-home에서 수동 실행하세요:
+                {{ __('t_ingame.admin.translations_show.modal_auto_commit_info') }}
             </p>
             <pre style="
                 background: #1e2a3a;
@@ -149,11 +149,11 @@
 git status resources/lang/ko
 git add resources/lang/ko
 git commit -m "i18n(ko): update translations via /admin/translations"
-# 현재 admin-translations 브랜치면 push는 030에서 일괄</pre>
+# {{ __('t_ingame.admin.translations_show.modal_push_note') }}</pre>
             <p style="color: #fb923c; font-size: 12px; margin-bottom: 16px;">
-                자동화는 향후 업스트림 PR 후보(shell exec 보안 검토 필요).
+                {{ __('t_ingame.admin.translations_show.modal_automation_note') }}
             </p>
-            <button id="closeModalBtn" class="btn_blue">닫기</button>
+            <button id="closeModalBtn" class="btn_blue">{{ __('t_ingame.admin.translations_show.modal_close') }}</button>
         </div>
     </div>
 
