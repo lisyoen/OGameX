@@ -1681,8 +1681,6 @@ The OGame Starter Aid',
             'placeholder_ok'        => 'placeholder OK',
             'mismatch_count'        => 'mismatch: :count',
         ],
-        ],
-        ],
         'server_settings' => [
             'title' => 'Server settings',
             'basic_settings' => 'Basic settings.',
