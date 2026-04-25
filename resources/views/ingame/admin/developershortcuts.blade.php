@@ -12,32 +12,32 @@
 
     <div id="resourcesettingscomponent" class="maincontent">
         <div id="planet" class="shortHeader">
-            <h2>@lang('Developer shortcuts')</h2>
+            <h2>@lang('admin.developer_shortcuts.title')</h2>
         </div>
 
         <div id="buttonz">
             <div class="header">
-                <h2>@lang('Developer shortcuts')</h2>
+                <h2>@lang('admin.developer_shortcuts.title')</h2>
             </div>
             <div class="content">
                 <div class="buddylistContent" style="margin-bottom: 60px;">
 
                     <form action="{{ route('admin.developershortcuts.update') }}" name="form" method="post">
                         {{ csrf_field() }}
-                                <p class="box_highlight textCenter no_buddies">@lang('Update current planet:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.update_current_planet')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <input type="submit" class="btn_blue" name="set_mines" value="@lang('Set all mines to level 30')">
-                                        <input type="submit" class="btn_blue" name="set_storages" value="@lang('Set all storages to level 15')">
-                                        <input type="submit" class="btn_blue" name="set_shipyard" value="@lang('Set all shipyard facilities to level 12')">
-                                        <input type="submit" class="btn_blue" name="set_research" value="@lang('Set all research to level 10')">
+                                        <input type="submit" class="btn_blue" name="set_mines" value="@lang('admin.developer_shortcuts.set_all_mines')">
+                                        <input type="submit" class="btn_blue" name="set_storages" value="@lang('admin.developer_shortcuts.set_all_storages')">
+                                        <input type="submit" class="btn_blue" name="set_shipyard" value="@lang('admin.developer_shortcuts.set_all_shipyard')">
+                                        <input type="submit" class="btn_blue" name="set_research" value="@lang('admin.developer_shortcuts.set_all_research_10')">
                                     </div>
                                 </div>
 
-                                <p class="box_highlight textCenter no_buddies">@lang('Add X of unit to current planet:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.add_x_units')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Amount of units to add:')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.amount_of_units')</label>
                                         <div class="thefield">
                                             <input type="text" pattern="^[0-9,.kmb]+$" class="textInput w50 textCenter textBeefy" placeholder="1" size="2" name="amount_of_units">
                                         </div>
@@ -47,14 +47,14 @@
                                         @foreach ($units as $unit)
                                             <input type="submit" name="unit_{{ $unit->id }}" class="btn_blue" value="{{ $unit->title }}">
                                         @endforeach
-                                        <input type="submit" class="btn_blue" value="@lang('Light fighter')">
+                                        <input type="submit" class="btn_blue" value="@lang('admin.developer_shortcuts.light_fighter')">
                                     </div>
                                 </div>
 
-                                <p class="box_highlight textCenter no_buddies">@lang('Set building level on current planet:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.set_building_level')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Level to set:')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.level_to_set')</label>
                                         <div class="thefield">
                                             <input type="text" pattern="^[0-9]+$" placeholder="0" class="textInput w50 textCenter textBeefy" size="2" name="building_level">
                                         </div>
@@ -66,10 +66,10 @@
                                     </div>
                                 </div>
 
-                                <p class="box_highlight textCenter no_buddies">@lang('Set research level for current player:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.set_research_level')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Level to set:')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.level_to_set')</label>
                                         <div class="thefield">
                                             <input type="text" pattern="^[0-9]+$" placeholder="0" class="textInput w50 textCenter textBeefy" size="2" name="research_level">
                                         </div>
@@ -81,59 +81,59 @@
                                     </div>
                                 </div>
                                 <!-- TODO: refactor this to add/substract DM to any player instead of free changes, this removes unecessary/complex free change logic -->
-                                <p class="box_highlight textCenter no_buddies">@lang('Character Class Settings')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.character_class_settings')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
                                         @php
                                             $freeClassChanges = app(\OGame\Services\SettingsService::class)->get('dev_free_class_changes', false);
                                         @endphp
                                         @if($freeClassChanges)
-                                            <input type="submit" class="btn_blue" name="disable_free_class_changes" value="@lang('Disable Free Class Changes')">
+                                            <input type="submit" class="btn_blue" name="disable_free_class_changes" value="@lang('admin.developer_shortcuts.disable_free_class_changes')">
                                         @else
-                                            <input type="submit" class="btn_blue" name="enable_free_class_changes" value="@lang('Enable Free Class Changes')">
+                                            <input type="submit" class="btn_blue" name="enable_free_class_changes" value="@lang('admin.developer_shortcuts.enable_free_class_changes')">
                                         @endif
-                                        <input type="submit" class="btn_blue" name="reset_character_class" value="@lang('Reset Character Class')">
-                                        <a href="{{ route('characterclass.index') }}" class="btn_blue" style="display: inline-block; padding: 5px 10px; text-decoration: none;">@lang('Go to Class Selection')</a>
+                                        <input type="submit" class="btn_blue" name="reset_character_class" value="@lang('admin.developer_shortcuts.reset_character_class')">
+                                        <a href="{{ route('characterclass.index') }}" class="btn_blue" style="display: inline-block; padding: 5px 10px; text-decoration: none;">@lang('admin.developer_shortcuts.go_to_class_selection')</a>
                                     </div>
                                 </div>
 
-                                <p class="box_highlight textCenter no_buddies">@lang('Reset planet')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.reset_planet')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <input type="submit" class="btn_blue" name="reset_buildings" value="@lang('Set all buildings to level 0')">
-                                        <input type="submit" class="btn_blue" name="reset_research" value="@lang('Set all research to level 0')">
-                                        <input type="submit" class="btn_blue" name="reset_units" value="@lang('Remove all units')">
-                                        <input type="submit" class="btn_blue" name="reset_resources" value="@lang('Set all resources to 0')">
+                                        <input type="submit" class="btn_blue" name="reset_buildings" value="@lang('admin.developer_shortcuts.set_buildings_to_0')">
+                                        <input type="submit" class="btn_blue" name="reset_research" value="@lang('admin.developer_shortcuts.set_research_to_0')">
+                                        <input type="submit" class="btn_blue" name="reset_units" value="@lang('admin.developer_shortcuts.remove_all_units')">
+                                        <input type="submit" class="btn_blue" name="reset_resources" value="@lang('admin.developer_shortcuts.set_resources_to_0')">
                                     </div>
                                 </div>
                             </form>
 
                             <form action="{{ route('admin.developershortcuts.update-resources') }}" name="form" method="post">
                                 {{ csrf_field() }}
-                                <p class="box_highlight textCenter no_buddies">@lang('Add / subtract resources at coordinates:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.add_subtract_resources')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <div class="smallFont">@lang('You can enter positive or negative values to add or subtract to the selected resource. Supports k/m/b suffixes (e.g., 1k, 2m, 3b)')</div>
-                                        <label class="styled textBeefy">@lang('Coordinates:')</label>
+                                        <div class="smallFont">@lang('admin.developer_shortcuts.resources_desc')</div>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.coordinates')</label>
                                         <div class="thefield" style="display: flex; gap: 10px;">
                                             <div>
-                                                <label for="galaxy">@lang('Galaxy:')</label>
+                                                <label for="galaxy">@lang('admin.developer_shortcuts.galaxy')</label>
                                                 <input type="text" id="galaxy" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->galaxy }}" min="1" max="{{ $settings->numberOfGalaxies() }}" name="galaxy">
                                             </div>
                                             <div>
-                                                <label for="system">@lang('System:')</label>
+                                                <label for="system">@lang('admin.developer_shortcuts.system')</label>
                                                 <input type="text" id="system" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->system }}" min="1" max="499" name="system">
                                             </div>
                                             <div>
-                                                <label for="position">@lang('Position:')</label>
+                                                <label for="position">@lang('admin.developer_shortcuts.position')</label>
                                                 <input type="text" id="position" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->position }}" min="1" max="15" name="position">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="fieldwrapper"><label class="styled textBeefy">@lang('Resources to add/subtract:')</label>
+                                    <div class="fieldwrapper"><label class="styled textBeefy">@lang('admin.developer_shortcuts.resources_to_add_subtract')</label>
                                         <div class="thefield" style="display: flex; flex-direction: column; gap: 10px;">
                                             @foreach (\OGame\Models\Enums\ResourceType::cases() as $resource)
                                                 <div style="display: flex; gap: 10px;">
@@ -154,39 +154,39 @@
 
                             <form action="{{ route('admin.developershortcuts.create-at-coords') }}" name="form" method="post">
                                 {{ csrf_field() }}
-                                <p class="box_highlight textCenter no_buddies">@lang('Create planet/moon at coordinates:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.create_planet_moon')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Coordinates:')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.coordinates')</label>
                                         <div class="thefield" style="display: flex; gap: 10px;">
                                             <div>
-                                                <label for="galaxy">@lang('Galaxy:')</label>
+                                                <label for="galaxy">@lang('admin.developer_shortcuts.galaxy')</label>
                                                 <input type="text" id="galaxy" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->galaxy }}" min="1" max="{{ $settings->numberOfGalaxies() }}" name="galaxy">
                                             </div>
                                             <div>
-                                                <label for="system">@lang('System:')</label>
+                                                <label for="system">@lang('admin.developer_shortcuts.system')</label>
                                                 <input type="text" id="system" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->system }}" min="1" max="499" name="system">
                                             </div>
                                             <div>
-                                                <label for="position">@lang('Position:')</label>
+                                                <label for="position">@lang('admin.developer_shortcuts.position')</label>
                                                 <input type="text" id="position" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->position }}" min="1" max="15" name="position">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Moon Size (for Create Moon):')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.moon_size')</label>
                                         <div class="thefield" style="display: flex; gap: 15px; align-items: flex-start;">
                                             <div style="flex: 1;">
-                                                <label for="moon_debris" style="display: block; margin-bottom: 5px;">@lang('Debris Amount:')</label>
+                                                <label for="moon_debris" style="display: block; margin-bottom: 5px;">@lang('admin.developer_shortcuts.debris_amount')</label>
                                                 <input type="text" id="moon_debris" pattern="^[-+0-9,.kmb]+$" class="textInput textCenter textBeefy"
                                                        style="width: 100%;" value="2000000" placeholder="2000000" name="moon_debris" title="Total debris (metal+crystal+deuterium) that determines moon size">
                                                 <span style="display: block; font-size: 0.9em; color: #666; margin-top: 5px;">Examples: 100k, 500k, 1M, 2M</span>
                                             </div>
                                             <div style="flex: 1;">
-                                                <label for="moon_factor" style="display: block; margin-bottom: 5px;">@lang('X Factor (10-20):')</label>
+                                                <label for="moon_factor" style="display: block; margin-bottom: 5px;">@lang('admin.developer_shortcuts.x_factor')</label>
                                                 <input type="text" id="moon_factor" pattern="^[0-9]+$" class="textInput textCenter textBeefy"
                                                        style="width: 100%;" value="" placeholder="Random" name="moon_factor" min="10" max="20" title="X factor in formula (10-20). Leave blank for random.">
                                                 <span style="display: block; font-size: 0.9em; color: #666; margin-top: 5px;">Leave blank = random</span>
@@ -195,40 +195,40 @@
                                         <span style="display: block; font-size: 0.9em; color: #999; margin-top: 8px; font-style: italic;">Formula: diameter = floor((x + 3*debris/100000)^0.5 * 1000)</span>
                                     </div>
                                     <div class="fieldwrapper" style="text-align: center; margin-bottom: 20px;">
-                                        <input type="submit" class="btn_blue" name="create_planet" value="@lang('Create Planet')">
-                                        <input type="submit" class="btn_blue" name="create_moon" value="@lang('Create Moon')">
-                                        <input type="submit" class="btn_blue" name="delete_planet" value="@lang('Delete Planet')">
-                                        <input type="submit" class="btn_blue" name="delete_moon" value="@lang('Delete Moon')">
+                                        <input type="submit" class="btn_blue" name="create_planet" value="@lang('admin.developer_shortcuts.create_planet')">
+                                        <input type="submit" class="btn_blue" name="create_moon" value="@lang('admin.developer_shortcuts.create_moon')">
+                                        <input type="submit" class="btn_blue" name="delete_planet" value="@lang('admin.developer_shortcuts.delete_planet')">
+                                        <input type="submit" class="btn_blue" name="delete_moon" value="@lang('admin.developer_shortcuts.delete_moon')">
                                     </div>
                                 </div>
                             </form>
 
                             <form action="{{ route('admin.developershortcuts.create-debris') }}" name="form" method="post">
                                 {{ csrf_field() }}
-                                <p class="box_highlight textCenter no_buddies">@lang('Create/delete debris field at coordinates:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.create_delete_debris')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Coordinates:')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.coordinates')</label>
                                         <div class="thefield" style="display: flex; gap: 10px;">
                                             <div>
-                                                <label for="galaxy">@lang('Galaxy:')</label>
+                                                <label for="galaxy">@lang('admin.developer_shortcuts.galaxy')</label>
                                                 <input type="text" id="galaxy" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->galaxy }}" min="1" max="{{ $settings->numberOfGalaxies() }}" name="galaxy">
                                             </div>
                                             <div>
-                                                <label for="system">@lang('System:')</label>
+                                                <label for="system">@lang('admin.developer_shortcuts.system')</label>
                                                 <input type="text" id="system" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->system }}" min="1" max="499" name="system">
                                             </div>
                                             <div>
-                                                <label for="position">@lang('Position:') (1-16)</label>
+                                                <label for="position">@lang('admin.developer_shortcuts.position') (1-16)</label>
                                                 <input type="text" id="position" pattern="^[-+0-9,.kmb]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->position }}" min="1" max="16" name="position">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Resources to add:')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.resources_to_add')</label>
                                         <div class="thefield" style="display: flex; flex-direction: column; gap: 10px;">
                                             @foreach (\OGame\Models\Enums\ResourceType::cases() as $resource)
                                                 <div style="display: flex; gap: 10px;">
@@ -241,8 +241,8 @@
                                         </div>
                                     </div>
                                     <div class="fieldwrapper" style="text-align: center; margin-bottom: 20px;">
-                                        <input type="submit" class="btn_blue" name="create_debris" value="@lang('Create/Append Debris Field')">
-                                        <input type="submit" class="btn_blue" name="delete_debris" value="@lang('Delete Debris Field')">
+                                        <input type="submit" class="btn_blue" name="create_debris" value="@lang('admin.developer_shortcuts.create_append_debris')">
+                                        <input type="submit" class="btn_blue" name="delete_debris" value="@lang('admin.developer_shortcuts.delete_debris_field')">
                                     </div>
                                     <div class="fieldwrapper" style="text-align: center; margin-bottom: 50px; padding-top: 10px; border-top: 1px solid #444;">
                                         <p style="margin-bottom: 10px; color: #999; font-size: 0.9em;">Quick shortcut for testing Discoverer class:</p>
@@ -255,31 +255,31 @@
 
                             <form action="{{ route('admin.developershortcuts.update-dark-matter') }}" name="form" method="post">
                                 {{ csrf_field() }}
-                                <p class="box_highlight textCenter no_buddies">@lang('Add / subtract dark matter for player at coordinates:')</p>
+                                <p class="box_highlight textCenter no_buddies">@lang('admin.developer_shortcuts.add_subtract_dark_matter')</p>
                                 <div class="group bborder" style="display: block;">
                                     <div class="fieldwrapper">
-                                        <div class="smallFont">@lang('Enter positive value to add or negative value to subtract dark matter. Supports k/m/b suffixes.')</div>
-                                        <label class="styled textBeefy">@lang('Coordinates:')</label>
+                                        <div class="smallFont">@lang('admin.developer_shortcuts.dark_matter_desc')</div>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.coordinates')</label>
                                         <div class="thefield" style="display: flex; gap: 10px;">
                                             <div>
-                                                <label for="dm_galaxy">@lang('Galaxy:')</label>
+                                                <label for="dm_galaxy">@lang('admin.developer_shortcuts.galaxy')</label>
                                                 <input type="text" id="dm_galaxy" pattern="^[0-9]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->galaxy }}" min="1" max="{{ $settings->numberOfGalaxies() }}" name="galaxy">
                                             </div>
                                             <div>
-                                                <label for="dm_system">@lang('System:')</label>
+                                                <label for="dm_system">@lang('admin.developer_shortcuts.system')</label>
                                                 <input type="text" id="dm_system" pattern="^[0-9]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->system }}" min="1" max="499" name="system">
                                             </div>
                                             <div>
-                                                <label for="dm_position">@lang('Position:')</label>
+                                                <label for="dm_position">@lang('admin.developer_shortcuts.position')</label>
                                                 <input type="text" id="dm_position" pattern="^[0-9]+$" class="textInput w50 textCenter textBeefy"
                                                        value="{{ $currentPlanet->getPlanetCoordinates()->position }}" min="1" max="15" name="position">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="fieldwrapper">
-                                        <label class="styled textBeefy">@lang('Dark Matter amount:')</label>
+                                        <label class="styled textBeefy">@lang('admin.developer_shortcuts.dark_matter_amount')</label>
                                         <div class="thefield">
                                             <input type="text" id="dark_matter" pattern="^[-+0-9,.kmb]+$"
                                                    class="textInput w100 textCenter textBeefy"
@@ -287,7 +287,7 @@
                                         </div>
                                     </div>
                                     <div class="fieldwrapper" style="text-align: center;">
-                                        <input type="submit" class="btn_blue" name="update_dark_matter" value="@lang('Update Dark Matter')">
+                                        <input type="submit" class="btn_blue" name="update_dark_matter" value="@lang('admin.developer_shortcuts.update_dark_matter')">
                                     </div>
                                 </div>
                             </form>
