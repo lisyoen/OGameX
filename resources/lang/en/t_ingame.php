@@ -109,6 +109,31 @@ return [
         'jump_gate'      => 'Jump Gate',
         'alliance_depot' => 'Alliance Depot',
         'burn_confirm'   => 'Are you sure you want to burn up this wreck field? This action cannot be undone.',
+
+        // Wreck field - Space Dock
+        'wreck_field' => [
+            'no_wreckage'                   => 'There is no wreckage at this position.',
+            'wreckage_repairable'           => 'Wreckages can be repaired in the Space Dock.',
+            'ships_being_repaired'          => 'Ships being repaired:',
+            'put_ships_back'                => 'Put ships that are already repaired back into service',
+            'space_dock_title'              => 'Space Dock',
+            'repair_time_remaining'         => 'Repair time remaining:',
+            'repaired_ships'                => 'Repaired Ships:',
+            'collect'                       => 'Collect',
+            'details'                       => 'Details',
+            'wreckage_burns_up_in'          => 'Wreckage burns up in:',
+            'repairable_ships'              => 'Repairable Ships:',
+            'leave_to_burn_up'              => 'Leave to burn up',
+            'start_repairs'                 => 'Start repairs',
+            'leave_burn_up_title'           => 'Leave to burn up',
+            'leave_burn_up_confirm'         => 'The wreckage will descend into the planet\'s atmosphere and burn up. Once struck, a repair will no longer be possible. Are you sure you want to burn up the wreckage?',
+
+            // Tooltip messages
+            'late_added_ships_warning'      => 'Ships added during ongoing repairs cannot be collected manually. You must wait until all repairs are automatically completed.',
+            'repairs_in_progress'           => 'Repairs are still in progress. Use the Details window for partial collection.',
+            'no_ships_repaired'             => 'No ships repaired yet',
+            'repairs_must_complete'         => 'Repairs must be completed to collect ships from here.',
+        ],
     ],
 
     // -------------------------------------------------------------------------

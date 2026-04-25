@@ -110,6 +110,31 @@ return [
         'jump_gate'      => '점프 게이트',
         'alliance_depot' => '동맹 저장소',
         'burn_confirm'   => '이 잔해 필드를 소각하시겠습니까? 이 작업은 되돌릴 수 없습니다.',
+
+        // Wreck field - Space Dock (잔해 필드 - 우주 도크)
+        'wreck_field' => [
+            'no_wreckage'                   => '이 위치에 잔해가 없습니다.',
+            'wreckage_repairable'           => '우주 도크에서 잔해를 수리할 수 있습니다.',
+            'ships_being_repaired'          => '수리 중인 함선:',
+            'put_ships_back'                => '이미 수리된 함선을 즉시 복귀시킵니다',
+            'space_dock_title'              => '우주 도크',
+            'repair_time_remaining'         => '남은 수리 시간:',
+            'repaired_ships'                => '수리된 함선:',
+            'collect'                       => '수거',
+            'details'                       => '세부사항',
+            'wreckage_burns_up_in'          => '잔해 소각까지:',
+            'repairable_ships'              => '수리 가능한 함선:',
+            'leave_to_burn_up'              => '소각되도록 남겨두기',
+            'start_repairs'                 => '수리 시작',
+            'leave_burn_up_title'           => '소각되도록 남겨두기',
+            'leave_burn_up_confirm'         => '잔해가 행성의 대기권으로 떨어져 소각됩니다. 일단 소각되면 더 이상 수리할 수 없습니다. 정말 잔해를 소각하시겠습니까?',
+
+            // Tooltip messages (툴팁 메시지)
+            'late_added_ships_warning'      => '진행 중인 수리 도중 추가된 함선은 수동으로 수거할 수 없습니다. 모든 수리가 자동으로 완료될 때까지 기다려야 합니다.',
+            'repairs_in_progress'           => '수리가 아직 진행 중입니다. 부분 수거를 하려면 세부사항 창을 사용하세요.',
+            'no_ships_repaired'             => '아직 수리된 함선이 없습니다',
+            'repairs_must_complete'         => '여기서 함선을 수거하려면 수리가 완료되어야 합니다.',
+        ],
     ],
 
     // -------------------------------------------------------------------------
