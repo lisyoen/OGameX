@@ -24,6 +24,7 @@ return [
         'universe_label'    => 'Universo:',
         'universe_option_1' => '1. Universo',
         'submit'            => 'Accedi',
+        'save_password'     => 'Save password',
         'forgot_password'   => 'Hai dimenticato la password?',
         'forgot_email'      => 'Hai dimenticato l\'indirizzo e-mail?',
         'terms_accept_html' => 'Accedendo accetto i <a class="" href="#" target="_blank" title="T&amp;C">T&amp;C</a>',

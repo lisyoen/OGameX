@@ -25,6 +25,7 @@ return [
         'universe_label'    => '유니버스:',
         'universe_option_1' => '1. 유니버스',
         'submit'            => '로그인',
+        'save_password'     => '비밀번호 저장',
         'forgot_password'   => '비밀번호를 잊으셨나요?',
         'forgot_email'      => '이메일 주소를 잊으셨나요?',
         'terms_accept_html' => '로그인함으로써 <a class="" href="#" target="_blank" title="이용약관">이용약관</a>에 동의합니다',

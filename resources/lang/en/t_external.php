@@ -24,6 +24,7 @@ return [
         'universe_label'    => 'Universe:',
         'universe_option_1' => '1. Universe',
         'submit'            => 'Log in',
+        'save_password'     => 'Save password',
         'forgot_password'   => 'Forgot your password?',
         'forgot_email'      => 'Forgot your email address?',
         'terms_accept_html' => 'With the login I accept the <a class="" href="#" target="_blank" title="T&amp;Cs">T&amp;Cs</a>',

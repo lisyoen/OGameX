@@ -260,6 +260,12 @@
                     </div>
                 </div>
                 <input type="submit" id="loginSubmit" value="{{ __('t_external.login.submit') }}"/>
+                <div class="input-wrap" id="savePasswordWrap">
+                    <label for="savePassword" style="cursor:pointer;">
+                        <input type="checkbox" id="savePassword" name="save_password" value="1"/>
+                        {{ __('t_external.login.save_password') }}
+                    </label>
+                </div>
                 <a href="#" id="pwLost" target="_blank" title="{{ __('t_external.login.forgot_password') }}">{{ __('t_external.login.forgot_password') }}</a>
                 <br/>
                 <a href="#" id="emailLost" target="_blank" title="{{ __('t_external.login.forgot_email') }}">{{ __('t_external.login.forgot_email') }}</a>
@@ -282,6 +288,39 @@
               if (lf) {
                 lf.addEventListener('submit', lockLoginAction, true);
               }
+            })();
+            (function () {
+                var KEY = 'ogame_saved_login';
+                var emailEl = document.getElementById('usernameLogin');
+                var pwEl = document.getElementById('passwordLogin');
+                var chkEl = document.getElementById('savePassword');
+                var formEl = document.getElementById('loginForm');
+                if (!emailEl || !pwEl || !chkEl || !formEl) return;
+
+                try {
+                    var raw = localStorage.getItem(KEY);
+                    if (raw) {
+                        var data = JSON.parse(raw);
+                        if (data && data.email) {
+                            emailEl.value = data.email;
+                            if (data.password) pwEl.value = data.password;
+                            chkEl.checked = true;
+                        }
+                    }
+                } catch (e) { /* localStorage 접근 불가 시 무시 */ }
+
+                formEl.addEventListener('submit', function () {
+                    try {
+                        if (chkEl.checked) {
+                            localStorage.setItem(KEY, JSON.stringify({
+                                email: emailEl.value,
+                                password: pwEl.value
+                            }));
+                        } else {
+                            localStorage.removeItem(KEY);
+                        }
+                    } catch (e) { /* 무시 */ }
+                });
             })();
             </script>
         </div>

@@ -24,6 +24,7 @@ return [
         'universe_label'    => 'Universum:',
         'universe_option_1' => '1. Universum',
         'submit'            => 'Inloggen',
+        'save_password'     => 'Save password',
         'forgot_password'   => 'Wachtwoord vergeten?',
         'forgot_email'      => 'E-mailadres vergeten?',
         'terms_accept_html' => 'Door in te loggen accepteer ik de <a class="" href="#" target="_blank" title="Gebruiksvoorwaarden">Gebruiksvoorwaarden</a>',
