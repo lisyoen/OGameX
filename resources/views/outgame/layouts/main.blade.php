@@ -34,6 +34,24 @@
     <meta name="Revisit" content="After 14 days"/>
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Open Graph / Facebook / Twitter (CraftBay custom) -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="OGameX"/>
+    <meta property="og:title" content="OGameX - Conquer the Universe"/>
+    <meta property="og:description" content="A massively multiplayer space strategy game. Build your empire, conquer the galaxy, and rule the universe with thousands of players."/>
+    <meta property="og:url" content="https://ogame.craftbay.io/"/>
+    <meta property="og:image" content="{{ url('/og-image.jpg?v=2') }}"/>
+    <meta property="og:image:secure_url" content="{{ url('/og-image.jpg?v=2') }}"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="OGameX - Conquer the Universe"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="OGameX - Conquer the Universe"/>
+    <meta name="twitter:description" content="A massively multiplayer space strategy game. Build your empire, conquer the galaxy, and rule the universe."/>
+    <meta name="twitter:image" content="{{ url('/og-image.jpg?v=2') }}"/>
+
     <link rel="apple-touch-icon" href="/img/outgame/20da7e6c416e6cd5f8544a73f588e5.png"/>
     <link rel="stylesheet" href="{{ mix('css/outgame.css') }}">
     <script type="text/javascript" src="{{ mix('js/outgame.min.js') }}"></script>
